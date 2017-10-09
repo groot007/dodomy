@@ -1,0 +1,478 @@
+.rec-category{
+	&__item{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	&__s-brands{
+		box-shadow: none;
+	}
+}
+
+.item-rec-category{
+	background-color: #f8f8f8;
+	padding: 25px 20px;
+
+	display: inline-block;
+	text-decoration: none;
+	text-align: left;
+	transition: background-color .4s ease-in-out;
+	&:hover{
+		background-color: #e8edf2;
+	}
+
+	&__title{
+		text-transform: uppercase;
+		font-size: 20px;
+		color: $grey333;
+		margin-top: 0;
+	}
+
+	&__sub-title{
+		max-width: 60%;
+		color : #777;
+	}
+
+	&__details{
+		color: $grey333;
+	}
+
+	&--lamps{
+		background-image: url(../img/mobile/rec-category/lamps.png);
+		background-position: right -50px top;
+		background-repeat: no-repeat;
+	}
+
+	&--sofa{
+		background-image: url(../img/mobile/rec-category/sofa.png);
+		background-position: right -50px bottom 10px;
+		background-repeat: no-repeat;
+	}
+	&--commode{
+		background-image: url(../img/mobile/rec-category/commode.png);
+		background-position: right -30px top 30px;
+		background-repeat: no-repeat;
+	}
+	&--kitchen{
+		background-image: url(../img/mobile/rec-category/kitchen.png);
+		background-position: right -75px center;
+		background-repeat: no-repeat;
+	}
+	&--pouf{
+		background-image: url(../img/mobile/rec-category/pouf.png);
+		background-position: right -15px bottom 0px;
+		background-repeat: no-repeat;
+	}
+	&--bedroom{
+		background-image: url(../img/mobile/rec-category/bedroom.png);
+		background-position: right 0px bottom 20px;
+		background-repeat: no-repeat;
+	}
+
+	&--order{
+		padding: 50px 40px;
+		background: $links-color;
+		text-align: center;
+		&:hover{
+			background: $links-color;
+		}
+		.item-rec-category__title{
+			margin: 0;
+			display: inline-block;
+			text-align: left;
+			font-weight: 400;
+			color: #fff;
+			text-transform: none;
+			padding-left: 60px;
+			background: url(../img/mobile/rec-category/puzzle.png) no-repeat left center;
+		}		
+	}
+
+}
+
+//  ==========
+
+.popular-products{
+
+	&__slider{
+		margin: 60px 0 20px 0;
+	}
+
+}
+
+
+
+.tabs{
+	font-size: 0;
+	border-bottom: 1px solid $purple;
+	display: inline-block;
+	&__item{
+		padding: 10px 5px;
+		border: 1px solid $purple;
+		border-bottom: none;
+		font-size: 14px;
+		display: inline-block;
+		min-width: 95px;
+		margin-left: 1px;
+		color: $purple;
+		text-decoration: none;
+
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+
+	&__item--active{
+		font-weight: 600;
+		font-family: "ProximaNovaSemiBold";
+		color: #fff;
+		background: $purple;
+	}
+}
+
+// ===== start ==
+
+.slider-products{
+	.slick-slide{
+		text-align: center;
+		&:focus{
+			outline: none;
+		}
+	}
+	&__item{
+		width: 220px;
+	}
+	.slick-arrows{
+		
+		top: -40px;
+
+		&.arrow-prev{
+			left: 0;
+		}
+
+		&.arrow-next{
+			right: 0;
+		}
+	}
+}
+
+.item-slider-products{
+	display: inline-block;
+	text-align: center;
+	
+	&:hover{
+		.item-slider-products__current-price{
+			color: $links-color;
+		}
+	}
+
+	&__wr-img{
+		text-align: center;
+		border: 1px solid #d2d2d2;	
+		height: 260px;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		&:hover{
+			.item-slider-products__basket{
+				opacity: 1;
+			}	
+		}
+		&:focus{
+			outline: none;
+		}
+	}
+	&__basket{
+		position: absolute;
+		right: 5px;
+		bottom: 15px;
+		background: #d44e64;
+		padding: 10px;
+		color: #fff;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		font-size: 20px;
+		transition: opacity .4s ease;
+		opacity: 0;
+	}
+	&__discount, &__sticker{
+		padding: 5px 8px;
+		font-size: 20px;
+		position: absolute;
+		font-family: "MuseoCyrl 500";
+		color: #fff;
+		text-transform: uppercase;
+	}
+	&__discount{		
+		right: 0;
+		top: 0;
+		background: $links-color;
+	}
+	&__sticker{
+		left: 0;
+		bottom: 0;
+		background: $purple;
+	}
+	&__img{
+		display: inline-block !important;
+	}
+
+	&__product-title{
+		font-size: 16px;
+		font-weight: 400;
+		margin: 15px 0;
+	}
+
+	&__old-price{
+		display: block;
+		color: #898889;
+		text-decoration: line-through;
+		font-size: 14px;	
+		margin-bottom: 5px;
+	}
+
+	&__current-price{
+		display: block;
+		color: $grey333;
+		font-size: 16px;	
+	}
+}
+
+// ======= end
+
+
+// ====== ADVANTEGES ===
+
+.advanteges{
+	background: #f0f7fa;
+	padding: 50px 0;
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		z-index: 9;
+		bottom: -15vw;
+		border-top: 15vw solid #f0f7fa;
+		border-bottom: 0;
+		border-left: 0;
+		border-right: 100vw solid transparent;
+	}
+	&__list{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	&__item{
+		text-align: left;
+		width: 100%;
+		
+		background: #e6eef1;
+		margin-bottom: 10px;
+	}
+	.h-sub-title{
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			height: 1px;
+			background: #898889;
+			right: 0;
+			bottom: 0;
+			width: 2000px;
+		}
+	}
+
+	.with-v-line{
+		position: relative;
+		margin-left: 20%;
+		max-width: 85%;
+		&:before{
+			content: '';
+			display: block;
+			left: 0;
+			position: absolute;
+			top: 0;
+			background: #000;
+			height: 100%;
+			width: 1px;
+		}
+	}
+}
+//  ===
+.item-with-icon{
+	display: flex;
+	align-items: center;
+	&__icon{
+		display: block;
+		float: left;
+		font-size: 28px;
+		padding: 10px;
+		text-align: center;
+		width: 20%;
+		height: 100%;
+		border-right: 1px solid #fff;
+	}
+	&__icon .green{
+		color: #03e57d;
+	}
+	&__text{
+		float: left;
+		width: 80%;
+		font-weight: 600;
+		padding: 10px 10px 10px 15px;
+		display: block;
+		
+	}
+
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+
+//  ====
+
+
+
+// ====== end ADVANTEGES ===
+
+
+// ====== INF ABOUT =====
+.inf-about{
+	display: flex;
+	flex-wrap: wrap;
+
+	.right-wr{
+		margin-top: 40px;
+		padding: 50px 15px 80px 15px;
+		background-image: linear-gradient(to bottom, rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%), 
+		                   url(../img/mobile/inf-about-bg.png);
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-size: contain;
+		p{
+			color: #898889;
+		}
+	}
+	.left-wr{
+		color: #fff;
+		.block-left{
+
+			padding: 0 0 190px 0;;
+			background: #fff url(../img/mobile/deskr-1-bg.png) no-repeat center;
+			// background-size: cover;	
+			background-position: right 0 bottom -70px;
+		}
+		.block-right{
+			padding: 0 0 190px 0;;
+			background: #fff url(../img/mobile/deskr-2-bg.png) no-repeat;
+			// background-size: cover;	
+			background-position: right 0 bottom -90px;
+		}
+	}
+
+	&__btn{
+		margin-bottom: 10px;
+	}
+}
+
+
+.deskr{
+	padding: 30px 15px;
+	background: rgba(212, 78, 100, 0.9);
+
+	&--bordered-btn{
+		background-image: url(../img/mobile/logo-part.png),
+			linear-gradient(to bottom, rgba(135,68,99,1) 0%,rgba(135,68,99,1) 100%);
+			background-repeat: no-repeat;
+		background-position: right -50px bottom -50px, center;
+
+	}
+
+	&__icon{
+		font-size: 50px;
+	}
+	&__h{
+		margin-top: 20px;
+	}
+	&__txt{
+		font-size: 12px;
+	}
+	&__link{
+		margin-top: 10px;
+		color: #fff;
+	}
+}
+
+
+// ====== end INF ABOUT ===
+
+// ====== BEST SOLUTION ===
+
+.best-solution{
+	padding: 35px 0;
+	background: #fff url(../img/mobile/decision-bg.png) no-repeat;
+	background-position: right bottom;
+
+	p{
+		font-size: 14px;
+		line-height: 22px;
+		color: #333;
+	}
+}
+
+
+// ====== end BEST SOLUTION ===
+
+
+
+
+// ===== SUBSCRIBE ====
+
+.subscribe{
+	padding: 50px 0;
+	background-image: linear-gradient(to bottom, rgba(212,78,100,0.95) 0%,rgba(212,78,100,0.95) 100%), url(../img/mobile/subscribe-bg.png);
+	background-repeat: no-repeat;
+	background-position: right 0 bottom 0px;
+	color: #fff;
+
+	&__sub-title{
+		font-weight: 400;
+		font-size: 14px;
+		margin-top: 0;
+	}
+}
+
+// ===== end SUBSRIBE ===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ====== FOOOTER
+
+.footer{
+	.webmaestro{
+		img{
+			max-width: 100px;
+		}
+	}
+}
+
+// ===== end FOOTER
