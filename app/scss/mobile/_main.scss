@@ -258,7 +258,7 @@
 		border-top: 15vw solid #f0f7fa;
 		border-bottom: 0;
 		border-left: 0;
-		border-right: 100vw solid transparent;
+		border-right: 99vw solid transparent;
 	}
 	&__list{
 		list-style-type: none;
@@ -274,6 +274,10 @@
 	}
 	.h-sub-title{
 		position: relative;
+		font-weight: 400;
+		margin-top: 40px;
+		letter-spacing: 2px;
+		padding-bottom: 10px;
 		&:before{
 			content: '';
 			position: absolute;
@@ -363,20 +367,21 @@
 	.left-wr{
 		color: #fff;
 		.block-left, .block-right{
-			max-width: 320px;
+			// max-width: 320px;
+			width: 100%;
 			float: left;
 		}
 		.block-left{
 
 			padding: 0 0 190px 0;;
 			background: #fff url(../img/mobile/deskr-1-bg.png) no-repeat center;
-			// background-size: cover;	
-			background-position: right 0 bottom -70px;
+			background-size: cover;	
+			background-position: right -1px bottom -70px;
 		}
 		.block-right{
 			padding: 0 0 190px 0;;
 			background: #fff url(../img/mobile/deskr-2-bg.png) no-repeat;
-			// background-size: cover;	
+			background-size: cover;	
 			background-position: right 0 bottom -90px;
 		}
 	}
@@ -424,6 +429,13 @@
 	background: #fff url(../img/mobile/decision-bg.png) no-repeat;
 	background-position: right bottom;
 
+	.two-imgs{
+		display: flex;
+		flex-direction: column;
+		// width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 	p{
 		font-size: 14px;
 		line-height: 22px;
@@ -479,7 +491,7 @@
 	}
 	&__sign{
 		text-align: left;
-		color:  #874463;
+		color:  $purple;
 		width: 100%;
 		display: inline-block;
 		font-family: $Museo;
@@ -510,8 +522,17 @@
 				width:35px;
 				height: 35px;
 				text-align: center;
-				line-height: 35px;
+				line-height: 38px;
 				color: #898889;
+				.fa{
+					font-size: 22px;
+				}
+				&:hover{
+					background: $purple;
+					.fa{
+						color: #fff;
+					}
+				}
 			}
 		}
 	}
@@ -539,43 +560,3 @@
 
 
 
-// ====== FOOOTER
-
-.footer{
-	background-color: #874463;
-	color: #fff;
-	padding: 20px 0;
-	text-align: center;
-	.wr-flex{
-		flex-wrap: wrap;
-		display: flex;
-		justify-content: center;
-	}
-	
-
-	&:after{
-		content: '';
-		display: block;
-		clear: both;
-	}
-	.webmaestro{
-		width: 80%;
-		p{
-			display: flex;
-			align-items: center;
-			margin-bottom: 0;
-			text-align: right;
-			justify-content: flex-end;
-			height: 60px;
-			float: right;
-			padding: 10px 80px 10px 0;
-			background: url(../img/wm_lite.svg) no-repeat right center;
-			background-size: 60px 60px;
-		}
-		img{
-			max-width: 100px;
-		}
-	}
-}
-
-// ===== end FOOTER

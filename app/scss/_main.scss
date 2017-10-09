@@ -1,2 +1,53 @@
 @import "mobile/_main.scss";
 
+.inf-about{
+	.left-wr{
+		display: flex;
+		.block-right{
+			padding: 190px 0 0 0;
+		}
+	}
+}
+
+.item-rec-category--order .item-rec-category__title{
+	padding: 60px 0 0 0;
+	background-position: left top;
+}
+
+.best-solution{
+	.two-imgs{
+		display: inline-block;
+		float: left;
+		margin: 0 10px 10px 0;
+	}
+	.read-more{
+		display: none;
+	}
+}
+
+
+
+
+.contacts-section{
+	.el-wr{
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		
+	}
+	&__logo, &__user-zone, &__phones, &__social{
+			width: auto;
+		}
+	&__logo{
+		width: 25%;
+	}
+	&__user-zone{
+		width: 16%;
+	}
+	 &__phones{
+	 	order: 4;
+	 	width: 16%;
+	 }
+	 &__social{
+	 	width: 25%;
+	 }
+}

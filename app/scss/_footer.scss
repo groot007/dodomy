@@ -1,0 +1,12 @@
+@import "mobile/_footer.scss";
+
+.footer{
+	.wr-flex{
+		flex-wrap: nowrap;
+	}
+	.webmaestro{
+		p{
+			margin: 0;
+		}
+	}
+}

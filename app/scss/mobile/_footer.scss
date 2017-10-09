@@ -1,0 +1,44 @@
+// ====== FOOOTER
+
+.footer{
+	background-color: $purple;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+	.wr-flex{
+		flex-wrap: wrap;
+		display: flex;
+		justify-content: center;
+	}
+	
+
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.copyright{
+		display: flex;
+		align-items: center;
+	}
+	.webmaestro{
+		width: 80%;
+		p{
+			display: flex;
+			align-items: center;
+			margin-bottom: 0;
+			text-align: right;
+			justify-content: flex-end;
+			height: 60px;
+			float: right;
+			padding: 10px 80px 10px 0;
+			background: url(../img/wm_lite.svg) no-repeat right center;
+			background-size: 60px 60px;
+		}
+		img{
+			max-width: 100px;
+		}
+	}
+}
+
+// ===== end FOOTER
