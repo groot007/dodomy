@@ -1,12 +1,29 @@
 @import "mobile/_main.scss";
 
 .inf-about{
-	.left-wr{
-		display: flex;
-		.block-right{
-			padding: 190px 0 0 0;
+	margin-top: 100px;
+	@include min(1024px){
+		flex-wrap: nowrap;
+	}
+
+	.right-wr{
+		@include min(1024px){
+			width: 50%;
+			order: 2;
 		}
 	}
+	.left-wr{
+		display: flex;
+		@include min(1024px){
+			order: 1;
+			width: 50%;
+		}
+		.block-right{
+			padding: 200px 0 0 0;
+		}
+	}
+
+
 }
 
 .item-rec-category--order .item-rec-category__title{

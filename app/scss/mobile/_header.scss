@@ -442,7 +442,7 @@
                 }
             }
             &:after {
-                font-family: 'custom-font';
+                font-family: 'FontAwesome';
                 text-align: center;
                 content: "\f103";
                 position: absolute;
@@ -520,8 +520,8 @@
                 position: relative;
 				padding-left: 10px;
                 &:before{
-	        		content: "\f105";
-	        		font-family: "custom-font";
+	        		content: "\f104";
+	        		font-family: "FontAwesome";
 	        		position: absolute;
 	        		left: 0;
 	        		top: 0;
