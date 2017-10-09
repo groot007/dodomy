@@ -637,32 +637,39 @@
   </section>
   <section class="subscribe">
     <div class="container">
-        <h2 class="h-simple h-simple--light">Хочете дізнаватися про акції першими і отримувати знижки?</h2>
-        <h3 class="subscribe__sub-title">Залиште свою електронну пошту та завжди залишайтесь в курсі вигідних пропозицій та новинок!</h3>
+        <hgroup>        
+            <h2 class="h-simple h-simple--light">Хочете дізнаватися про акції першими і отримувати знижки?</h2>
+            <h3 class="subscribe__sub-title">Залиште свою електронну пошту та завжди залишайтесь в курсі вигідних пропозицій та новинок!</h3>
+        </hgroup>
         <form action="">
-            <input type="email" name="email" id="email" class="txt-input txt-input--bg-white" placeholder="Введіть свій E-mail">
-            <input type="submit" class="btn btn--light" value="Підписатись"></button>
+            <input type="email" name="email" id="email" class="subscribe__input txt-input txt-input--bg-white" placeholder="Введіть свій E-mail">
+            <input type="submit" class="subscribe__btn btn btn--light" value="Підписатись"></button>
         </form>
     </div>
 </section>
-<section class="contacts">
+<section class="contacts-section">
     <div class="container">
-        <div class="logo">
-            <img src="img/LOGO.png" alt="">
-        </div>
+        <div class="el-wr">
 
-        <a class="contacts__sign" href="#"><span>Вхід</span> <i class="icon sign-in"></i></a>
-        <a class="contacts__sign" href="#"><span>Реєстрація</span><i class="icon user-plus"></i></a>
-        <div class="phones">
-            <a class="contacts__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
-            <a class="contacts__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
-            <a class="contacts__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
-        </div>
-        <div class="social">
-            <ul>
-                <li><a href="#"><span class="icon"></span></a></li>
-                <li><a href="#"><span class="icon"></span></a></li>
-                <li><a href="#"><span class="icon"></span></a></li>
+
+            <div class="contacts-section__logo">
+                <img src="img/LOGO.png" alt="">
+            </div>
+            <div class="contacts-section__user-zone">
+                <a class="contacts-section__sign" href="#"><i class="fa fa-sign-in"></i><span>Вхід</span> </a>
+                <a class="contacts-section__sign" href="#"><i class="fa fa-user-plus"></i><span>Реєстрація</span></a>
+            </div>
+
+            <div class="contacts-section__phones">
+                <a class="contacts-section__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
+                <a class="contacts-section__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
+                <a class="contacts-section__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
+            </div>
+
+            <ul class="contacts-section__social">
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
             </ul>
         </div>   
     </div> 
@@ -680,12 +687,16 @@
 <!-- ============================================== -->
 
 <footer class="footer">
-    <div class="copyright">
-        <span>2017</span><span>dodomy.com.ua</span>
-    </div>
-    <div class="webmaestro">
-        <p>Розробка, підтримка та розкрутка сайту:</p>
-        <img src="img/wm_lite.svg" alt="">
+    <div class="container">
+        <div class="wr-flex">
+            <div class="copyright">
+                <span>2017</span> <i class="fa fa-copyright" aria-hidden="true"></i> <span>dodomy.com.ua</span>
+            </div>
+            <div class="webmaestro">
+                <p>Розробка, підтримка та розкрутка сайту:</p>
+                <!-- <img src="img/wm_lite.svg" alt=""> -->
+            </div>
+        </div>
     </div>
 </footer>
 
