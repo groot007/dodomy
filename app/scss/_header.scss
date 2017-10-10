@@ -99,8 +99,8 @@
     &__search {
         @include min(1024px) {
             position: absolute;
-            left: 65%;
-            bottom: 5px;
+            left: 62%;
+            bottom: 2px;
         }
         width: 20%;
         input {
@@ -113,9 +113,10 @@
         }
         button{
             top: 0;
-            width: 40px;
-            height: 40px;
-            right: -1px;
+            line-height: 30px;
+            width: 33px;
+            height:33px;
+            right: 5px;
             position: absolute;
         }
     }
@@ -417,6 +418,7 @@
         &:nth-child(2) {
             order: 5;
             @include min(1024px) {
+                margin-left:50px;
                 order: 3
             }
         }
@@ -427,7 +429,11 @@
               margin-left: 15px;
           }
           @include min(889px) {
-            order: 2
+            order: 2;
+            
+        }
+        @include min(1024px){
+            margin-left: 50px;
         }
     }
     &:nth-child(4) {
@@ -440,6 +446,9 @@
         order: 3;
         @include min(889px) {
             order: 4
+        }
+        @include min(1024px){
+            margin-left: 50px;
         }
     }
 }
@@ -730,7 +739,7 @@ i{
             }
         }
         &:after {
-            font-family: 'custom-font';
+            font-family: 'FontAwesome';
             text-align: center;
             content: "\f103";
             position: absolute;
@@ -831,7 +840,7 @@ i{
      }
      &:before{
        content: "\f105";
-       font-family: "custom-font";
+       font-family: "FontAwesome";
        position: absolute;
        left: 0;
        top: 0;
@@ -866,7 +875,7 @@ i{
         background: transparent;
         border-radius: 50px;
         color: #fff;
-        padding: 10px 20px;
+        padding: 7px 20px;
         border: 1px solid #fff;
         &:focus{
             outline: none;
@@ -898,7 +907,7 @@ i{
         top: 0;
         z-index: 1;
         width: 100%;
-        height: 20%;
+        height: 30%;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
         left: 0;
 
@@ -1004,10 +1013,14 @@ i{
                 padding: 0;
                 line-height: 0;
                 border: 0;
-                width: 10px;
-                height: 10px;
+                width: 15px;
+                height: 15px;
                 transition: background .3s ease;
+                &:focus{
+                    outline: none;
+                }
                 &:hover, &:active {
+                    cursor: pointer;
                     outline: none;
                     background: #cf9893;
                     border: 1px solid #cf9893;

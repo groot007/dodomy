@@ -1,16 +1,24 @@
 @import "mobile/_main.scss";
 
-.inf-about{
+
+.rec-category{
 	margin-top: 100px;
+}
+
+.inf-about{
+	margin-top: 146px;
 	@include min(1024px){
 		flex-wrap: nowrap;
 	}
 
 	.right-wr{
+		padding: 0px 15px 80px 15px;
 		@include min(1024px){
 			width: 50%;
 			order: 2;
 		}
+		background-image: linear-gradient(to bottom,#fff 0%,rgba(255,255,255,0) 50%),url(../img/inf-about-bg.jpg);
+		background-size: contain;
 	}
 	.left-wr{
 		display: flex;
@@ -18,8 +26,23 @@
 			order: 1;
 			width: 50%;
 		}
+		.block-left{
+			padding: 0 0 350px 0;
+			background: #fff url(../img/deskr-1-bg.png) no-repeat center;
+			background-size: contain;
+			background-position: right top;
+			.deskr{
+				padding-top: 215px;
+			}
+		}
 		.block-right{
-			padding: 200px 0 0 0;
+			padding: 420px 0 0 0;
+			background: #fff url(../img/deskr-2-bg.png) no-repeat;
+			background-size: contain;
+			background-position: left top;
+			.deskr{
+				padding: 58px 15px;
+			}
 		}
 	}
 
@@ -52,19 +75,114 @@
 		
 	}
 	&__logo, &__user-zone, &__phones, &__social{
-			width: auto;
-		}
+		width: auto;
+	}
 	&__logo{
 		width: 25%;
 	}
 	&__user-zone{
 		width: 16%;
 	}
-	 &__phones{
-	 	order: 4;
-	 	width: 16%;
-	 }
-	 &__social{
-	 	width: 25%;
-	 }
+	&__phones{
+		order: 4;
+		width: 16%;
+	}
+	&__social{
+		width: 25%;
+	}
 }
+
+.tabs{
+	width:50%;
+	&__item{
+		width: 30%;
+		font-size: 20px;
+		margin-left: 5%;
+	}
+}
+
+.rec-category__s-brands.slider-brands .slick-list {
+	padding: 0 100px;
+}
+
+.slider-products__item{
+	margin: 0 20px;
+}
+
+.advanteges .with-v-line{
+	transform: translateY(23%);
+	max-width: 100%;
+	z-index: 99;
+	margin-left: 10%;
+	img{
+		transform: translateY(-20%);
+	}
+	&:before{
+		top: -20px;
+	}
+	&:after{
+		content: '';
+		display: block;
+		left: -20px;
+		position: absolute;
+		top: -20px;
+		background: #000;
+		height: 1px;
+		width: 20px;
+	}
+}
+
+.subscribe{
+	.wr-flex{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		hgroup, form{
+			width: 50%;
+		}
+		.subscribe__btn{
+			width: 30%;
+		}
+		.subscribe__input{
+			width: 70%;
+		}
+
+	}
+}
+
+.advanteges__list{
+	columns: 2;
+}
+
+
+.contacts-section__user-zone{
+	display: flex;
+	align-items: center;
+	width: 30%;
+}
+.contacts-section__social{
+	display: flex;
+	width: 15%;
+	align-items: center;
+	li{
+		margin-left: 20px;
+	}
+}
+
+.contacts-section__sign{
+	width: auto;
+	margin-left: 60px;
+	&:first-child{
+		margin-left: 40px;
+	}
+}
+
+.contacts-section__phone{
+	width: 100%;
+	margin-bottom: 10px;
+	display: inline-block;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+

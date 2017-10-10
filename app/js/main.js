@@ -191,6 +191,7 @@ $(function() {
             swipe: false,
             nextArrow: "<div class='slick-arrows arrow-next'><i class='fa fa-angle-right'></i></div>",
             prevArrow: "<div class='slick-arrows arrow-prev'><i class='fa fa-angle-left'></i></div>",
+            
         });
 
         $('.main-slider').slick("setPosition");

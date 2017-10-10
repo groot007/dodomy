@@ -98,6 +98,10 @@ section{
   color: $grey333;
   margin-bottom: 25px;
 
+  @include min(1024px){
+    font-size: 35px;
+  }
+
   &--light{
     color: #fff;
   }
@@ -116,7 +120,9 @@ section{
   text-align: center;
   font-weight: 400;
   color: $grey333;
-
+@include min(1024px){
+    font-size: 35px;
+  }
   &:after{
     content: '';
     display: inline-block;
