@@ -7,6 +7,8 @@ $(function() {
 
     $(document).on("touchend", ".mmenu__close", function(e) {
         $(this).closest(".mmenu").removeClass("mmenu--opened");
+        $(".dropdown-menu .items").css("overflow-y", "hidden");
+        $(".all-catagories").css("display", "block");
     });
 
     $(".catalog__item").on('mouseleave', function(e) {
@@ -41,6 +43,15 @@ $(function() {
             target.closest(".item-catalog__back").length) {
             $(".catalog__item--active").removeClass("catalog__item--active")
     }
+});
+
+$(document).on("click", ".all-catagories", function(e){
+    e.preventDefault();
+    var height = $(".dropdown-menu .items").height();
+    console.log()
+    $(this).css("display", "none");
+    $(".dropdown-menu .items").css("overflow-y", "scroll");
+    $(".dropdown-menu .items").animate({scrollTop : 100}, 1000);
 });
 
 

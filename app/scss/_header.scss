@@ -163,6 +163,34 @@
     }
 }
 // ======= MENU & MENU BAR =======
+.lang-change{
+    &__item{
+        font-size: 14px;
+        font-family: $Museo;
+        color: #fff;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: transparent;
+        text-decoration: none;
+        border-radius: 50%;
+        border: 1px solid #a37188;
+        margin-left: 25px;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+
+    &__item--active{
+        border: 1px solid #d34d64;
+        background: #d34d64;
+    }
+}
+
+
+
 .menu-bar {
     background: $links-color;
     padding: 17px 11px 16px 12px;
@@ -185,7 +213,7 @@
     left: 0;
     z-index: 999;
     padding: 40px 0;
-    height: 230px;
+    height: 260px;
     background: #874463;
     opacity: .95;
     text-align: center;
@@ -1087,13 +1115,13 @@ i{
             font-size: 10px;
         }
         &.arrow-prev {
-            left: 0;
+            left: 10px;
             i {
                 padding-left: 10px;
             }
         }
         &.arrow-next {
-            right: 0;
+            right: 10px;
             i {
                 padding-left: 10px;
             }

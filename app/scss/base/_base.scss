@@ -209,11 +209,15 @@ section{
     display: none;
   }
   .custom-arrow{
+
     display: inline-block;
     background: #c4c3c4;
     min-width: 50px;
     height: 2px;
     position: relative;
+    @include min(1024px){
+      min-width: 80px;
+    }
     &:after{
       content: '';
       display: inline-block;
@@ -229,23 +233,28 @@ section{
   }
 
   &.arrow-next{
+    // right: 10px;
     .circle{
       float: right;
       margin-left: -15px;
     }
     .custom-arrow:after{
       border-left: 14px solid #c4c3c4;
-      right: -10px;
+      right: -5px;
+      border-right: none;
     }
   }
   &.arrow-prev{
+    // left: 10px;
     .circle{
       float: left;
+      display: none;
       margin-right: -15px;
     }
     .custom-arrow:after{
+      border-left: none;
       border-right: 14px solid #c4c3c4;
-      left: -10px;
+      left: -5px;
     }
   }
 }
