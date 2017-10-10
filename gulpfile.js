@@ -88,12 +88,12 @@ gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss')
 	.pipe(sourcemaps.init())
   	.pipe(sass().on('error', sass.logError))
-  	.pipe(sourcemaps.write())
 	.pipe(combineMq({
         beautify: true
     }))
 	.pipe(rename({suffix: '.min'}))
 	.pipe(autoprefixer(['last 15 versions']))
+  	.pipe(sourcemaps.write())
 	.pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));

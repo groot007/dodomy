@@ -3,45 +3,163 @@
 
 .rec-category{
 	margin-top: 100px;
+
+	&__h-head{
+		margin-bottom: 80px;
+	}
+	&__s-brands{
+		margin-bottom: 50px;
+	}
+}
+
+
+
+.item-rec-category{
+	background-color: #f8f8f8;
+	padding: 0 20px;
+	min-height: 300px;
+	margin-bottom: 40px;
+	display: inline-block;
+	text-decoration: none;
+	text-align: left;
+	transition: background-color .4s ease-in-out;
+	&:hover{
+		background-color: #e8edf2;
+	}
+
+	&__title{
+		padding: 0;
+		text-transform: uppercase;
+		font-size: 26px;
+		color: $grey333;
+		margin-top: 0;
+		font-family: "ProximaNovaExtraBold";
+	}
+
+	&__sub-title{
+		max-width: 60%;
+		color : #777;
+		width: 50%;
+	}
+
+	&__details{
+		color: $grey333;
+	}
+
+	&--lamps{
+		background-image: url(../img/rec-category/lamps.png);
+		background-position: right -150px top -10px;
+		background-repeat: no-repeat;
+	}
+
+	&--sofa{
+		background-image: url(../img/rec-category/sofa.png);
+		background-position: right -100px bottom -30px;
+		background-repeat: no-repeat;
+	}
+	&--commode{
+		background-image: url(../img/rec-category/commode.png);
+		background-position: right -90px bottom -10px;
+		background-repeat: no-repeat;
+	}
+	&--kitchen{
+		background-image: url(../img/rec-category/kitchen.png);
+		background-position: right -95px bottom -40px;
+		background-repeat: no-repeat;
+	}
+	&--pouf{
+		background-image: url(../img/rec-category/pouf.png);
+		background-position: right -15px bottom -40px;
+		background-repeat: no-repeat;
+	}
+	&--bedroom{
+		background-image: url(../img/rec-category/bedroom.png);
+		background-position: right -80px bottom -40px;
+		background-repeat: no-repeat;
+	}
+
+	&--order{
+		padding: 50px 40px;
+		background: $links-color;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		&:hover{
+			background: $links-color;
+		}
+		.item-rec-category__title{
+			margin: 0;
+			display: inline-block;
+			text-align: left;
+			font-weight: 400;
+			color: #fff;
+			text-transform: none;
+			padding-left: 60px;
+			background: url(../img/mobile/rec-category/puzzle.png) no-repeat left center;
+		}		
+	}
+
+}
+
+
+.best-solution{
+	.more-txt{
+		display: block;
+	}
 }
 
 .inf-about{
-	margin-top: 146px;
+	margin-top: 150px;
 	@include min(1024px){
+		height: 45vw;
 		flex-wrap: nowrap;
 	}
 
+	&__txt{
+		font-size: 16px;
+		@include min(1300px){
+			margin: 0 auto 50px auto;
+			width: 70%;
+			
+		}
+	}
+
 	.right-wr{
-		padding: 0px 15px 80px 15px;
+		padding: 30px 15px 80px 15px;
 		@include min(1024px){
-			width: 50%;
+			width: 58%;
 			order: 2;
 		}
-		background-image: linear-gradient(to bottom,#fff 0%,rgba(255,255,255,0) 50%),url(../img/inf-about-bg.jpg);
+		background-image: linear-gradient(to bottom,#fff 20%,rgba(255,255,255,0) 100%),url(../img/inf-about-bg.jpg);
 		background-size: contain;
+
+		.h-simple{
+			margin-bottom: 50px;
+		}
 	}
 	.left-wr{
 		display: flex;
 		@include min(1024px){
 			order: 1;
-			width: 50%;
+			width: 42%;
 		}
 		.block-left{
-			padding: 0 0 350px 0;
+			padding: 0 0 30% 0;
 			background: #fff url(../img/deskr-1-bg.png) no-repeat center;
 			background-size: contain;
-			background-position: right top;
+			background-position: right bottom;
 			.deskr{
-				padding-top: 215px;
+				padding-top: 30%;
 			}
 		}
 		.block-right{
-			padding: 420px 0 0 0;
+			padding: 50% 0 0 0;
 			background: #fff url(../img/deskr-2-bg.png) no-repeat;
 			background-size: contain;
 			background-position: left top;
 			.deskr{
-				padding: 58px 15px;
+				// height: 350px;
+				padding: 20% 15px;
 			}
 		}
 	}
@@ -51,17 +169,23 @@
 
 .item-rec-category--order .item-rec-category__title{
 	padding: 60px 0 0 0;
-	background-position: left top;
+	text-align: center;
+	background-position: center top;
 }
 
 .best-solution{
+
 	.two-imgs{
 		display: inline-block;
 		float: left;
 		margin: 0 10px 10px 0;
+		text-align: right;
 	}
 	.read-more{
 		display: none;
+	}
+	p{
+		text-align: left;
 	}
 }
 
@@ -75,22 +199,82 @@
 		
 	}
 	&__logo, &__user-zone, &__phones, &__social{
-		width: auto;
+			width: auto;
+		}
+	@include min(1024px){
+
+		&__logo{
+			width: 25%;
+		}
+		&__user-zone{
+			width: 16%;
+		}
+		&__phones{
+			order: 4;
+			width: 16%;
+		}
+		&__social{
+			width: 25%;
+		}
 	}
-	&__logo{
-		width: 25%;
-	}
-	&__user-zone{
-		width: 16%;
-	}
-	&__phones{
-		order: 4;
-		width: 16%;
-	}
-	&__social{
-		width: 25%;
+	
+}
+
+.contacts-section__logo{
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.contacts-section__user-zone{
+	display: flex;
+	align-items: flex-start;
+	width: 30%;
+	margin-left: 5%;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	@include min(1024px){
+		margin-left: 0;
+		width: 35%;
+		flex-direction: row;
+		align-items: center;;
 	}
 }
+.contacts-section__social{
+	display: flex;
+	width: 15%;
+	align-items: center;
+	justify-content: center;
+	li{
+		margin-left: 20px;
+	}
+}
+
+.contacts-section__sign{
+	width: auto;
+	margin: 0;
+	@include min(1024px){
+		margin-left: 60px;
+	}
+	&:first-child{
+		@include min(1024px){
+			margin-left: 40px;
+		}
+	}
+}
+
+.contacts-section__phone{
+	width: 100%;
+	margin-bottom: 10px;
+	display: inline-block;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+
+
 
 .tabs{
 	width:50%;
@@ -108,24 +292,37 @@
 .slider-products__item{
 	margin: 0 20px;
 }
-
+.advanteges{
+	height: 640px;
+	.h-sub-title{
+		text-align: right;
+		padding-bottom: 40px;
+		font-size: 24px;
+		letter-spacing: 4px;
+	}
+	&__list{
+		margin-top: 80px;
+	}
+}
 .advanteges .with-v-line{
-	transform: translateY(23%);
-	max-width: 100%;
+	transform: translateY(20%);
+	max-width:100%;
 	z-index: 99;
 	margin-left: 10%;
+	position: absolute;
 	img{
 		transform: translateY(-20%);
 	}
 	&:before{
-		top: -20px;
+		top: 35px;
+		height: 68%;
 	}
 	&:after{
 		content: '';
 		display: block;
 		left: -20px;
 		position: absolute;
-		top: -20px;
+		top: 35px;
 		background: #000;
 		height: 1px;
 		width: 20px;
@@ -133,6 +330,10 @@
 }
 
 .subscribe{
+	padding: 30px 0;
+	background-image: linear-gradient(to bottom,rgba(212,78,100,.95) 0,rgba(212,78,100,.95) 100%),
+	                      url(../img/subscribe-bg.png);
+	                      background-size: cover;
 	.wr-flex{
 		display: flex;
 		align-items: center;
@@ -154,35 +355,4 @@
 	columns: 2;
 }
 
-
-.contacts-section__user-zone{
-	display: flex;
-	align-items: center;
-	width: 30%;
-}
-.contacts-section__social{
-	display: flex;
-	width: 15%;
-	align-items: center;
-	li{
-		margin-left: 20px;
-	}
-}
-
-.contacts-section__sign{
-	width: auto;
-	margin-left: 60px;
-	&:first-child{
-		margin-left: 40px;
-	}
-}
-
-.contacts-section__phone{
-	width: 100%;
-	margin-bottom: 10px;
-	display: inline-block;
-	&:last-child{
-		margin-bottom: 0;
-	}
-}
 

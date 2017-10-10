@@ -428,7 +428,9 @@
 	padding: 35px 0;
 	background: #fff url(../img/mobile/decision-bg.png) no-repeat;
 	background-position: right bottom;
-
+	.more-txt{
+		display: none;
+	}
 	.two-imgs{
 		display: flex;
 		flex-direction: column;

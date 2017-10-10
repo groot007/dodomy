@@ -49,16 +49,16 @@ input:focus:-ms-input-placeholder { color: transparent; }
 
 input{
   &.txt-input{
-      padding: 15px 20px;
-      border-radius: 50px;
-      border: 1px solid #898889;
-      text-decoration: none;
-      line-height: 1;
-      display: inline-block;
-      min-width: 170px;
-      outline: none;
-      background-color: transparent;
-      color: #898889;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 1px solid #898889;
+    text-decoration: none;
+    line-height: 1;
+    display: inline-block;
+    min-width: 170px;
+    outline: none;
+    background-color: transparent;
+    color: #898889;
     &--bg-white{
       border: 1px solid #fff;
       color: #898889;
@@ -98,6 +98,10 @@ section{
   color: $grey333;
   margin-bottom: 25px;
 
+  @include min(750px){
+    font-size: 28px;
+  }
+
   @include min(1024px){
     font-size: 35px;
   }
@@ -120,7 +124,10 @@ section{
   text-align: center;
   font-weight: 400;
   color: $grey333;
-@include min(1024px){
+  @include min(750px){
+    font-size: 28px;
+  }
+  @include min(1024px){
     font-size: 35px;
   }
   &:after{
@@ -167,7 +174,7 @@ section{
 
   &--light{
     border: 1px solid #fff;
-     color: #fff;
+    color: #fff;
   }
 
 }
@@ -175,7 +182,7 @@ section{
 .udl-link{
   text-decoration: none;
   position: relative;
-   display: inline-block;
+  display: inline-block;
   &:after{
     content: "";
     position: absolute;
@@ -204,7 +211,7 @@ section{
   .custom-arrow{
     display: inline-block;
     background: #c4c3c4;
-    min-width: 75px;
+    min-width: 50px;
     height: 2px;
     position: relative;
     &:after{

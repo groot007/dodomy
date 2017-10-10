@@ -106,6 +106,7 @@
         input {
             border: 1px solid #898898;
             max-width: 100%;
+            color: #898898;
             // display: none;
             @include min(1024px) {
                 display: inline-block;
@@ -116,7 +117,7 @@
             line-height: 30px;
             width: 33px;
             height:33px;
-            right: 5px;
+            right: 0;
             position: absolute;
         }
     }
