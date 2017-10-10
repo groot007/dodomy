@@ -115,6 +115,7 @@
 	@include min(1024px){
 		margin-top: 150px;
 		height: 45vw;
+		max-height: 720px;
 		flex-wrap: nowrap;
 	}
 
@@ -169,6 +170,12 @@
 			background-size: contain;
 			background-position: left top;
 			position: relative;
+			@include min(750px){
+				padding: 335px 0 0 0;
+			}
+			@include min(1024px){
+				padding: 0;
+			}
 			.deskr{
 				@include min(1024px){
 					position: absolute;
