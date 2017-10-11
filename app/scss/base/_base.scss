@@ -43,10 +43,6 @@ input:focus::-moz-placeholder { color: transparent; }
 /* Internet Explorer 10+ */
 input:focus:-ms-input-placeholder { color: transparent; }
 
-
-
-
-
 input{
   &.txt-input{
     padding: 15px 20px;
@@ -65,9 +61,31 @@ input{
       background: #fff;
     }
   }
-  
+
 }
 
+
+.catalog .items::-webkit-scrollbar {
+  height: 5px;
+  width: 10px;
+  background-color: #333;
+}
+
+.catalog .items::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: #777;
+  background-color: #898898;
+}
+
+.catalog .items::-webkit-scrollbar-thumb:hover {
+  border-width: 1px 1px 1px 2px;
+  border-color: #555;
+  background-color: #777;
+}
+
+.catalog .items::-webkit-scrollbar-track {
+  border-width: 0;
+}
 
 
 img{
@@ -227,7 +245,7 @@ section{
       width: 0;
       height: 0;
       border: 7px solid transparent;
-      
+
       // background: $links-color;
     }
   }

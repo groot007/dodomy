@@ -85,10 +85,14 @@
             &:after {
                 @include min(1024px) {
                     margin-top: 2px;
+                    right: -8px;
                 }
             }
             .current {
                 font-size: 18px;
+                @include min(1024px){
+                    font-size: 22px;
+                }
             }
             .list {
                 left: 0;
@@ -447,8 +451,11 @@
         &:nth-child(2) {
             order: 5;
             @include min(1024px) {
-                margin-left:50px;
+                margin-left:25px;
                 order: 3
+            }
+            @include min(1200px){
+                margin-left: 50px;
             }
         }
         &:nth-child(3) {
@@ -459,16 +466,25 @@
           }
           @include min(889px) {
             order: 2;
-            
+
         }
         @include min(1024px){
             margin-left: 50px;
+        }
+        @include min(1200px){
+            margin-left: 25px;
         }
     }
     &:nth-child(4) {
         order: 2;
         @include min(889px) {
             order: 3
+        }
+        @include min(1024px){
+            margin-left:  35px;
+        }
+        @include min(1200px){
+            margin-left: 70px;
         }
     }
     &:nth-child(5) {
@@ -477,7 +493,10 @@
             order: 4
         }
         @include min(1024px){
-            margin-left: 50px;
+            margin-left: 20px;
+        }
+        @include min(1200px){
+            margin-left: 40px
         }
     }
 }
@@ -550,7 +569,7 @@ i{
         flex: 1 0 65px;
         text-align: center;
         justify-content: center;
-        transition: background .3s ease-in-out;
+        transition: background .2s ease-in;
         &:last-child {
             border: 0;
         }
@@ -627,6 +646,7 @@ i{
 .item-catalog__icon {
     // flex: 1;
     font-size: 1.5rem;
+
     @include min(1024px) {
         // font-size: 2rem;
     }
@@ -635,13 +655,16 @@ i{
     }
     i:before {
         color: #898889;
+        transition: color .2s ease-in;
     }
 }
 .item-catalog__title {
     font-size: 14px;
     // flex: 1;
+    color: #333;
+    transition: color .2s ease-in;
     @include min(1024px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 // ======== end CATALOG block ==========
@@ -655,6 +678,16 @@ i{
     }
     &:hover{
     	cursor: default;
+    }
+    &__slider.slider-brands{
+        .slick-arrows{
+            &.arrow-prev{
+                left: 5px;
+            }
+            &.arrow-next{
+                right: 5px;
+            }
+        }
     }
     &__item {
         height: 155px;
@@ -929,7 +962,7 @@ i{
 .main-slider {
     width: 100%;
     max-height: 880px;
-    background: #e3e3e3;
+    // background: #e3e3e3;
     &:before{
         content: '';
         position: absolute;
@@ -1061,6 +1094,7 @@ i{
 .slider-brands {
     background: #FFF;
     margin-top: 5px;
+    padding: 0 50px;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
     .slick-track {
         height: 100px;

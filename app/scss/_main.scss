@@ -3,26 +3,33 @@
 
 .rec-category{
 	margin-top: 100px;
+	[class*="col-"]{
+		padding: 0 5px;
 
+	}
 	&__h-head{
 		margin-bottom: 80px;
 	}
 	&__s-brands{
 		margin-bottom: 50px;
 	}
+
 }
 
 
 
 .item-rec-category{
 	background-color: #f8f8f8;
-	padding: 0 20px;
+	padding: 10px;
 	min-height: 300px;
 	margin-bottom: 40px;
 	display: inline-block;
 	text-decoration: none;
 	text-align: left;
 	transition: background-color .4s ease-in-out;
+	@include min(1024px){
+		padding: 40px 25px;
+	}
 	&:hover{
 		background-color: #e8edf2;
 	}
@@ -84,6 +91,7 @@
 		text-align: center;
 		display: flex;
 		align-items: center;
+		margin-left: 5px;
 		&:hover{
 			background: $links-color;
 		}
@@ -96,7 +104,7 @@
 			text-transform: none;
 			padding-left: 60px;
 			background: url(../img/mobile/rec-category/puzzle.png) no-repeat left center;
-		}		
+		}
 	}
 
 }
@@ -119,30 +127,45 @@
 		flex-wrap: nowrap;
 	}
 
+	&__btn{
+		margin-left: 20px;
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+
 	&__txt{
 		font-size: 16px;
+		width: 80%;
+		margin: 0 auto 60px auto;
 		@include min(1300px){
 			margin: 0 auto 50px auto;
 			width: 70%;
-			
+
 		}
 	}
 
 	.right-wr{
-		padding: 30px 15px 80px 15px;
+		padding: 50px 15px 80px 15px;
+		background-size: cover;
+				background-image: linear-gradient(to bottom,#fff 30%,rgba(255,255,255,0) 100%),url(../img/inf-about-bg.jpg);
 		@include min(1024px){
+			padding: 30px 15px 80px 15px;
 			width: 58%;
 			order: 2;
-		}
+		// background-size: contain;
+
 		background-image: linear-gradient(to bottom,#fff 20%,rgba(255,255,255,0) 100%),url(../img/inf-about-bg.jpg);
-		background-size: contain;
+		}
 
 		.h-simple{
 			margin-bottom: 50px;
 		}
+
 	}
 	.left-wr{
 		display: flex;
+		position: relative;
 		@include min(1024px){
 			order: 1;
 			width: 42%;
@@ -152,16 +175,18 @@
 			background: #fff url(../img/deskr-1-bg.png) no-repeat center;
 			background-size: contain;
 			background-position: right bottom;
-			position: relative;
+			// position: relative;
 			background-size: cover;
 			.deskr{
 
 				@include min(1024px){
-
+					height: 50%;
+					width: 50%;
 					position: absolute;
 					top: 0;
+					left: 0;
 				}
-				padding-top: 30%;
+				// padding-top: 30%;
 			}
 		}
 		.block-right{
@@ -169,7 +194,7 @@
 			background: #fff url(../img/deskr-2-bg.png) no-repeat;
 			background-size: contain;
 			background-position: left top;
-			position: relative;
+			// position: relative;
 			@include min(750px){
 				padding: 335px 0 0 0;
 			}
@@ -180,10 +205,12 @@
 				@include min(1024px){
 					position: absolute;
 					bottom: 0;
-					
+					right: 0;
+					height:50%;
+					width: 50%;
 				}
 				// height: 350px;
-				padding: 20% 15px;
+				// padding: 20% 15px;
 			}
 		}
 	}
@@ -220,7 +247,7 @@
 	.el-wr{
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		
+
 	}
 	&__logo, &__user-zone, &__phones, &__social{
 		width: auto;
@@ -241,7 +268,7 @@
 			width: 25%;
 		}
 	}
-	
+
 }
 
 .contacts-section__logo{
@@ -334,7 +361,7 @@
 	max-width:100%;
 	z-index: 99;
 	margin-left: 10%;
-	
+
 	@include min(768px){
 		position: absolute;
 		transform: translateY(35%);
@@ -376,20 +403,23 @@
 		hgroup, form{
 			width: 50%;
 		}
-		.subscribe__btn{
-			width: 70%;
-			@include min(1200px){
-				width: 30%;
-			}
-		}
-		.subscribe__input{
-			width: 70%;
-		}
+
 
 	}
 	.h-simple{
 		text-align: left;
+		margin-bottom: 15px;
 	}
+	&__btn{
+			width: 70%;
+			margin-left: 20px;
+			@include min(1200px){
+				width: 30%;
+			}
+		}
+	&__input{
+			width: 70%;
+		}
 	&__sub-title{
 		text-align: left;
 		width: 70%;
