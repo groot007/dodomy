@@ -50,8 +50,8 @@ $(document).on("click", ".all-catagories", function(e){
     var height = $(".dropdown-menu .items").height();
     console.log()
     $(this).css("display", "none");
-    $(".dropdown-menu .items").css("overflow-y", "scroll");
-    $(".dropdown-menu .items").animate({scrollTop : 100}, 1000);
+    $(".dropdown-menu").css("height", "auto");
+    // $(".dropdown-menu .items").animate({scrollTop : 100}, 1000);
 });
 
 
@@ -92,7 +92,7 @@ $(document).on("click", ".all-catagories", function(e){
         dots: false,
         infinite: false,
         speed: 300,
-        slidesToShow: 4,a
+        slidesToShow: 4,
         slidesToScroll: 4,
         waitForAnimate: false,
         infinite: true,
@@ -109,7 +109,7 @@ $(document).on("click", ".all-catagories", function(e){
             }
         },
         {
-            breakpoint: 750,
+            breakpoint: 768,
             settings: {
                 dots: false,
                 slidesToShow: 3,
@@ -165,7 +165,7 @@ $(document).on("click", ".all-catagories", function(e){
             }
         },
         {
-            breakpoint: 751,
+            breakpoint: 768,
             settings: {
                 dots: false,
                 slidesToShow: 2,
@@ -185,9 +185,11 @@ $(document).on("click", ".all-catagories", function(e){
         ]
     });
 
+function mainSlickInit(){
 
+    if($(window).width() >= 750 && !$(".main-slider").hasClass("slick-slider")){
+        console.log(1)
 
-    if($(window).width() >= 750){
         $('.main-slider').slick({
             dots: true,
             speed: 500,
@@ -202,12 +204,20 @@ $(document).on("click", ".all-catagories", function(e){
             swipe: false,
             nextArrow: "<div class='slick-arrows arrow-next'><i class='fa fa-angle-right'></i></div>",
             prevArrow: "<div class='slick-arrows arrow-prev'><i class='fa fa-angle-left'></i></div>",
-
+            responsive: [{
+                breakpoint: 768,
+                settings: "unslick"
+            }]
         });
 
         $('.main-slider').slick("setPosition");
-
     }
+
+}
+mainSlickInit()
+
+    $(window).on("resize", mainSlickInit);
+
 
 
     // end SLIDERs ====

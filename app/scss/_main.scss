@@ -120,10 +120,9 @@
 	@include min(768px){
 		margin-top: 50px;
 	}
-	@include min(1024px){
+	@include min(1200px){
 		margin-top: 150px;
-		height: 45vw;
-		max-height: 720px;
+		max-height: 900px;
 		flex-wrap: nowrap;
 	}
 
@@ -146,10 +145,13 @@
 	}
 
 	.right-wr{
+		margin-top: 	0;
+		// height: 	600px;
 		padding: 50px 15px 80px 15px;
 		background-size: cover;
+
 				background-image: linear-gradient(to bottom,#fff 30%,rgba(255,255,255,0) 100%),url(../img/inf-about-bg.jpg);
-		@include min(1024px){
+		@include min(1200px){
 			padding: 30px 15px 80px 15px;
 			width: 58%;
 			order: 2;
@@ -164,9 +166,11 @@
 
 	}
 	.left-wr{
+		height: 900px;
 		display: flex;
 		position: relative;
-		@include min(1024px){
+		width: 100%;
+		@include min(1200px){
 			order: 1;
 			width: 42%;
 		}
@@ -177,8 +181,19 @@
 			background-position: right bottom;
 			// position: relative;
 			background-size: cover;
+			// min-height: 600px;
+			@include min(1024px){
+				position: static;
+				min-height: auto;
+				// padding: 335px 0 0 0;
+			}
 			.deskr{
-
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 50%;
+				padding: 100px 15px 30px 15px;
 				@include min(1024px){
 					height: 50%;
 					width: 50%;
@@ -194,14 +209,25 @@
 			background: #fff url(../img/deskr-2-bg.png) no-repeat;
 			background-size: contain;
 			background-position: left top;
-			// position: relative;
-			@include min(750px){
-				padding: 335px 0 0 0;
+			position: relative;
+			// min-height: 600px;
+			@include min(1024px){
+				position: static;
+				min-height: auto;
+				// padding: 335px 0 0 0;
 			}
 			@include min(1024px){
 				padding: 0;
 			}
 			.deskr{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				height: 50%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 				@include min(1024px){
 					position: absolute;
 					bottom: 0;
@@ -328,7 +354,7 @@
 
 
 .tabs{
-	width:50%;
+	width:70%;
 	&__item{
 		width: 30%;
 		font-size: 20px;
@@ -336,12 +362,16 @@
 	}
 }
 
-.rec-category__s-brands.slider-brands .slick-list {
-	padding: 0 100px;
-}
-
 .slider-products__item{
 	margin: 0 20px;
+}
+.popular-products{
+	.slider-brands{
+		width: calc(100% - 140px);
+		@include min(1200px){
+			width: 100%;
+		}
+	}
 }
 .advanteges{
 	height: 640px;
@@ -352,9 +382,30 @@
 		letter-spacing: 4px;
 	}
 	&__list{
+		z-index: 	10;
 		margin-top: 80px;
+		@include min(993px){
+			columns: 2;
+		}
+	}
+	&:after{
+		@include min(1920px){
+			z-index: 1;
+			bottom: -280px;
+		border-top: 280px solid #f0f7fa;
+		border-bottom: 0;
+		border-left: 0;
+			border-right: 1920px solid transparent;
+		}
+	}
+	.square{
+		// width: 500px;
+		// height: 500px;
+		// border: 20px solid #fff;
+		// position: absolute;
 	}
 }
+
 .advanteges .with-v-line{
 
 	transform: translateY(20%);
@@ -426,8 +477,6 @@
 	}
 }
 
-.advanteges__list{
-	columns: 2;
-}
+
 
 
