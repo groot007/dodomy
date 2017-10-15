@@ -94,7 +94,15 @@ img{
 }
 
 .hidden{
-  display: none;
+  display: none !important;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
 }
 
 section{
@@ -116,7 +124,7 @@ section{
   color: $grey333;
   margin-bottom: 25px;
 
-  @include min(750px){
+  @include min(768px){
     font-size: 28px;
   }
 
@@ -142,7 +150,7 @@ section{
   text-align: center;
   font-weight: 400;
   color: $grey333;
-  @include min(750px){
+  @include min(768px){
     font-size: 28px;
   }
   @include min(1024px){
@@ -178,9 +186,11 @@ section{
   min-width: 170px;
   background-color: transparent;
   color: #898889;
+  transition: border-radius .5s ease;
 
   &:hover{
     cursor: pointer;
+    border-radius: 10px;
   }
 
   &--reg{

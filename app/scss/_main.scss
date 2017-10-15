@@ -2,15 +2,16 @@
 
 
 .rec-category{
-	margin-top: 100px;
+	margin-top: 50px;
+	@include min(1024px){
+		margin-top: 100px;
+	}
+
 	[class*="col-"]{
 		padding: 0 5px;
 
 	}
 	&__h-head{
-		margin-bottom: 80px;
-	}
-	&__s-brands{
 		margin-bottom: 50px;
 	}
 
@@ -22,7 +23,8 @@
 	background-color: #f8f8f8;
 	padding: 10px;
 	min-height: 300px;
-	margin-bottom: 40px;
+	height: 300px;
+	margin-bottom: 10px;
 	display: inline-block;
 	text-decoration: none;
 	text-align: left;
@@ -44,9 +46,15 @@
 	}
 
 	&__sub-title{
-		max-width: 60%;
+		max-width: 100%;
 		color : #777;
-		width: 50%;
+		width: 65%;
+		@include min(993px){
+			width: 50%;
+		}
+		@include min(1024px){
+			width: 65%;
+		}
 	}
 
 	&__details{
@@ -55,34 +63,52 @@
 
 	&--lamps{
 		background-image: url(../img/rec-category/lamps.png);
-		background-position: right -150px top -10px;
+		background-position: right -230px top -10px;
 		background-repeat: no-repeat;
+		@include min(993px){
+			background-position: right -150px top -10px;
+		}
 	}
 
 	&--sofa{
 		background-image: url(../img/rec-category/sofa.png);
-		background-position: right -100px bottom -30px;
+		background-position: right -180px bottom -30px;
 		background-repeat: no-repeat;
+		@include min(993px){
+			background-position: right -100px bottom -30px;
+		}
 	}
 	&--commode{
 		background-image: url(../img/rec-category/commode.png);
-		background-position: right -90px bottom -10px;
+		background-position: right -150px bottom -10px;
 		background-repeat: no-repeat;
+		@include min(993px){
+			background-position: right -90px bottom -10px;
+		}
 	}
 	&--kitchen{
 		background-image: url(../img/rec-category/kitchen.png);
-		background-position: right -95px bottom -40px;
+		background-position: right -165px bottom -70px;
 		background-repeat: no-repeat;
+		@include min(993px){
+			background-position: right -95px bottom -40px;
+		}
 	}
 	&--pouf{
 		background-image: url(../img/rec-category/pouf.png);
-		background-position: right -15px bottom -40px;
+		background-position: right -65px bottom -40px;
 		background-repeat: no-repeat;
+		@include min(993px){
+			background-position: right -15px bottom -40px;
+		}
 	}
 	&--bedroom{
 		background-image: url(../img/rec-category/bedroom.png);
-		background-position: right -80px bottom -40px;
+		background-position: right -120px bottom -70px;
 		background-repeat: no-repeat;
+		@include min(993px){
+			background-position: right -80px bottom -40px;
+		}
 	}
 
 	&--order{
@@ -90,8 +116,9 @@
 		background: $links-color;
 		text-align: center;
 		display: flex;
+		min-height: 300px;
 		align-items: center;
-		margin-left: 5px;
+		margin-left: 0px;
 		&:hover{
 			background: $links-color;
 		}
@@ -114,14 +141,26 @@
 	.more-txt{
 		display: block;
 	}
+	p{
+		line-height: 	24px;
+	}
+	.two-imgs{
+		width: 40%;
+		@include min(1200px){
+			width: auto;
+		}
+	}
 }
 
 .inf-about{
 	@include min(768px){
 		margin-top: 50px;
 	}
-	@include min(1200px){
-		margin-top: 150px;
+	@include min(992px){
+		margin-top: 100px;
+	}
+	@include min(1400px){
+		margin-top: 140px;
 		max-height: 900px;
 		flex-wrap: nowrap;
 	}
@@ -145,12 +184,17 @@
 	}
 
 	.right-wr{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include min(768px){
 		margin-top: 	0;
 		// height: 	600px;
-		padding: 50px 15px 80px 15px;
+		padding: 90px 15px 80px 15px;
 		background-size: cover;
 
-				background-image: linear-gradient(to bottom,#fff 30%,rgba(255,255,255,0) 100%),url(../img/inf-about-bg.jpg);
+		background-image: linear-gradient(to bottom,#fff 30%,rgba(255,255,255,0) 100%),url(../img/inf-about-bg.jpg);
+		}
 		@include min(1200px){
 			padding: 30px 15px 80px 15px;
 			width: 58%;
@@ -161,18 +205,22 @@
 		}
 
 		.h-simple{
-			margin-bottom: 50px;
+			margin-bottom:30px;
 		}
 
 	}
 	.left-wr{
-		height: 900px;
+		height: 700px;
 		display: flex;
 		position: relative;
 		width: 100%;
 		@include min(1200px){
 			order: 1;
+
 			width: 42%;
+		}
+		@include min(1450px){
+			height: 900px;
 		}
 		.block-left{
 			padding: 0 0 0 0;
@@ -193,7 +241,7 @@
 				align-items: center;
 				justify-content: center;
 				height: 50%;
-				padding: 100px 15px 30px 15px;
+				padding: 100px 65px 30px 65px;
 				@include min(1024px){
 					height: 50%;
 					width: 50%;
@@ -228,6 +276,7 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+				padding: 15px 65px;
 				@include min(1024px){
 					position: absolute;
 					bottom: 0;
@@ -269,86 +318,6 @@
 
 
 
-.contacts-section{
-	.el-wr{
-		flex-wrap: nowrap;
-		justify-content: space-between;
-
-	}
-	&__logo, &__user-zone, &__phones, &__social{
-		width: auto;
-	}
-	@include min(1024px){
-
-		&__logo{
-			width: 25%;
-		}
-		&__user-zone{
-			width: 16%;
-		}
-		&__phones{
-			order: 4;
-			width: 16%;
-		}
-		&__social{
-			width: 25%;
-		}
-	}
-
-}
-
-.contacts-section__logo{
-	margin: 0;
-	display: flex;
-	align-items: center;
-}
-
-.contacts-section__user-zone{
-	display: flex;
-	align-items: flex-start;
-	width: 30%;
-	margin-left: 5%;
-	flex-direction: column;
-	justify-content: center;
-	text-align: left;
-	@include min(1024px){
-		margin-left: 0;
-		width: 35%;
-		flex-direction: row;
-		align-items: center;;
-	}
-}
-.contacts-section__social{
-	display: flex;
-	width: 15%;
-	align-items: center;
-	justify-content: center;
-	li{
-		margin-left: 20px;
-	}
-}
-
-.contacts-section__sign{
-	width: auto;
-	margin: 0;
-	@include min(1024px){
-		margin-left: 60px;
-	}
-	&:first-child{
-		@include min(1024px){
-			margin-left: 40px;
-		}
-	}
-}
-
-.contacts-section__phone{
-	width: 100%;
-	margin-bottom: 10px;
-	display: inline-block;
-	&:last-child{
-		margin-bottom: 0;
-	}
-}
 
 
 
@@ -368,6 +337,7 @@
 .popular-products{
 	.slider-brands{
 		width: calc(100% - 140px);
+		margin-bottom: 	50px;
 		@include min(1200px){
 			width: 100%;
 		}
@@ -375,11 +345,19 @@
 }
 .advanteges{
 	height: 640px;
+	.h-head{
+		@include min(1400px){
+				margin-bottom: 	100px;
+		}
+	}
 	.h-sub-title{
 		text-align: right;
 		padding-bottom: 40px;
 		font-size: 24px;
 		letter-spacing: 4px;
+		&:before{
+			right: -30px;
+		}
 	}
 	&__list{
 		z-index: 	10;
@@ -399,10 +377,34 @@
 		}
 	}
 	.square{
-		// width: 500px;
-		// height: 500px;
-		// border: 20px solid #fff;
-		// position: absolute;
+		@include min(768px){
+		width: 320px;
+				height: 320px;
+				top: 20%;
+				z-index: 99;
+				left: 15px;
+				border: 20px solid #fff;
+				position: absolute;
+		}
+		@include min(992px){
+				width: 90%;
+				height: 90%;
+				top: 20%;
+				z-index: 99;
+				left: 15px;
+				border: 40px solid #fff;
+				position: absolute;
+		}
+		@include min(1200px){
+			width: 90%;
+		height: 90%;
+		top: 25%;
+		z-index: 99;
+		left: 15px;
+		border: 50px solid #fff;
+		position: absolute;
+		}
+
 	}
 }
 
@@ -411,7 +413,7 @@
 	transform: translateY(20%);
 	max-width:100%;
 	z-index: 99;
-	margin-left: 10%;
+	margin-left: 15%;
 
 	@include min(768px){
 		position: absolute;
@@ -427,55 +429,44 @@
 		transform: translateY(-20%);
 	}
 	&:before{
-		top: 35px;
-		height: 68%;
+
+		@include min(768px){
+			top: 45px;
+		height: 92%;
+		}
+		@include min(992px){
+			height: 76%;
+		}
+		@include min(1200px){
+			top: 45px;
+		height: 63%;
+		}
+		@include min(1400px){
+			top: 105px;
+		}
 	}
 	&:after{
 		content: '';
 		display: block;
-		left: -20px;
+		left: -34px;
 		position: absolute;
-		top: 35px;
+
 		background: #000;
 		height: 1px;
-		width: 20px;
+		width: 34px;
+		@include min(768px){
+			top: 45px;
+		}
+
+		@include min(1200px){
+			top: 45px;
+		}
+		@include min(1400px){
+			top: 105px;
+		}
 	}
 }
 
-.subscribe{
-	padding: 30px 0;
-	background-image: linear-gradient(to bottom,rgba(212,78,100,.95) 0,rgba(212,78,100,.95) 100%),
-	url(../img/subscribe-bg.png);
-	background-size: cover;
-	.wr-flex{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		hgroup, form{
-			width: 50%;
-		}
-
-
-	}
-	.h-simple{
-		text-align: left;
-		margin-bottom: 15px;
-	}
-	&__btn{
-			width: 70%;
-			margin-left: 20px;
-			@include min(1200px){
-				width: 30%;
-			}
-		}
-	&__input{
-			width: 70%;
-		}
-	&__sub-title{
-		text-align: left;
-		width: 70%;
-	}
-}
 
 
 

@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body class="index">
     <!-- ============================================== -->
     <!-- ===============  HEADER ====================== -->
     <!-- ============================================== -->
@@ -45,269 +45,277 @@
         <header class="header-with-bg">
             <div class="gradient-overlay"></div>
             <div class="main-wrap">
-            <div class="site-header__top-head top-head">
-                <div class="top-head__menu-bar menu-bar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="top-head__mmenu mmenu">
-                    <div class="mmenu__lang lang-change">
-                        <a href="#" class="lang-change__item lang-change__item--active">ua</a>
-                        <a href="#" class="lang-change__item">ru</a>
+                <div class="site-header__top-head top-head">
+                    <div class="top-head__menu-bar menu-bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <ul class="mmenu__list">
-                        <li class="mmenu__item mmenu__item--popup"><a href="#">Вхід</a>
+                    <div class="top-head__mmenu mmenu">
+                        <div class="mmenu__lang lang-change">
+                            <a href="#" class="lang-change__item lang-change__item--active">ua</a>
+                            <a href="#" class="lang-change__item">ru</a>
+                        </div>
+                        <ul class="mmenu__list">
+                            <li class="mmenu__item mmenu__item--popup"><a href="#">Вхід</a>
+                            </li>
+                            <li class="mmenu__item mmenu__item--popup"><a href="#">Реєстрація</a>
+                            </li>
+                            <li class="mmenu__item"><a href="#">Про нас</a>
+                            </li>
+                            <li class="mmenu__item"><a href="#">Доставка</a>
+                            </li>
+                            <li class="mmenu__item"><a href="#">Контакти</a>
+                            </li>
+                        </ul>
+                        <form action="" class="mmenu__search search">
+                            <input class="search__input" type="text" placeholder="Пошук">
+                            <button class="search__btn"><i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                        <span class="mmenu__close"><i class="fa fa-times"></i></span>
+                    </div>
+                    <div class="top-head__logo logo">
+                        <a href="#"><img src="img/LOGO.png" alt="">
+                        </a>
+                    </div>
+                    <div class="top-head__contacts contacts">
+                        <a class="contacts__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
+                        <a class="contacts__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
+                        <a class="contacts__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
+                        <a class="contacts__sign" href="#"><span>Вхід</span> <i class="fa fa-sign-in"></i></a>
+                        <a class="contacts__sign" href="#"><span>Реєстрація</span><i class="fa fa-user-plus"></i></a>
+                    </div>
+                    <ul class="top-head__main-menu main-menu">
+                        <li class="main-menu__item"><a href="#">Про нас</a>
                         </li>
-                        <li class="mmenu__item mmenu__item--popup"><a href="#">Реєстрація</a>
+                        <li class="main-menu__item"><a href="#">Доставка</a>
                         </li>
-                        <li class="mmenu__item"><a href="#">Про нас</a>
-                        </li>
-                        <li class="mmenu__item"><a href="#">Доставка</a>
-                        </li>
-                        <li class="mmenu__item"><a href="#">Контакти</a>
+                        <li class="main-menu__item"><a href="#">Контакти</a>
                         </li>
                     </ul>
-                    <form action="" class="mmenu__search search">
+                    <form action="" class="top-head__search search">
                         <input class="search__input" type="text" placeholder="Пошук">
                         <button class="search__btn"><i class="fa fa-search"></i>
                         </button>
                     </form>
-                    <span class="mmenu__close"><i class="fa fa-times"></i></span>
-                </div>
-                <div class="top-head__logo logo">
-                    <a href="#"><img src="img/LOGO.png" alt="">
+                    <div class="top-head__lang-change lang-change">
+                        <select name="lang" id="lang">
+                            <option value="ua">ua</option>
+                            <option value="ru">ru</option>
+                        </select>
+                    </div>
+
+
+                    <a href="" class="top-head__shopping-basket shopping-basket">
+                        <i class="shopping-basket__icon fa fa-shopping-basket"></i>
+                        <span class="shopping-basket__counter">0</span>
                     </a>
                 </div>
-                <div class="top-head__contacts contacts">
-                    <a class="contacts__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
-                    <a class="contacts__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
-                    <a class="contacts__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
-                    <a class="contacts__sign" href="#"><span>Вхід</span> <i class="fa fa-sign-in"></i></a>
-                    <a class="contacts__sign" href="#"><span>Реєстрація</span><i class="fa fa-user-plus"></i></a>
-                </div>
-                <ul class="top-head__main-menu main-menu">
-                    <li class="main-menu__item"><a href="#">Про нас</a>
-                    </li>
-                    <li class="main-menu__item"><a href="#">Доставка</a>
-                    </li>
-                    <li class="main-menu__item"><a href="#">Контакти</a>
-                    </li>
-                </ul>
-                <form action="" class="top-head__search search">
-                    <input class="search__input" type="text" placeholder="Пошук">
-                    <button class="search__btn"><i class="fa fa-search"></i>
-                    </button>
-                </form>
-                <div class="top-head__lang-change lang-change">
-                    <select name="lang" id="lang">
-                        <option value="ua">ua</option>
-                        <option value="ru">ru</option>
-                    </select>
-                </div>
-
-
-                <a href="" class="top-head__shopping-basket shopping-basket">
-                    <i class="shopping-basket__icon fa fa-shopping-basket"></i>
-                    <span class="shopping-basket__counter">0</span>
-                </a>
-            </div>
-            <div class="site-header__catalog catalog">
-                <div class="catalog__item">
-                    <div class="item-catalog__icon"><i class="icon icon-hallway"></i>
-                    </div>
-                    <div class="item-catalog__title">Коридор</div>
-                </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon"><i class="icon icon-bedroom"></i>
-                    </div>
-                    <div class="item-catalog__title">Спальня</div>
-                </div>
-                <div class="catalog__item">
-                    <span class="item-catalog__back"><i class="fa fa-angle-double-left"></i>Назад</span>
-                    <div class="item-catalog__icon"><i class="icon icon-kitchen"></i>
-                    </div>
-                    <div class="item-catalog__title">Кухня</div>
-                    <div class="catalog__dropdown-menu dropdown-menu">
-                        <div class="items">
-
-                            <div class="dropdown-menu__item">
-                                <div class="item-dropdown__img">
-                                    <a href="#"><img src="img/dropdown/module-kitchen.png" alt=""></a>
-                                </div>
-                                <div class="item-dropdown__title">
-                                    <a href="#">Модульні кухні</a>
-                                </div>
-
-                            </div>
-                            <div class="dropdown-menu__item">
-                                <div class="item-dropdown__img">
-                                    <a href="#"><img src="img/dropdown/set-kitchen.png" alt=""></a>
-                                </div>
-                                <div class="item-dropdown__title">
-                                    <a href="#">Комплекти кухонь</a>
-                                </div>
-
-                            </div>
-                            <div class="dropdown-menu__item dropdown-menu__item--with-list show-more">
-                                <div class="wrap-absolute">
-                                    <div class="item-dropdown__title">
-                                        <a href="#">Куточки, столи та стільниці</a>
-                                    </div>
-                                    <div class="item-dropdown__img">
-                                        <a href="#"><img src="img/dropdown/table-and-chairs.png" alt=""></a>
-                                    </div>
-
-
-                                    <ul class="item-dropdown__list">
-                                        <li><a href="">Кухонні куточки</a>
-                                        </li>
-                                        <li><a href="">Кухонні стільці</a>
-                                        </li>
-                                        <li><a href="">Табурети в кухню</a>
-                                        </li>
-                                        <li><a href="">Обідні групи в кухню</a>
-                                        </li>
-                                        <li><a href="">Сервірувальні столики для кухні</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="dropdown-menu__item dropdown-menu__item--with-list">
-                                <div class="wrap-absolute">
-                                    <div class="item-dropdown__title">
-                                        <a href="#">Стільниці та аксесуари</a>
-                                    </div>
-                                    <div class="item-dropdown__img">
-                                        <a href="#"><img src="img/dropdown/slab.png" alt=""></a>
-                                    </div>
-
-
-                                    <ul class="item-dropdown__list">
-                                        <li><a href="">Стільниці кухонні під будь-який розмір</a>
-                                        </li>
-                                        <li><a href="">Стільниці стандартних розмірів</a>
-                                        </li>
-                                        <li><a href="">Аксесуари для кухні</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="dropdown-menu__item dropdown-menu__item--with-list">
-                                <div class="wrap-absolute">
-                                    <div class="item-dropdown__title">
-                                        <a href="#">Кухонні тумби</a>
-                                    </div>
-                                    <div class="item-dropdown__img">
-                                        <a href="#"><img src="img/dropdown/timb.png" alt=""></a>
-                                    </div>
-
-
-                                    <ul class="item-dropdown__list">
-                                        <li><a href="">Нижні кухонні тумби</a>
-                                        </li>
-                                        <li><a href="">Верхні кухонні тумби</a>
-                                        </li>
-                                        <li><a href="">Пенали кухонні</a>
-                                        </li>
-                                        <li><a href="">Кухонні фасади</a>
-                                        </li>
-                                        <li><a href="">Кухонні корпуси</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="dropdown-menu__item">
-                                <div class="item-dropdown__img">
-                                    <a href="#"><img src="img/dropdown/puzzle.png" alt=""></a>
-                                </div>
-                                <div class="item-dropdown__title">
-                                    <a href="#">Кухні під замовлення</a>
-                                </div>
-                            </div>
-                            <a href="#" class="all-catagories">
-                                <img class="all-catagories__arrow" src="img/dropdown/arrow down.png" alt="">
-                            </a>
+                <div class="site-header__catalog catalog">
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon"><i class="icon icon-hallway"></i>
                         </div>
-                        <div class="slider-brands-wr">
+                        <div class="item-catalog__title">Коридор</div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon"><i class="icon icon-bedroom"></i>
+                        </div>
+                        <div class="item-catalog__title">Спальня</div>
+                    </div>
+                    <div class="catalog__item">
+                        <span class="item-catalog__back"><i class="fa fa-angle-double-left"></i>Назад</span>
+                        <div class="item-catalog__icon"><i class="icon icon-kitchen"></i>
+                        </div>
+                        <div class="item-catalog__title">Кухня</div>
+                        <div class="catalog__dropdown-menu dropdown-menu">
+                            <div class="items">
+
+                                <div class="dropdown-menu__item">
+                                    <div class="item-dropdown__img">
+                                        <a href="#"><img src="img/dropdown/module-kitchen.png" alt=""></a>
+                                    </div>
+                                    <div class="item-dropdown__title">
+                                        <a href="#">Модульні кухні</a>
+                                    </div>
+
+                                </div>
+                                <div class="dropdown-menu__item">
+                                    <div class="item-dropdown__img">
+                                        <a href="#"><img src="img/dropdown/set-kitchen.png" alt=""></a>
+                                    </div>
+                                    <div class="item-dropdown__title">
+                                        <a href="#">Комплекти кухонь</a>
+                                    </div>
+
+                                </div>
+                                <div class="dropdown-menu__item dropdown-menu__item--with-list show-more">
+                                    <div class="wrap-absolute">
+                                        <div class="item-dropdown__title">
+                                            <a href="#">Куточки, столи та стільниці</a>
+                                        </div>
+                                        <div class="item-dropdown__img">
+                                            <a href="#"><img src="img/dropdown/table-and-chairs.png" alt=""></a>
+                                        </div>
 
 
-                        <div class="dropdown-menu__slider slider-brands">
-                            <div>
-                                <div class="group-hover">
-                                    <img src="img/dropdown/companies/logo 1.png" alt="" />
-                                    <img src="img/dropdown/companies/logo 1 hover.png" alt="" />
+                                        <ul class="item-dropdown__list">
+                                            <li><a href="">Кухонні куточки</a>
+                                            </li>
+                                            <li><a href="">Кухонні стільці</a>
+                                            </li>
+                                            <li><a href="">Табурети в кухню</a>
+                                            </li>
+                                            <li><a href="">Обідні групи в кухню</a>
+                                            </li>
+                                            <li><a href="">Сервірувальні столики для кухні</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="group-hover">
-                                    <img src="img/dropdown/companies/logo 2.png" alt="" />
-                                    <img src="img/dropdown/companies/logo 2 hover.png" alt="" />
+                                <div class="dropdown-menu__item dropdown-menu__item--with-list">
+                                    <div class="wrap-absolute">
+                                        <div class="item-dropdown__title">
+                                            <a href="#">Стільниці та аксесуари</a>
+                                        </div>
+                                        <div class="item-dropdown__img">
+                                            <a href="#"><img src="img/dropdown/slab.png" alt=""></a>
+                                        </div>
+
+
+                                        <ul class="item-dropdown__list">
+                                            <li><a href="">Стільниці кухонні під будь-який розмір</a>
+                                            </li>
+                                            <li><a href="">Стільниці стандартних розмірів</a>
+                                            </li>
+                                            <li><a href="">Аксесуари для кухні</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="group-hover">
-                                    <img src="img/dropdown/companies/logo 3.png" alt="" />
-                                    <img src="img/dropdown/companies/logo 3 hover.png" alt="" />
+                                <div class="dropdown-menu__item dropdown-menu__item--with-list">
+                                    <div class="wrap-absolute">
+                                        <div class="item-dropdown__title">
+                                            <a href="#">Кухонні тумби</a>
+                                        </div>
+                                        <div class="item-dropdown__img">
+                                            <a href="#"><img src="img/dropdown/timb.png" alt=""></a>
+                                        </div>
+
+
+                                        <ul class="item-dropdown__list">
+                                            <li><a href="">Нижні кухонні тумби</a>
+                                            </li>
+                                            <li><a href="">Верхні кухонні тумби</a>
+                                            </li>
+                                            <li><a href="">Пенали кухонні</a>
+                                            </li>
+                                            <li><a href="">Кухонні фасади</a>
+                                            </li>
+                                            <li><a href="">Кухонні корпуси</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="group-hover">
-                                    <img src="img/dropdown/companies/logo 4.png" alt="" />
-                                    <img src="img/dropdown/companies/logo 4 hover.png" alt="" />
+                                <div class="dropdown-menu__item">
+                                    <div class="item-dropdown__img">
+                                        <a href="#"><img src="img/dropdown/puzzle.png" alt=""></a>
+                                    </div>
+                                    <div class="item-dropdown__title">
+                                        <a href="#">Кухні під замовлення</a>
+                                    </div>
                                 </div>
+                                <div class="dropdown-menu__item">
+                                    <div class="item-dropdown__img">
+                                        <a href="#"><img src="img/dropdown/puzzle.png" alt=""></a>
+                                    </div>
+                                    <div class="item-dropdown__title">
+                                        <a href="#">Кухні під замовлення</a>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div>
-                                <div class="group-hover">
-                                    <img src="img/dropdown/companies/logo 5.png" alt="" />
-                                    <img src="img/dropdown/companies/logo 5 hover.png" alt="" />
+                            <div class="slider-brands-wr">
+                                <a href="#" class="all-catagories">
+                                    <img class="all-catagories__arrow" src="img/dropdown/arrow down.png" alt="">
+                                </a>
+
+                                <div class="dropdown-menu__slider slider-brands">
+                                    <div>
+                                        <div class="group-hover">
+                                            <img src="img/dropdown/companies/logo 1.png" alt="" />
+                                            <img src="img/dropdown/companies/logo 1 hover.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="group-hover">
+                                            <img src="img/dropdown/companies/logo 2.png" alt="" />
+                                            <img src="img/dropdown/companies/logo 2 hover.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="group-hover">
+                                            <img src="img/dropdown/companies/logo 3.png" alt="" />
+                                            <img src="img/dropdown/companies/logo 3 hover.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="group-hover">
+                                            <img src="img/dropdown/companies/logo 4.png" alt="" />
+                                            <img src="img/dropdown/companies/logo 4 hover.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="group-hover">
+                                            <img src="img/dropdown/companies/logo 5.png" alt="" />
+                                            <img src="img/dropdown/companies/logo 5 hover.png" alt="" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon"><i class="icon icon-living-room"></i>
                         </div>
+                        <div class="item-catalog__title">Вітальня</div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon scale2"><i class="icon icon-sofa"></i>
+                        </div>
+                        <div class="item-catalog__title">Дивани</div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon"><i class="icon icon-commode"></i>
+                        </div>
+                        <div class="item-catalog__title">Комоди</div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon"><i class="icon icon-office"></i>
+                        </div>
+                        <div class="item-catalog__title">Офіс</div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon"><i class="icon icon-wardrobe"></i>
+                        </div>
+                        <div class="item-catalog__title">Шафи</div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon"><i class="icon icon-pouf"></i>
+                        </div>
+                        <div class="item-catalog__title">Пуфи</div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon scale2"><i class="icon icon-chairs-and-tables"></i>
+                        </div>
+                        <div class="item-catalog__title">Столи, стільці</div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="item-catalog__icon"><i class="icon icon-lamp"></i>
+                        </div>
+                        <div class="item-catalog__title">Люстри</div>
                     </div>
                 </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon"><i class="icon icon-living-room"></i>
-                    </div>
-                    <div class="item-catalog__title">Вітальня</div>
-                </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon scale2"><i class="icon icon-sofa"></i>
-                    </div>
-                    <div class="item-catalog__title">Дивани</div>
-                </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon"><i class="icon icon-commode"></i>
-                    </div>
-                    <div class="item-catalog__title">Комоди</div>
-                </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon"><i class="icon icon-office"></i>
-                    </div>
-                    <div class="item-catalog__title">Офіс</div>
-                </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon"><i class="icon icon-wardrobe"></i>
-                    </div>
-                    <div class="item-catalog__title">Шафи</div>
-                </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon"><i class="icon icon-pouf"></i>
-                    </div>
-                    <div class="item-catalog__title">Пуфи</div>
-                </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon scale2"><i class="icon icon-chairs-and-tables"></i>
-                    </div>
-                    <div class="item-catalog__title">Столи, стільці</div>
-                </div>
-                <div class="catalog__item">
-                    <div class="item-catalog__icon"><i class="icon icon-lamp"></i>
-                    </div>
-                    <div class="item-catalog__title">Люстри</div>
-                </div>
-            </div>
             </div>
         </header>
 
@@ -611,12 +619,15 @@
             <div class="right-wr">
               <h2 class="h-simple"><span class="pink">"Додому"</span> - Ваш інтернет магазин меблів</h2>
               <div class="inf-about__txt">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus magni eos nam vel, eum non maiores, iusto deserunt officiis minima maxime voluptatibus sit, asperiores laborum rem voluptas ad beatae sequi quibusdam. Totam expedita, voluptates quia eveniet, error enim aperiam. Beatae, qui incidunt consequatur enim et dolorem eum nihil placeat dolore sunt magni assumenda rem corporis sapiente mollitia, </p> <p>labore amus nobis, perferendis optio quasi, iusto facilis! Facilis harum aliquam blanditiis illo vel accusamus quis illum itaque expedita.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus magni eos nam vel, eum non maiores, iusto deserunt officiis minima maxime voluptatibus sit, asperiores laborum rem voluptas ad beatae sequi quibusdam. Totam expedita, voluptates quia eveniet, error enim aperiam. Beatae, qui incidunt consequatur enim et dolorem eum nihil placeat dolore sunt magni assumenda rem corporis sapiente mollitia, </p> <p>labore amus nobis, perferendis optio quasi, iusto facilis! Facilis harum aliquam blanditiis illo vel accusamus quis illum itaque expedita.</p>
               </div>
-              <a href="#" class="inf-about__btn btn btn--reg">Реєстрація</a>
-              <a href="#" class="inf-about__btn btn btn--grey">Детальніше</a>
-          </div>
-          <div class="left-wr">
+              <div class="btns-group">
+                <a href="#" class="inf-about__btn btn btn--reg">Реєстрація</a>
+                <a href="#" class="inf-about__btn btn btn--grey">Детальніше</a>
+            </div>
+
+        </div>
+        <div class="left-wr">
             <div class="block-left">
                 <div class="deskr">
                     <i class="deskr__icon fa fa-hand-peace-o" aria-hidden="true"></i>
@@ -639,89 +650,113 @@
         <div class="container">
           <h2 class="h-head"">Найкращі рішення для Вашого інтер’єру</h2>
           <div class="two-imgs">
-            <div class="wr-img"><img src="img/mobile/best-decision.png" alt=""></div>
+            <div class="wr-img"><img src="img/best-desicion.png" alt=""></div>
             <div class="wr-img"><img src="img/mobile/logo-grey.png" alt=""></div>
         </div>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas nostrum expedita nesciunt numquam sit dolores. Magni quo nam quaerat veniam minus culpa, mollitia nihil accusamus esse vero nisi? Molestiae aliquid laboriosam omnis, quo eos nam beatae iusto, quisquam voluptas explicabo quia ipsam tenetur accusantium nostrum quibusdam, aperiam, veniam similique! Delectus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid odit pariatur similique cupiditate perferendis, quia commodi ea dolorum dolor harum modi soluta, ratione, reprehenderit dolorem facere. Nulla suscipit, quas doloribus recusandae doloremque inventore facilis assumenda obcaecati earum ab exercitationem eaque accusantium esse nam repellendus adipisci, quod voluptatum dolore. Laboriosam.</p>
+        <p>Купівля меблів у наш час справа не проста, тому що потрібно підібрати меблі, які б дійсно
+        приносили комфорт у Ваш дім, були б функціональні і майже завжди компактні аби не займати багато простору у Вашому домі. Багато сімей обмежують свій вибір бюджетом, який виділяють на купівлю меблів.</p>
+        <p>І тут постає питання чи можливо купити недорогі і якісні меблі і чи взагалі поняття “недорого
+            і якісно” існує по відношенню до меблів? У вирішенні подібних питань Вам прийде на допомогу
+        інтернет-магазин меблів dodomy.com.ua. В еру інтернет-покупок, ринок меблів не лишився осторонь. Тоді, в чому саме перевага інтернет-магазин меблів dodomy.com.ua і чим він кращий за інших? Цілком справедливе питання, на яке кожен покупець хоче отримати конструктивну відповідь.</p>
+        <p>Серед переваг інтернет-магазин меблів dodomy.com.ua виділимо наступні пункти:</p>
         <div class="more-txt">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid odit pariatur similique cupiditate perferendis, quia commodi ea dolorum dolor harum modi soluta, ratione, reprehenderit dolorem facere. Nulla suscipit, quas doloribus recusandae doloremque inventore facilis assumenda obcaecati earum ab exercitationem eaque accusantium esse nam repellendus adipisci, quod voluptatum dolore. Laboriosam.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid odit pariatur similique cupiditate perferendis, quia commodi ea dolorum dolor harum modi soluta, ratione, reprehenderit dolorem facere. Nulla suscipit, quas doloribus recusandae doloremque inventore facilis assumenda obcaecati earum ab exercitationem eaque accusantium esse nam repellendus adipisci, quod voluptatum dolore. Laboriosam.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid odit pariatur similique cupiditate perferendis, quia commodi ea dolorum dolor harum modi soluta, ratione, reprehenderit dolorem facere. Nulla suscipit, quas doloribus recusandae doloremque inventore facilis assumenda obcaecati earum ab exercitationem eaque accusantium esse nam repellendus adipisci, quod voluptatum dolore. Laboriosam.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid odit pariatur similique cupiditate perferendis, quia commodi ea dolorum dolor harum modi soluta, ratione, reprehenderit dolorem facere. Nulla suscipit, quas doloribus recusandae doloremque inventore facilis assumenda obcaecati earum ab exercitationem eaque accusantium esse nam repellendus adipisci, quod voluptatum dolore. Laboriosam.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid odit pariatur similique cupiditate perferendis, quia commodi ea dolorum dolor harum modi soluta, ratione, reprehenderit dolorem facere. Nulla suscipit, quas doloribus recusandae doloremque inventore facilis assumenda obcaecati earum ab exercitationem eaque accusantium esse nam repellendus adipisci, quod voluptatum dolore. Laboriosam.</p>
+            <h3 class="text-left">Доступні ціни на всі меблі</h3>
+            <p>
+                Саме ціна є головним параметром для більшості покупців, яким вони керуються при покупці меблів. dodomy.com.ua
+                старається бути лояльним, пропонуючи своїм покупцям цілком доступні ціни, проводячи різноманітні розіграші та акції.
+            Працюючи напряму з постачальниками, інтернет-магазин є привабливим і доступним в ціновому плані, оскільки більшість конкурентів працюють з посередниками.</p>
+            <h3 class="text-left">Якісні і недорогі меблі</h3>
+            <p>
+            Так, якісні і недорогі меблі- це поєднання є ключовим для інтернет-магазину меблів, що забезпечується знову ж таки тісною співпрацею з постачальниками напряму, оскільки менеджери та власники дбають про імідж свого магазину.</p>
+            <h3 class="text-left">Доставка по всій Україні будь-яких меблів, зручні для вас способи оплати</h3>
+            <p>
+                Оскільки на сьогоднішній день доставка та оплата є не менш важливим пунктом, ніж ціна, то компанія дбає про те, щоб забезпечити максимально комфортні умови для покупців і в плані комфортної та швидкої доставки меблів.
+                На даний момент доставка меблів відбувається по всій території України,
+                а також доступні всі найбільш популярні способи оплати послуг.
+                У вартість товару уже включена доставка у Ваше місто,
+            що є дуже зручним, адже не потрібно думати про додаткову плату за доставку.</p>
+
+            <h3 class="text-left">Наявність зручного сайту інтернет-магазину dodomy.com.ua</h3>
+            <p>
+                Зручний сайт, великий вибір товарів, детальні характеристики товарів - будь це меблі для кухні, меблі для спальні чи дитячої кімнати або іншої частини Вашого дому- все у великому обсязі. Інформаційний розділ, в якому Ви зможете знайти рекомендації спеціалістів по вибору меблів або як правильно доглядати та користуватися тими чи іншими меблями - доступно на сайті. Наявність складів у великих містах дозволяє здійснювати оперативну доставку меблів як у міста, так і по регіонах. Купити меблі в Києві так само просто як і в будь-якому іншому місті. Завдяки оперативній доставці Ви зможете в найкоротші терміни милуватися новими меблями. На даний момент dodomy.com.ua пропонує купити меблі для дому кращих меблевих фабрик таких, як: Signal, Halmar, VOX, CAMA mebel, BRW та інші. Тут можна  купити меблі відмінної якості, з гарантією, збіркою і доставкою по всій Україні. Якісні меблі та доступні ціни, привітний та дружний колектив, онлайн-підтримка та консультація, гарантія та доставка - все це чекає Вас в інтернет-магазині меблів dodomy.com.ua!
+            </p>
+            <h3 class="text-center">Обирайте меблі та купуйте саме у нас!</h3>
         </div>
         <a href="#" class="read-more udl-link">Читати повністю  <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>
 </section>
-<section class="subscribe">
-    <div class="container">
-        <div class="wr-flex">
-            <hgroup>
-                <h2 class="h-simple h-simple--light">Хочете дізнаватися про акції першими і отримувати знижки?</h2>
-                <h3 class="subscribe__sub-title">Залиште свою електронну пошту та завжди залишайтесь в курсі вигідних пропозицій та новинок!</h3>
-            </hgroup>
-            <form action="">
-                <input type="email" name="email" id="email" class="subscribe__input txt-input txt-input--bg-white" placeholder="Введіть свій E-mail">
-                <input type="submit" class="subscribe__btn btn btn--light" value="Підписатись"></button>
-            </form>
-        </div>
-    </div>
-</section>
-<section class="contacts-section">
-    <div class="container">
-        <div class="el-wr">
-
-
-            <div class="contacts-section__logo">
-                <img src="img/LOGO.png" alt="">
-            </div>
-            <div class="contacts-section__user-zone">
-                <a class="contacts-section__sign" href="#"><i class="fa fa-sign-in"></i><span>Вхід</span> </a>
-                <a class="contacts-section__sign" href="#"><i class="fa fa-user-plus"></i><span>Реєстрація</span></a>
-            </div>
-
-            <div class="contacts-section__phones">
-                <a class="contacts-section__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
-                <a class="contacts-section__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
-                <a class="contacts-section__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
-            </div>
-
-            <ul class="contacts-section__social">
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</section>
 </main>
-
 
 <!-- ============================================== -->
 <!-- ========== END MAIN PART (CONTENT)============ -->
 <!-- ============================================== -->
 
 
+
+
+
+
 <!-- ============================================== -->
 <!-- ================== FOOTER ==================== -->
 <!-- ============================================== -->
 
-<footer class="footer">
-    <div class="container">
-        <div class="wr-flex">
-            <div class="copyright">
-                <span>2017</span> <i class="fa fa-copyright" aria-hidden="true"></i> <span>dodomy.com.ua</span>
-            </div>
-            <div class="webmaestro">
-                <p>Розробка, підтримка та розкрутка сайту:</p>
-                <!-- <img src="img/wm_lite.svg" alt=""> -->
+<footer class="site-footer">
+    <section class="subscribe">
+        <div class="container">
+            <div class="wr-flex">
+                <hgroup>
+                    <h2 class="h-simple h-simple--light">Хочете дізнаватися про акції першими і отримувати знижки?</h2>
+                    <h3 class="subscribe__sub-title">Залиште свою електронну пошту та завжди залишайтесь в курсі вигідних пропозицій та новинок!</h3>
+                </hgroup>
+                <form action="">
+                    <input type="email" name="email" id="email" class="subscribe__input txt-input txt-input--bg-white" placeholder="Введіть свій E-mail">
+                    <input type="submit" class="subscribe__btn btn btn--light" value="Підписатись"></button>
+                </form>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
+    <section class="contacts-section">
+        <div class="container">
+            <div class="el-wr">
 
+
+                <div class="contacts-section__logo">
+                    <img src="img/LOGO.png" alt="">
+                </div>
+                <div class="contacts-section__user-zone">
+                    <a class="contacts-section__sign" href="#"><i class="fa fa-sign-in"></i><span>Вхід</span> </a>
+                    <a class="contacts-section__sign" href="#"><i class="fa fa-user-plus"></i><span>Реєстрація</span></a>
+                </div>
+
+                <div class="contacts-section__phones">
+                    <a class="contacts-section__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
+                    <a class="contacts-section__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
+                    <a class="contacts-section__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
+                </div>
+
+                <ul class="contacts-section__social">
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-footer">
+        <div class="container">
+            <div class="wr-flex">
+                <div class="copyright">
+                    <span>2017</span> <i class="fa fa-copyright" aria-hidden="true"></i> <span>dodomy.com.ua</span>
+                </div>
+                <div class="webmaestro">
+                    <p>Розробка, підтримка та розкрутка сайту:</p>
+                    <!-- <img src="img/wm_lite.svg" alt=""> -->
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
 
 <!-- ============================================== -->
 <!-- =============== END FOOTER =================== -->

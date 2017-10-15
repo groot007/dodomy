@@ -313,7 +313,7 @@
             }
         }
         @include min(645px) {
-            min-width: 136px;
+            min-width: 140px;
         }
         &:hover,
         &:active {
@@ -406,7 +406,7 @@
 
 
 
-        @include min(480px) {
+        @include min(576px) {
             width: 50%;
             padding: 0 1%;
             border: none;
@@ -433,6 +433,7 @@
             display: inline-block;
             vertical-align: middle;
         }
+
         &--with-list {
             .item-dropdown__img {
                 position: absolute;
@@ -551,7 +552,7 @@
     }
 }
 .all-catagories {
-    display: inline-block;
+    display: none;
     width: 100%;
     height: 26px;
     position: absolute;
