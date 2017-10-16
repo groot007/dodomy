@@ -165,12 +165,12 @@
 	}
 }
 
-.item-slider-products{
+.item-product{
 	display: inline-block;
 	text-align: center;
 
 	&:hover{
-		.item-slider-products__current-price{
+		.item-product__current-price{
 			color: $links-color;
 		}
 	}
@@ -186,7 +186,7 @@
 		position: relative;
 
 		&:hover{
-			.item-slider-products__basket{
+			.item-product__basket{
 				opacity: 1;
 			}
 		}
@@ -245,6 +245,7 @@
 
 	&__current-price{
 		display: block;
+		font-weight: 600;
 		color: $grey333;
 		font-size: 16px;
 	}
@@ -306,6 +307,7 @@
             left: 10%;
             border: 30px solid #fff;
             position: absolute;
+
         }
 	.with-v-line{
 		position: relative;
@@ -318,10 +320,15 @@
 			display: block;
 			left: 0;
 			position: absolute;
-			top: 75px;
+			top: -10%;
 			background: #000;
-			height: 90%;
+			height: 106%;
 			width: 1px;
+			@include min(600px){
+				top: 75px;
+				height: 90%;
+			}
+
 		}
 		&:after{
 			content: '';
@@ -329,9 +336,14 @@
 			position: absolute;
 			left: 0;
 			background: #000;
-			height: 85px;
+			height: 55px;
 			width: 1px;
-			top: -40px;
+			top: -50px;
+			height: 0;
+			@include min(600px){
+				top: -40px;
+				height: 85px;
+			}
 		}
 	}
 }

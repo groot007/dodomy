@@ -205,6 +205,8 @@
 		}
 
 		.h-simple{
+			width: 70%;
+			margin: 0 auto;
 			margin-bottom:30px;
 		}
 
@@ -456,6 +458,7 @@
 		width: 34px;
 		@include min(768px){
 			top: 45px;
+			height: 1px;
 		}
 
 		@include min(1200px){

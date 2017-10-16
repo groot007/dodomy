@@ -45,6 +45,7 @@
 .menu-bar {
     background: $links-color;
     padding: 17px 11px 16px 12px;
+    z-index: 99;
     line-height: 0;
     font-size: 0;
     >span {

@@ -63,6 +63,7 @@ gulp.task('build', ['removedist'], function () {
 // Скрипты проекта
 gulp.task('scripts', function() {
 	return gulp.src(['app/js/main.js'])
+		.pipe(gulpImports())
 		.pipe(uglify())
 		.pipe(rename({suffix: ".min"}))
 		.pipe(gulp.dest('app/js'))
@@ -103,7 +104,7 @@ gulp.task('sass', function() {
 gulp.task('watch', function() {
 	// gulp.watch('bower.json', ['bower']);
 	gulp.watch('app/scss/**/*.scss', ['sass']);
-	gulp.watch('app/js/*.js', ['scripts']);
+	gulp.watch('app/js/main.js', ['scripts']);
 	gulp.watch('app/*.html').on("change", browserSync.reload);
 
 });
