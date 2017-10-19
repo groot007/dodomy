@@ -330,6 +330,11 @@
 		width: 30%;
 		font-size: 20px;
 		margin-left: 5%;
+		letter-spacing: 0;	
+		transition: letter-spacing .3s ease;
+		&:hover{
+			letter-spacing: 2px;
+		}
 	}
 }
 

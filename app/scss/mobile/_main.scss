@@ -150,6 +150,9 @@
 	}
 	&__item{
 		width: 220px;
+		@include min(1600px){
+			width: 300px;
+		}
 	}
 	.slick-arrows{
 
@@ -170,6 +173,10 @@
 	text-align: center;
 
 	&:hover{
+		.item-product__img{
+			transform: scale(1.15);
+		}
+
 		.item-product__current-price{
 			color: $links-color;
 		}
@@ -227,6 +234,8 @@
 	}
 	&__img{
 		display: inline-block !important;
+		transform: scale(1);
+		transition: transform .3s ease;
 	}
 
 	&__product-title{

@@ -9,4 +9,12 @@
     .site-header__catalog{
         display: flex;
     }
+
+
+}
+
+.pagination{
+	&__item{
+		margin: 0 8px;
+	}
 }

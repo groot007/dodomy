@@ -22,6 +22,8 @@
 }
 }
 
+
+
 body.index{
     .header-with-bg{
         background: #f1f4f3;
@@ -46,6 +48,12 @@ body.index{
 
 .main-wrap, .main-slider{
     pointer-events: all;
+}
+
+.main-wrap{
+    @include min(1600px){
+        max-width: 1500px;
+    }
 }
 // .gradient-overlay{
 //     height: 20%;
@@ -477,6 +485,10 @@ flex-wrap: wrap;
     border-bottom: 1px solid $light-grey;
 }
 
+@include min(1600px) {
+    width: 60%;
+}
+
 
 &__phone,
 &__sign {
@@ -515,8 +527,8 @@ flex-wrap: wrap;
         @include min(1200px){
             margin-left: 30px;
         }
-        @include min(1700px) {
-            margin-left: 60px;
+        @include min(1600px) {
+            margin-left: 100px;
         }
     }
     &:nth-child(3) {
@@ -535,8 +547,8 @@ flex-wrap: wrap;
     @include min(1200px){
         margin-left: 30px;
     }
-    @include min(1700px) {
-     margin-left: 60px;
+    @include min(1600px) {
+     margin-left: 100px;
  }
 }
 &:nth-child(4) {
@@ -548,10 +560,10 @@ flex-wrap: wrap;
         margin-left:  35px;
     }
     @include min(1200px){
-        margin-left: 120px;
-    }
-    @include min(1700px) {
         margin-left: 100px;
+    }
+    @include min(1600px) {
+        margin-left: 200px;
     }
 }
 &:nth-child(5) {
@@ -565,6 +577,9 @@ flex-wrap: wrap;
     @include min(1200px){
         margin-left: 40px
     }
+    @include min(1600px) {
+        margin-left: 60px;
+    }
 }
 }
 &__phone {
@@ -572,6 +587,9 @@ flex-wrap: wrap;
     display: none;
     @include min(1024px) {
         display: inline-block;
+    }
+    @include min(1024px) {
+        font-size: 18px;
     }
     &:hover{
         text-decoration: underline;
@@ -788,6 +806,9 @@ transition: color .2s ease-in;
         }
 
     }
+     @include min(1600px) {
+            height: 170px;
+        }
 .wrap-absolute {
     z-index:  99;
 }
@@ -888,7 +909,7 @@ transition: color .2s ease-in;
         left: 0;
         width: 100%;
         height: 20px;
-        background: linear-gradient(top, rgba(255, 255, 255, 0), #fff 100%, #fff 10%, #fff);
+        background: linear-gradient(to top, rgba(255, 255, 255, 0), #fff 100%, #fff 10%, #fff);
     }
     &.show-more{
        &:after{
@@ -1015,7 +1036,7 @@ overflow: hidden;
 }
 }
 .search {
-    position: relative;
+    // position: relative;
     &__input {
         background: transparent;
         border-radius: 50px;
@@ -1205,6 +1226,7 @@ box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .group-hover {
     display: inline-block;
+    
     img {
         &:last-child {
             display: none;

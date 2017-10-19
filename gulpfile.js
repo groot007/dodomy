@@ -76,9 +76,10 @@ gulp.task('browser-sync', function() {
 		server: {
 			baseDir: './app/'
 		},
+		// proxy: 'https://dodomy.com.wm/app/',
 		// port: 8080,
-		notify: false,
-		online: true,
+		// notify: false,
+		// online: true,
 		// tunnel: true,
 		// tunnel: "gootex", //Demonstration page: http://projectmane.localtunnel.me
 	});
@@ -86,16 +87,16 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('sass', function() {
-	return gulp.src('app/scss/**/*.scss')
+	return gulp.src(['app/scss/style.scss', 'app/scss/style-mobile.scss', ])
 	.pipe(sourcemaps.init())
-  	.pipe(sass().on('error', sass.logError))
-	.pipe(combineMq({
-        beautify: true
-    }))
+  	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	// .pipe(combineMq({
+        // beautify: true
+    // }))
 	.pipe(rename({suffix: '.min'}))
 	.pipe(autoprefixer(['last 15 versions']))
-  	.pipe(sourcemaps.write())
 	.pipe(cleanCSS())
+  	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });

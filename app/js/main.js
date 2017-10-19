@@ -1,4 +1,7 @@
 //import("../js/libs/jquery-ui.min.js");
+//import("../js/libs/jquery-bar-rating.min.js");
+
+
 
 // ================**********=============
 
@@ -13,7 +16,6 @@ $(function() {
       max: 500,
       values: [ 10, 450 ],
       create: function( event, ui ) {
-        console.log(ui)
         $( ".price-filter .min-input" ).val( 10 );
         $( ".price-filter .max-input" ).val( 450 );
       },
@@ -22,6 +24,31 @@ $(function() {
         $( ".price-filter .max-input" ).val( ui.values[ 1 ] );
       }
     });
+
+
+    // ====== YOUTUBE ======
+
+ $(".youtube").each(function(i, el) {
+        // Based on the YouTube ID, we can easily find the thumbnail image
+        $(el).css('background-image', 'url(http://i.ytimg.com/vi/' + el.id + '/sddefault.jpg)');
+
+        // Overlay the Play icon to make it look like a video player
+        $(el).append($('<div/>', {'class': 'play'}));
+
+        $(document).on( 'click','#' + el.id, function() {
+            // Create an iFrame with autoplay set to true
+            var iframe_url = "https://www.youtube.com/embed/" + el.id + "?autoplay=1&autohide=1";
+            if ($(el).data('params')) iframe_url+='&'+$(el).data('params');
+
+            // The height and width of the iFrame should be the same as parent
+            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(el).width(), 'height': $(el).height() })
+
+            // Replace the YouTube thumbnail with YouTube HTML5 Player
+            $(el).replaceWith(iframe);
+        });
+    });
+
+// ======================
 
 
     //  ========= SLIDERs  ========
@@ -122,6 +149,25 @@ $(function() {
         ]
     });
 
+    $('.product-slider-g').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        waitForAnimate: false,
+        infinite: true,
+        customPaging : function(slider, i) {
+            if(slider.$slides.eq(i).find(".youtube").length){
+                return '<span href="#" class="dots-item">Y</span>';
+            }
+        return '<span href="#" class="dots-item">0</span>';
+    },
+        nextArrow: "<div class='slick-arrows arrow-next'><span class='custom-arrow'></span><i class='circle'></i></div>",
+        prevArrow: "<div class='slick-arrows arrow-prev'><span class='custom-arrow'></span><i class='circle'></i></div>",
+
+    });
+
     function mainSlickInit(){
 
         if($(window).width() > 768 && !$(".main-slider").hasClass("slick-slider")){
@@ -163,6 +209,10 @@ $(document).on("click touchend", ".top-head__menu-bar", function(e) {
 });
 
 
+$(".rating-stars").barrating({
+    theme: 'fontawesome-stars'
+});;
+
 $(document).on("click touchend", ".mmenu__close", function(e) {
     $(this).closest(".mmenu").removeClass("mmenu--opened");
 });
@@ -181,14 +231,28 @@ $(".catalog__item").on('mouseenter touchend', function(e) {
         $this.find('.slider-brands').slick("setPosition");
 
         if(items.length > 6){
-            console.log(items.length)
             dropM.find(".all-catagories").css("display", "inline-block");
         }
     }
-
-
-
 });
+
+var filters = $(".filters"),
+    childs = $(".filters").find(".filter");
+
+if(childs.length > 5){
+    var heightFive = 0;
+    childs.each(function(i, el){
+        heightFive += $(el).height();
+    });
+    filters.height(heightFive + 30);
+}
+
+$(document).on("click", ".filters__show-all", function(e){
+    e.preventDefault();
+    $(this).addClass("hidden")
+    $(this).closest(".filters").css("height", "auto");
+});
+
 
 
 $(document).on("click touchend", function(e) {
@@ -200,7 +264,7 @@ $(document).on("click touchend", function(e) {
 }
 });
 
-$(document).on("click", ".all-catagories", function(e){
+$(document).on("click", ".dropdown__show-all", function(e){
     e.preventDefault();
     $(this).addClass("hidden")
     $(".dropdown-menu").css("height", "auto");
