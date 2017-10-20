@@ -33,7 +33,7 @@ $(function() {
         $(el).css('background-image', 'url(http://i.ytimg.com/vi/' + el.id + '/sddefault.jpg)');
 
         // Overlay the Play icon to make it look like a video player
-        $(el).append($('<div/>', {'class': 'play'}));
+        $(el).append($('<img/>', {'class': 'play'}));
 
         $(document).on( 'click','#' + el.id, function() {
             // Create an iFrame with autoplay set to true
@@ -41,14 +41,20 @@ $(function() {
             if ($(el).data('params')) iframe_url+='&'+$(el).data('params');
 
             // The height and width of the iFrame should be the same as parent
-            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(el).width(), 'height': $(el).height() })
+            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(el).width(), 'height': $(el).outerHeight() })
 
             // Replace the YouTube thumbnail with YouTube HTML5 Player
-            $(el).replaceWith(iframe);
+            $(el).append(iframe);
         });
     });
 
 // ======================
+if($('.phone-mask').length){
+    $('.phone-mask').inputmask('+38 (099) 999-99-99', { "onincomplete": function(){
+        $(this).val('');  
+    } }); 
+}
+
 
 
     //  ========= SLIDERs  ========
@@ -157,11 +163,12 @@ $(function() {
         slidesToScroll: 1,
         waitForAnimate: false,
         infinite: true,
+         adaptiveHeight: true,
         customPaging : function(slider, i) {
             if(slider.$slides.eq(i).find(".youtube").length){
-                return '<span href="#" class="dots-item">Y</span>';
+                return '<span href="#" class="dots-item dots-item--youtube"></span>';
             }
-        return '<span href="#" class="dots-item">0</span>';
+        return '<span href="#" class="dots-item"></span>';
     },
         nextArrow: "<div class='slick-arrows arrow-next'><span class='custom-arrow'></span><i class='circle'></i></div>",
         prevArrow: "<div class='slick-arrows arrow-prev'><span class='custom-arrow'></span><i class='circle'></i></div>",
@@ -211,7 +218,14 @@ $(document).on("click touchend", ".top-head__menu-bar", function(e) {
 
 $(".rating-stars").barrating({
     theme: 'fontawesome-stars'
-});;
+});
+
+$(".rating-stars").each(function(i, el){
+    var $this = $(el),
+        stars = $this.data("stars");
+    $this.barrating('set', stars);
+});
+
 
 $(document).on("click touchend", ".mmenu__close", function(e) {
     $(this).closest(".mmenu").removeClass("mmenu--opened");
@@ -311,6 +325,37 @@ $(document).on("click", ".tabs .tabs__item", function(e){
 // ======= end TABS ====
 
 
+// ==== input FILE ===
+$(document).on("change", ".load-photo input", handleFileSelect);
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          document.getElementById('photo-review').style.backgroundImage = "url(" + e.target.result + ")";
+          document.getElementById('photo-review').style.fontSize = 0;
+          // '<img class="thumb" src="'+ e.target.result +
+                            // '" title="'+ escape(theFile.name)+ '"/>';
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+//  ============
 
 
 

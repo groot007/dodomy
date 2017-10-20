@@ -1,1 +1,23 @@
 @import "mobile/_product.scss";
+
+
+.product-wr{
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    &__slider, &__about, &__reviews{
+        width: 50%;
+    }
+    &__slider{
+        float: left;
+    }
+    &__about{
+        float :right;
+    }
+    &__reviews{
+        float: left;
+    }
+}
