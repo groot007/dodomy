@@ -617,15 +617,16 @@
     .slick-slide {
         margin: 0 14px;
         text-align: center;
+        line-height: 100px;
         &:focus {
             outline: none;
         }
-        &:before {
-            content: "";
-            height: 100%;
-            display: inline-block;
-            vertical-align: middle;
-        }
+        // &:before {
+        //     content: "";
+        //     height: 100%;
+        //     display: inline-block;
+        //     vertical-align: middle;
+        // }
         img {
             margin: auto;
             vertical-align: middle;
