@@ -1226,7 +1226,7 @@ box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .group-hover {
     display: inline-block;
-    
+    vertical-align: middle;
     img {
         &:last-child {
             display: none;

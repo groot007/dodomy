@@ -627,12 +627,14 @@
             vertical-align: middle;
         }
         img {
+            margin: auto;
             vertical-align: middle;
             display: inline-block;
         }
     }
     .group-hover {
         display: inline-block;
+        vertical-align: middle;
         img {
             &:last-child {
                 display: none;

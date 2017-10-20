@@ -241,6 +241,7 @@
 .properties{
     &__table{
         width: 100%;
+        border-spacing: 0;
         tr{
             &:nth-child(odd){
                 background-color: #f4f6f8;
@@ -248,8 +249,10 @@
             td{
                 // vertical-align: middle;
                 padding: 15px 20px;
+                
                 &:first-child{
                     min-width: 110px;
+                    border-right: 1px solid #898889;
                 }
                 &:last-child{
                     text-align: right;

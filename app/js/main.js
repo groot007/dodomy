@@ -65,8 +65,8 @@ if($('.phone-mask').length){
         slidesToShow: 4,
         slidesToScroll: 4,
         waitForAnimate: false,
+        // variableWidth:true,
         infinite: true,
-
         nextArrow: "<div class='slick-arrows arrow-next'><span class='custom-arrow'></span><i class='circle'></i></div>",
         prevArrow: "<div class='slick-arrows arrow-prev'><span class='custom-arrow'></span><i class='circle'></i></div>",
         responsive: [{
@@ -83,7 +83,7 @@ if($('.phone-mask').length){
             settings: {
                 dots: false,
                 slidesToShow: 3,
-                slidesToScroll: 2
+                slidesToScroll: 3
             }
         },
         {
@@ -304,12 +304,12 @@ $(document).on("click", ".tabs .tabs__item", function(e){
 
     var $this = $(this),
     $tabs = $this
-    .closest(".tabs")
-    .find(".tabs__item"),
+        .closest(".tabs")
+        .find(".tabs__item"),
     toSlider = $this.data("to-slider"),
     $allSliders = $this
-    .closest("section")
-    .find(".slider-products"),
+        .closest(".tabs").parent()
+        .find(".slider-products"),
     slider = $("#tabs-slider-" + toSlider);
 
     $tabs.removeClass("tabs__item--active");
@@ -317,8 +317,8 @@ $(document).on("click", ".tabs .tabs__item", function(e){
 
     $allSliders.addClass("hidden")
     slider
-    .removeClass("hidden")
-    .slick('setPosition');
+        .removeClass("hidden")
+        .slick('setPosition');
 
 });
 
