@@ -112,20 +112,26 @@
 
 
 .tabs{
-	font-size: 0;
 	border-bottom: 1px solid $purple;
-	display: inline-block;
+	// font-size: 0;
+	// display: inline-block;
+	display: flex;
+    justify-content: center;
 	&__item{
 		padding: 10px 5px;
 		border: 1px solid $purple;
 		border-bottom: none;
 		font-size: 14px;
-		display: inline-block;
+		// display: inline-block;
 		min-width: 95px;
 		margin-left: 1px;
 		color: $purple;
 		text-decoration: none;
-
+		font-size: 12px;
+		max-width: 33%;
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
 		&:first-child{
 			margin-left: 0;
 		}
@@ -467,6 +473,7 @@
 	}
 	&__txt{
 		font-size: 12px;
+		line-height: 18px;
 	}
 	&__link{
 		margin-top: 10px;

@@ -51,8 +51,8 @@ $(function() {
 // ======================
 if($('.phone-mask').length){
     $('.phone-mask').inputmask('+38 (099) 999-99-99', { "onincomplete": function(){
-        $(this).val('');  
-    } }); 
+        $(this).val('');
+    } });
 }
 
 
@@ -163,7 +163,7 @@ if($('.phone-mask').length){
         slidesToScroll: 1,
         waitForAnimate: false,
         infinite: true,
-         adaptiveHeight: true,
+         // adaptiveHeight: true,
         customPaging : function(slider, i) {
             if(slider.$slides.eq(i).find(".youtube").length){
                 return '<span href="#" class="dots-item dots-item--youtube"></span>';
@@ -216,9 +216,17 @@ $(document).on("click touchend", ".top-head__menu-bar", function(e) {
 });
 
 
-$(".rating-stars").barrating({
-    theme: 'fontawesome-stars'
+$(".all-reviews-stars, .review-item__stars").barrating({
+    theme: 'fontawesome-stars',
+    readonly: true
 });
+
+$(".block-reviews__stars").barrating({
+    theme: 'fontawesome-stars',
+    readonly: false
+});
+
+
 
 $(".rating-stars").each(function(i, el){
     var $this = $(el),
@@ -245,6 +253,7 @@ $(".catalog__item").on('mouseenter touchend', function(e) {
         $this.find('.slider-brands').slick("setPosition");
 
         if(items.length > 6){
+            dropM.css("height", "");
             dropM.find(".all-catagories").css("display", "inline-block");
         }
     }
@@ -292,6 +301,16 @@ $(document).on("click", ".read-more", function(e){
     .find(".more-txt")
     .css("display", "block");
 });
+
+$(document).on("click", ".all-catagories", function(e){
+    e.preventDefault();
+    var height = $(".dropdown-menu .items").height();
+    console.log()
+    $(this).css("display", "none");
+    $(".dropdown-menu").css("height", "auto");
+    // $(".dropdown-menu .items").animate({scrollTop : 100}, 1000);
+});
+
 
 
 $("#lang, #sort").niceSelect();
@@ -343,8 +362,15 @@ $(document).on("change", ".load-photo input", handleFileSelect);
       // Closure to capture the file information.
       reader.onload = (function(theFile) {
         return function(e) {
-          document.getElementById('photo-review').style.backgroundImage = "url(" + e.target.result + ")";
-          document.getElementById('photo-review').style.fontSize = 0;
+          $('#photo-review').css("background-image","url(" + e.target.result + ")");
+          if($(window).width() < 1024){
+            $('#photo-review').css("text-align", "right")
+            .find("span").html(escape(theFile.name))
+        }else{
+            $('#photo-review')
+                .find("span").css("opacity", "0")
+        }
+
           // '<img class="thumb" src="'+ e.target.result +
                             // '" title="'+ escape(theFile.name)+ '"/>';
         };
@@ -361,3 +387,41 @@ $(document).on("change", ".load-photo input", handleFileSelect);
 
 
 });
+
+if($("#google-map").length && $(window).width() > 1200){
+     var map;
+     function initMap() {
+        var mapOptions = {
+            center: { lat: 50.447476, lng: 30.524386},
+            zoom: 14,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            panControl: false,
+            panControlOptions: {
+                position: google.maps.ControlPosition.TOP_RIGHT
+            },
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.LARGE,
+                position: google.maps.ControlPosition.RIGHT_TOP
+            },
+            scaleControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+        // var image = {
+        //     url: '/img/marker.png',
+        //     /*size: new google.maps.Size(177, 100),*/
+        //     scaledsize: new google.maps.Size(175, 96),
+        // };
+        // var point = new google.maps.LatLng(51.201803, 24.725005);
+        // var marker = new google.maps.Marker({
+        //     position: point,
+        //     map: map,
+        //     icon: image,
+        //     title: ''
+        // });
+
+    }
+
+}

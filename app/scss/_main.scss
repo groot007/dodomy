@@ -243,13 +243,17 @@
 				align-items: center;
 				justify-content: center;
 				height: 50%;
-				padding: 100px 65px 30px 65px;
+				padding: 100px 10px 30px 10px;
 				@include min(1024px){
 					height: 50%;
 					width: 50%;
 					position: absolute;
 					top: 0;
 					left: 0;
+
+				}
+				@include min(1600px){
+					padding: 100px 65px 30px 65px;
 				}
 				// padding-top: 30%;
 			}
@@ -278,7 +282,7 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				padding: 15px 65px;
+				padding: 15px 10px;
 				@include min(1024px){
 					position: absolute;
 					bottom: 0;
@@ -286,14 +290,25 @@
 					height:50%;
 					width: 50%;
 				}
+				@include min(1600px){
+					padding: 15px 65px;
+				}
 				// height: 350px;
 				// padding: 20% 15px;
 			}
 		}
+		.deskr{
+			&__txt{
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+
 	}
 
 
 }
+
 
 .item-rec-category--order .item-rec-category__title{
 	padding: 60px 0 0 0;
@@ -326,12 +341,16 @@
 
 .tabs{
 	width:70%;
+	margin: 0 auto;
 	&__item{
 		width: 30%;
 		font-size: 20px;
 		margin-left: 5%;
-		letter-spacing: 0;	
+		letter-spacing: 0;
 		transition: letter-spacing .3s ease;
+		@include min(1200px){
+			width: 22%;
+		}
 		&:hover{
 			letter-spacing: 2px;
 		}

@@ -330,7 +330,7 @@
                         <div><img src="img/rec-category/sofa.png" alt=""></div>
                         <div><img src="img/rec-category/kitchen.png" alt=""></div>
                         <div><img src="img/rec-category/bedroom.png" alt=""></div>
-                        
+
                     </div>
                     <div class="product-wr__about">
                         <div class="short-details">
@@ -355,7 +355,7 @@
                                 <div class="articul">
                                     <span>Артикул:</span><span>GD-220</span>
                                 </div>
-                            </div>  
+                            </div>
                         </div>
                         <div class="price-buy">
                             <div class="price-buy__block-price">
@@ -363,14 +363,15 @@
                             </div>
                             <div class="price-buy__block-buy">
                                 <div class="availability">В наявності</div>
-                                 <a href="#" class="btn btn--reg"><i class="fa fa-shopping-basket"></i>Купити</a>   
+                                 <a href="#" class="btn btn--reg"><i class="fa fa-shopping-basket"></i>Купити</a>
                             </div>
+                            <form action="" class="buy-click" id="by-click-1">
+                                <i class="fa fa-mobile" aria-hidden="true"></i>
+                                <input type="text" class="buy-click__phone phone-mask" placeholder="+38 (0__) ___ __ __" name="phone" id="phone-1">
+                                <input type="submit" class="buy-click__submit" id="submit-1" value="В 1 клік">
+                            </form>
                         </div>
-                        <form action="" class="buy-click" id="by-click-1">
-                            <i class="fa fa-mobile" aria-hidden="true"></i>
-                            <input type="text" class="buy-click__phone phone-mask" placeholder="+38 (0__) ___ __ __" name="phone" id="phone-1">
-                            <input type="submit" class="buy-click__submit" id="submit-1" value="В 1 клік">
-                        </form>
+
                         <div class="delivery">
                             <div class="delivery__header">
                                 <span class="delivery__header-item" >Доставка</span>
@@ -381,11 +382,17 @@
                                     <img src="img/delivery/logo-np.png" alt="">
                                     <img src="img/delivery/logo-deliver.png" alt="">
                                     <img src="img/delivery/logo-intime.png" alt="">
+                                    <span>Можливий
+                                    самовивіз
+                                    замовленой
+                                    продукції</span>
                                 </div>
                                 <div class="delivery__cont-item">
                                     <img src="img/delivery/logo-priv.png" alt="">
                                     <img src="img/delivery/logo-lp.png" alt="">
                                     <img src="img/delivery/logo-visa.png" alt="">
+                                    <span>Можливість оплати
+готівкою</span>
                                 </div>
                             </div>
                         </div>
@@ -441,21 +448,31 @@
                                         <span>Білий, чорний, бежевий</span>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>
+                                        <span>Категорія:</span>
+                                    </td>
+                                    <td>
+                                        <span>Кухонні столи</span>
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                         <div class="details-txt">
-                            <h4>Lorem</h4>
+                            <h4 class="details-txt__h h-deskr">Опис товару:</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta voluptatum, eos, assumenda atque consequatur dolor nulla accusamus deserunt ex facilis unde iure minima vero quis dicta beatae quasi dolorum excepturi impedit ab obcaecati incidunt, possimus quo explicabo suscipit. Obcaecati voluptatem earum atque molestias ab, ducimus, minus iusto facilis ex placeat!</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta voluptatum, eos, assumenda atque consequatur dolor nulla accusamus deserunt ex facilis unde iure minima vero quis dicta beatae quasi dolorum excepturi impedit ab obcaecati incidunt, possimus quo explicabo suscipit. Obcaecati voluptatem earum atque molestias ab, ducimus, minus iusto facilis ex placeat!</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta voluptatum, eos, assumenda atque consequatur dolor nulla accusamus deserunt ex facilis unde iure minima vero quis dicta beatae quasi dolorum excepturi impedit ab obcaecati incidunt, possimus quo explicabo suscipit. Obcaecati voluptatem earum atque molestias ab, ducimus, minus iusto facilis ex placeat!</p>
                         </div>
-                        
+
                     </div>
-                    <div class="product-wr__reviews">
+                    <div class="product-wr__reviews product-reviews">
                         <div class="instruction">
-                            instruction
+                            <img src="img/pdf-icon.png" alt="">
+                            <a href="#">Інструкція в два рядки <br> другий рядок другий</a>
                         </div>
-                        <div class="short-details__reviews reviews-inf">
+                        <div class="product-reviews__stars reviews-inf">
+                            <h4 class="reviews-inf__h h-deskr">Відгуки:</h4>
                                 <select class="reviews-inf__stars rating-stars all-reviews-stars" data-stars="4">
                                   <option value="1">1</option>
                                   <option value="2">2</option>
@@ -469,25 +486,96 @@
                                     <span>)</span>
                                 </div>
                             </div>
-                            rewiews
-                        <form action="">
-                            <input type="text">
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <label class="load-photo" id="photo-review">
-                                Прикріпити фото...
-                                <input type="file" accept="image/jpeg,image/png,image/gif"/>
-                            </label>
-                        <div class="g-recaptcha" data-sitekey="6LcvCzUUAAAAAP3ARSHXB190bJ_djYgbhOTzAEDG"></div>
+                        <div class="block-reviews">
+
+  <div class="review-item review-item--with-additions">
+                            <div class="review-item__top-row">
+                                <div class="review-item__name">Олег</div>
+                                <div class="review-item__date">01.02.2017</div>
+                                <select class="review-item__stars rating-stars" data-stars="3">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                </select>
+                            </div>
+                            <div class="review-item__cont">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quaerat eum explicabo amet doloremque alias ea, repellendus dolorem maiores praesentium. Vel cum consequuntur doloribus corporis rem consectetur adipisci eveniet tempore.</p>
+                                <div class="additions">
+                                    <a href="#" class="popup-img"><img src="img/user-addition.png" alt=""></a>
+                                    <a href="#" class="youtube-popup"><img src="img/youtube-icon.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-item__top-row">
+                                <div class="review-item__name">Олег</div>
+                                <div class="review-item__date">01.02.2017</div>
+                                <select class="review-item__stars rating-stars" data-stars="3">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                </select>
+                            </div>
+                            <div class="review-item__cont">
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Sed quaerat eum explicabo amet doloremque alias ea, repellendus dolorem maiores praesentium. Vel cum consequuntur doloribus corporis rem consectetur adipisci eveniet tempore.</p>
+                            </div>
+                        </div>
+
+                            <a href="#" class="show-more-reviews">Показати більше</a>
+                        </div>
+                        <div class="adding-review-form">
+
+
+
+
+                        <form action="" class="product-reviews__form add-review">
+                            <h4 class="reviews-inf__h h-deskr">Додайте свій відгук:</h4>
+                            <select class="block-reviews__stars rating-stars" data-stars="4">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                            <div class="inputs-block">
+                                <div class="left-group">
+                                    <div class="input-group">
+                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        <input type="text" class="input-el" placeholder="Ім'я">
+                                    </div>
+                                    <div class="input-group input-group--textarea">
+                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        <textarea name="" id="" class="input-el" placeholder="Текст відгуку"></textarea>
+                                    </div>
+                                </div>
+                                <div class="right-group">
+                                    <label class="load-photo" id="photo-review">
+                                        <span><i class="fa fa-camera" aria-hidden="true"></i>Прикріпити фото...</span>
+                                        <input type="file"  accept="image/jpeg,image/png,image/gif"/>
+                                    </label>
+                                    <div class="input-group input-group--with-label">
+                                        <label for="">Посилання на відео з Youtube:</label>
+                                        <i class="fa fa-link" aria-hidden="true"></i>
+                                        <input type="text" class="input-el" placeholder="Введіть URL">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6LcvCzUUAAAAAP3ARSHXB190bJ_djYgbhOTzAEDG"></div>
                             <input type="submit" class="btn btn--reg" value="Залишити відгук">
                          </form>
-                        
+                         </div>
                     </div>
                 </div>
                 <div class="product-cont__tabs-wr">
                     <div class="product-cont__tabs tabs">
-                        <a href="#" data-to-slider="1" class="tabs__item tabs__item--active">Акції</a>
-                        <a href="#" data-to-slider="2" class="tabs__item">Новинки</a>
-                        <a href="#" data-to-slider="3" class="tabs__item">Хіти продажу</a>
+                        <a href="#" data-to-slider="1" class="tabs__item tabs__item--active">Рекомендовані товари</a>
+                        <a href="#" data-to-slider="2" class="tabs__item">Переглянуті товари</a>
+                        <a href="#" data-to-slider="3" class="tabs__item">Аксесуари</a>
                     </div>
                     <div class="product-cont__slider slider-products" id="tabs-slider-1">
                         <div>
@@ -647,7 +735,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
         </div>
     </div>
