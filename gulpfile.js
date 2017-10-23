@@ -17,7 +17,9 @@ var gulp           = require('gulp'),
 		combineMq = require('gulp-combine-mq'),
 		notify         = require("gulp-notify"),
 		useref = require('gulp-useref'),
+		minifyInline = require('gulp-minify-inline'),
 	    gulpif = require('gulp-if'),
+	    image = require('gulp-image'),
 		wiredep  = require('gulp-wiredep');
 
 
@@ -30,6 +32,9 @@ var gulp           = require('gulp'),
 //     .pipe(gulp.dest('./app'))
 // })
 
+gulp.task('image', function () {
+  
+});
 
 // delete /dist
 gulp.task('removedist', function() { return del.sync('dist'); });
@@ -46,16 +51,21 @@ gulp.task('build', ['removedist'], function () {
 		]).pipe(gulp.dest('dist/css'));
 
 	gulp.src([
+		'app/scss/**/*',
+		]).pipe(gulp.dest('dist/scss'));
+
+	gulp.src([
 		'app/js/**/*',
 		]).pipe(gulp.dest('dist/js'));
+
+	gulp.src('./app/img/**/*')
+   		.pipe(image())
+    	.pipe(gulp.dest('./dist/img/'));
 
 	gulp.src([
 		'app/fonts/**/*',
 		]).pipe(gulp.dest('dist/fonts'));
 	return gulp.src('app/*.html')
-        .pipe(useref())
-        .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.css', cleanCSS()))
         .pipe(gulp.dest('dist'));
 });
 
@@ -86,19 +96,25 @@ gulp.task('browser-sync', function() {
 });
 
 
+ 
+
 gulp.task('sass', function() {
+
 	return gulp.src(['app/scss/style.scss', 'app/scss/style-mobile.scss', ])
-	.pipe(sourcemaps.init())
-  	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-	// .pipe(combineMq({
-        // beautify: true
-    // }))
-	.pipe(rename({suffix: '.min'}))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleanCSS())
-  	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.reload({stream: true}));
+		.pipe(sourcemaps.init())
+	  	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		// .pipe(combineMq({
+	        // beautify: true
+	    // }))
+		.pipe(rename({suffix: '.min'}))
+		.pipe(autoprefixer(['last 15 versions']))
+		// .pipe(cleanCSS({
+		// 	keepSpecialComments : 0,
+		// }))
+		.pipe(minifyInline())
+	  	.pipe(sourcemaps.write())
+		.pipe(gulp.dest('app/css'))
+		.pipe(browserSync.reload({stream: true}));
 });
 
 

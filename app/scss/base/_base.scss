@@ -88,12 +88,30 @@ input{
     padding: 15px 20px 15px 40px;
     color:  #898889;
     width: 100%;
+    transition: border .4s ease-in-out;
+    &.error{
+      border: 1px solid #f00;
+    }
+    &.valid{
+      border: 1px solid #85ff85;
+    }
   }
   .fa{
     position: absolute;
     left: 20px;
     top: 16px;
     color: #898889;
+  }
+  label.error{
+    position: absolute;
+    left: 0;
+    top: -16px;
+    border-radius: 5px;
+
+    transition: all .4s ease-in-out;
+    background: rgba(255, 0, 0, .8);
+    color: #fff;
+    padding: 5px 10px;
   }
 
   &--with-label{
@@ -117,6 +135,17 @@ input{
         outline: none;
       }
     }
+  }
+}
+
+.recaptcha-wr{
+  .error{
+    border-radius: 5px;
+
+    transition: all .4s ease-in-out;
+    background: rgba(255, 0, 0, .8);
+    color: #fff;
+    padding: 5px 10px;
   }
 }
 
@@ -251,6 +280,19 @@ input{
 
 }
 
+.icon-with-bg{
+  display: inline-block;
+  width: 72px;
+  vertical-align: middle;
+  height: 72px;
+  background: $links-color;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 72px;
+  color: #fff;
+  font-size: 24px;
+}
+
 
 .slider-range{
   position: relative;
@@ -331,14 +373,14 @@ section{
 }
 .h-simple{
   font-family: $Museo;
-  font-size: 20px;
+  font-size: 30px;
   display: block;
   // padding: 0 0 15px 0;
   position: relative;
   font-weight: 400;
   color: $grey333;
   margin-bottom: 25px;
-
+  
   @include min(768px){
     font-size: 28px;
   }

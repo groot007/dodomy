@@ -18,17 +18,17 @@ $(function() {
       create: function( event, ui ) {
         $( ".price-filter .min-input" ).val( 10 );
         $( ".price-filter .max-input" ).val( 450 );
-      },
-      slide: function( event, ui ) {
+    },
+    slide: function( event, ui ) {
         $( ".price-filter .min-input" ).val( ui.values[ 0 ] );
         $( ".price-filter .max-input" ).val( ui.values[ 1 ] );
-      }
-    });
+    }
+});
 
 
     // ====== YOUTUBE ======
 
- $(".youtube").each(function(i, el) {
+    $(".youtube").each(function(i, el) {
         // Based on the YouTube ID, we can easily find the thumbnail image
         $(el).css('background-image', 'url(http://i.ytimg.com/vi/' + el.id + '/sddefault.jpg)');
 
@@ -54,7 +54,6 @@ if($('.phone-mask').length){
         $(this).val('');
     } });
 }
-
 
 
     //  ========= SLIDERs  ========
@@ -111,7 +110,7 @@ if($('.phone-mask').length){
         infinite: false,
         speed: 300,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         waitForAnimate: false,
         infinite: true,
 
@@ -121,7 +120,7 @@ if($('.phone-mask').length){
             breakpoint: 1200,
             settings: {
                 slidesToShow: 4,
-                slidesToScroll: 4,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: false
             }
@@ -164,12 +163,12 @@ if($('.phone-mask').length){
         waitForAnimate: false,
         infinite: true,
          // adaptiveHeight: true,
-        customPaging : function(slider, i) {
+         customPaging : function(slider, i) {
             if(slider.$slides.eq(i).find(".youtube").length){
                 return '<span href="#" class="dots-item dots-item--youtube"></span>';
             }
-        return '<span href="#" class="dots-item"></span>';
-    },
+            return '<span href="#" class="dots-item"></span>';
+        },
         nextArrow: "<div class='slick-arrows arrow-next'><span class='custom-arrow'></span><i class='circle'></i></div>",
         prevArrow: "<div class='slick-arrows arrow-prev'><span class='custom-arrow'></span><i class='circle'></i></div>",
 
@@ -230,7 +229,7 @@ $(".block-reviews__stars").barrating({
 
 $(".rating-stars").each(function(i, el){
     var $this = $(el),
-        stars = $this.data("stars");
+    stars = $this.data("stars");
     $this.barrating('set', stars);
 });
 
@@ -256,11 +255,19 @@ $(".catalog__item").on('mouseenter touchend', function(e) {
             dropM.css("height", "");
             dropM.find(".all-catagories").css("display", "inline-block");
         }
+        var maxH = $(window).width() > 1600 ? 170 : 155;
+        $(".dropdown-menu__item--with-list").each(function(i, el){
+            // console.log($(el).find(".item-dropdown__list").height())
+            if($(el).find(".item-dropdown__list").height() + 36 > maxH){
+                // console.log("1")
+                $(el).addClass("show-more");
+            }
+        })
     }
 });
 
 var filters = $(".filters"),
-    childs = $(".filters").find(".filter");
+childs = $(".filters").find(".filter");
 
 if(childs.length > 5){
     var heightFive = 0;
@@ -302,6 +309,9 @@ $(document).on("click", ".read-more", function(e){
     .css("display", "block");
 });
 
+
+
+
 $(document).on("click", ".all-catagories", function(e){
     e.preventDefault();
     var height = $(".dropdown-menu .items").height();
@@ -311,6 +321,7 @@ $(document).on("click", ".all-catagories", function(e){
     // $(".dropdown-menu .items").animate({scrollTop : 100}, 1000);
 });
 
+  
 
 
 $("#lang, #sort").niceSelect();
@@ -323,12 +334,12 @@ $(document).on("click", ".tabs .tabs__item", function(e){
 
     var $this = $(this),
     $tabs = $this
-        .closest(".tabs")
-        .find(".tabs__item"),
+    .closest(".tabs")
+    .find(".tabs__item"),
     toSlider = $this.data("to-slider"),
     $allSliders = $this
-        .closest(".tabs").parent()
-        .find(".slider-products"),
+    .closest(".tabs").parent()
+    .find(".slider-products"),
     slider = $("#tabs-slider-" + toSlider);
 
     $tabs.removeClass("tabs__item--active");
@@ -336,8 +347,8 @@ $(document).on("click", ".tabs .tabs__item", function(e){
 
     $allSliders.addClass("hidden")
     slider
-        .removeClass("hidden")
-        .slick('setPosition');
+    .removeClass("hidden")
+    .slick('setPosition');
 
 });
 
@@ -346,7 +357,7 @@ $(document).on("click", ".tabs .tabs__item", function(e){
 
 // ==== input FILE ===
 $(document).on("change", ".load-photo input", handleFileSelect);
-  function handleFileSelect(evt) {
+function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
 
     // Loop through the FileList and render image files as thumbnails.
@@ -355,9 +366,9 @@ $(document).on("change", ".load-photo input", handleFileSelect);
       // Only process image files.
       if (!f.type.match('image.*')) {
         continue;
-      }
+    }
 
-      var reader = new FileReader();
+    var reader = new FileReader();
 
       // Closure to capture the file information.
       reader.onload = (function(theFile) {
@@ -368,47 +379,155 @@ $(document).on("change", ".load-photo input", handleFileSelect);
             .find("span").html(escape(theFile.name))
         }else{
             $('#photo-review')
-                .find("span").css("opacity", "0")
+            .find("span").css("opacity", "0")
         }
 
           // '<img class="thumb" src="'+ e.target.result +
                             // '" title="'+ escape(theFile.name)+ '"/>';
-        };
-      })(f);
+                        };
+                    })(f);
 
       // Read in the image file as a data URL.
       reader.readAsDataURL(f);
-    }
   }
+}
 
 //  ============
 
+// ===== MODALS ===
+if($("#basket-modal").length){
+    $("#basket-modal").iziModal({
+        transitionIn: "comingIn",
+         closeButton: true,
+    });
+}
 
+
+$(document).on('click', '.modal-basket', function (event) {
+    event.preventDefault();
+    $('#basket-modal').iziModal('open');
+});
+
+
+// === end MODALS ===
+
+
+    // ========= VALIDATION ========
+    $("form").on("submit", function(e) {
+        e.preventDefault();
+    });
+
+    if($("#add-review").length){
+        $("#add-review").validate({
+            rules: {
+              message:{
+                required: true,
+                minlength: 10,
+            },
+            name: {
+                required: true,
+            },
+            "hidden-grecaptcha": {
+              required: true,
+              minlength: "255"
+          }
+      },
+
+      messages: {
+          message: {
+            required: "Це поле не повинно бути пустим",
+            minlength: "Поле має містити більше 10 символів"
+        },
+        name: "Введіть ім’я",
+        "hidden-grecaptcha":{
+            required: "Пройдіть перевірку"
+        }
+    },
+
+    submitHandler: function(form) {
+        console.log(form);
+                // form.submit();
+                return false;
+            }
+        });
+
+    }
+
+    if($("#contact-us").length){
+
+        $("#contact-us").validate({
+        // Specify validation rules
+        rules: {
+
+          message:{
+            required: true,
+            minlength: 10,
+        },
+        email: {
+            required: true,
+            email: true
+        },
+        "hidden-grecaptcha": {
+          required: true,
+          minlength: "255"
+      }
+
+  },
+
+  messages: {
+      message: {
+        required: "Це поле не повинно бути пустим",
+        minlength: "Поле має містити більше 10 символів"
+    },
+    email: "Введіть E-mail",
+    "hidden-grecaptcha":{
+        required: "Пройдіть перевірку"
+    }
+},
+
+submitHandler: function(form) {
+    console.log(form);
+            // form.submit();
+            return false;
+        }
+    });
+
+    }
+
+
+
+    // ====== end VALIDATION =====
 
 
 });
 
-if($("#google-map").length && $(window).width() > 1200){
-     var map;
-     function initMap() {
-        var mapOptions = {
-            center: { lat: 50.447476, lng: 30.524386},
-            zoom: 14,
-            disableDefaultUI: true,
-            scrollwheel: false,
-            panControl: false,
-            panControlOptions: {
-                position: google.maps.ControlPosition.TOP_RIGHT
-            },
-            zoomControl: true,
-            zoomControlOptions: {
-                style: google.maps.ZoomControlStyle.LARGE,
-                position: google.maps.ControlPosition.RIGHT_TOP
-            },
-            scaleControl: true,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+function recaptchaCallback() {
+    var response = grecaptcha.getResponse();
+    $("#hidden-grecaptcha").val(response);
+    $("#add-review, #contact-us").valid();
+};
+
+if($("#google-map").length){
+   var map;
+   function initMap() {
+    var mapOptions = {
+        center: { lat: 50.447476, lng: 30.524386},
+        zoom: 14,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        panControl: false,
+        panControlOptions: {
+            position: google.maps.ControlPosition.TOP_RIGHT
+        },
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.LARGE,
+            position: google.maps.ControlPosition.RIGHT_TOP
+        },
+        scaleControl: true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
         // var image = {
         //     url: '/img/marker.png',
         //     /*size: new google.maps.Size(177, 100),*/
