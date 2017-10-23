@@ -405,6 +405,7 @@ if($("#basket-modal").length){
 
 $(document).on('click', '.modal-basket', function (event) {
     event.preventDefault();
+    console.log(21);
     $('#basket-modal').iziModal('open');
 });
 
