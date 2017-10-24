@@ -1,0 +1,13 @@
+@import "mobile/_profile.scss";
+
+
+.page-profile{
+	.site-header__catalog{
+    	display: flex;
+    }
+    .input-group--radio{
+    		.radio-header{
+    			margin: 0 20px;
+    		}
+    	}
+}

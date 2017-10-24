@@ -108,8 +108,9 @@ body.index {
         margin-bottom: -15px;
         margin-left: 2%;
 
-        @include min(1700px) {
+        @include min(1600px) {
             margin-top: 15px;
+            margin-left: 1%;
         }
     }
 

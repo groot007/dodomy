@@ -61,8 +61,8 @@ if($('.phone-mask').length){
         dots: false,
         infinite: false,
         speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 5,
+        slidesToScroll: 6,
         waitForAnimate: false,
         // variableWidth:true,
         infinite: true,
@@ -324,7 +324,7 @@ $(document).on("click", ".all-catagories", function(e){
   
 
 
-$("#lang, #sort").niceSelect();
+$("#lang, #sort, .nice-select").niceSelect();
 
 
 // ======= TABS ======
