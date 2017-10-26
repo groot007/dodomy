@@ -151,6 +151,8 @@ body.index {
         }
 
 
+        // background:
+
         .nice-select {
             background: transparent;
 
@@ -276,6 +278,77 @@ body.index {
     .pink {
         text-transform: uppercase;
         color: $hover-pink;
+    }
+}
+
+.lang-change-d {
+    &__select-lang {
+        position: relative;
+    }
+
+    &__list {
+        list-style-type: none;
+        color: #333;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        background: #fff;
+        z-index: 999;
+        padding: 5px 15px;
+        pointer-events: none;
+        left: -10px;
+        border-radius: 10px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        transform: translateY(-20%);
+        transition: all .3s ease-in-out;
+    }
+
+    &__item {
+        margin-bottom: 5px;
+        padding: 5px 0;
+        border-bottom: 1px solid #d2d2d2;
+        font-size: 18px;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__current-lang {
+        color: #898889;
+        font-size: 18px;
+        display: inline-block;
+        position: relative;
+        padding: 0 10px 0 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:after {
+            content: '\f107';
+            font-family: "FontAwesome";
+            font-size: 14px;
+            display: block;
+            position: absolute;
+            right: -5px;
+            top: 5px;
+        }
+    }
+
+    &--opened {
+        .lang-change-d__list {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(5%);
+        }
+
+        .lang-change-d__current-lang {
+            &:after {
+                content: '\f106';
+            }
+        }
     }
 }
 
@@ -664,7 +737,7 @@ body.index {
 
 
             @include min(1024px) {
-                margin-left: 35px;
+                margin-left: 2%;
             }
 
 
@@ -1486,22 +1559,25 @@ body.index {
         vertical-align: middle;
 
         img {
-            &:last-child {
-                display: none;
-            }
+            -webkit-filter: unquote("grayscale(100%)");
+            -moz-filter: unquote("grayscale(100%)");
+            -ms-filter: unquote("grayscale(100%)");
+            -o-filter: unquote("grayscale(100%)");
+            filter: unquote("grayscale(100%)");
+            transition: all .4s ease;
+            opacity: .5;
         }
 
         &:hover {
             cursor: pointer;
 
             img {
-                &:first-child {
-                    display: none;
-                }
-
-                &:last-child {
-                    display: inline-block;
-                }
+                -webkit-filter: unquote("grayscale(0%)");
+                -moz-filter: unquote("grayscale(0%)");
+                -ms-filter: unquote("grayscale(0%)");
+                -o-filter: unquote("grayscale(0%)");
+                filter: unquote("grayscale(0%)");
+                opacity: 1;
             }
         }
     }

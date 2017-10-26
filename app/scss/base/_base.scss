@@ -602,6 +602,8 @@ section {
    
     }
 
+
+
     &--reg {
         border: 1px solid $links-color;
         font-family: "ProximaNovaSemiBold";
@@ -612,6 +614,13 @@ section {
     &--light {
         border: 1px solid #fff;
         color: #fff;
+    }
+
+    &--disable{
+        border: 1px solid #dcdbdc;
+        color: #898889;
+        background: #dcdbdc;
+        
     }
 
     &.show-more {

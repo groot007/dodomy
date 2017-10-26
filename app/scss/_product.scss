@@ -1,5 +1,12 @@
 @import "mobile/_product.scss";
 
+.page-product {
+
+    .site-header__catalog {
+        display: flex;
+    }
+}
+
 .product-cont {
     &__tabs {
         margin: 0 auto 50px auto;
@@ -74,6 +81,10 @@
             flex: 0 1 50%;
             max-width: 180px;
         }
+        @include min(1200px) {
+            max-width: 250px;
+        }
+        
     }
 
     .buy-click {
@@ -253,6 +264,38 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
+        }
+    }
+}
+
+.similar-products{
+    padding: 25px;
+    @include min(1600px){
+        flex-direction: row;
+    }
+    &__header{
+        font-size: 20px;
+        top: -40px;
+    }
+    &__item{
+       @include min(1600px){
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            width: 33.333%;
+        } 
+    }
+    &__img-wr{
+        @include min(1600px){
+            width: 140px;
+            height: 140px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__title{
+        @include min(1600px){
+            font-size: 14px;
         }
     }
 }

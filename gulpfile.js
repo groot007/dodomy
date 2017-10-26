@@ -42,9 +42,9 @@ gulp.task('removedist', function() { return del.sync('dist'); });
 
 // чистий код в папку dist
 gulp.task('build', ['removedist'], function () {
-	gulp.src([
-		'app/img/**/*',
-		]).pipe(gulp.dest('dist/img'));
+	// gulp.src([
+	// 	'app/img/**/*',
+	// 	]).pipe(gulp.dest('dist/img'));
 
 	gulp.src([
 		'app/css/**/*',
@@ -107,7 +107,7 @@ gulp.task('sass', function() {
 	        // beautify: true
 	    // }))
 		.pipe(rename({suffix: '.min'}))
-		.pipe(autoprefixer(['last 15 versions']))
+		// .pipe(autoprefixer(['last 5 versions']))
 		// .pipe(cleanCSS({
 		// 	keepSpecialComments : 0,
 		// }))

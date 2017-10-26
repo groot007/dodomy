@@ -1,0 +1,33 @@
+@import "mobile/_modals.scss";
+.modal-success{
+	 box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)  !important;
+     border-radius: 30px !important; 
+     padding: 25px 70px;
+     height: 100px !important;
+     max-width: 720px !important;;
+
+
+    .success-img{
+        max-width: 50px;
+        margin-right: 30px;
+    }
+    .modal-wr{
+    	display: flex;
+    	align-items: center;
+    	font-size: 25px;
+    	font-family: $Museo;
+    	color: #333;
+    	justify-content: center;
+    }
+    .close{
+    	position: absolute;
+    	right: -50px;
+    	top: -10px;
+    	background: transparent;
+    	border: 0;
+    	font-size: 25px;
+    	.fa{
+    		color: #d2d2d2;
+    	}
+    }
+}

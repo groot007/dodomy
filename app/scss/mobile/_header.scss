@@ -197,6 +197,7 @@
 
 // end MENU & MENU BAR ===========
 
+
 .lang-change {
     &__item {
         font-size: 14px;
@@ -755,22 +756,26 @@
     .group-hover {
         display: inline-block;
         vertical-align: middle;
-
         img {
-            &:last-child {
-                display: none;
-            }
+            -webkit-filter: unquote("grayscale(100%)");
+            -moz-filter: unquote("grayscale(100%)");
+            -ms-filter: unquote("grayscale(100%)");
+            -o-filter: unquote("grayscale(100%)");
+            filter: unquote("grayscale(100%)");
+            transition: all .4s ease;
+            opacity: .5;
         }
 
         &:hover {
-            img {
-                &:first-child {
-                    display: none;
-                }
+            cursor: pointer;
 
-                &:last-child {
-                    display: inline-block;
-                }
+            img {
+                -webkit-filter: unquote("grayscale(0%)");
+                -moz-filter: unquote("grayscale(0%)");
+                -ms-filter: unquote("grayscale(0%)");
+                -o-filter: unquote("grayscale(0%)");
+                filter: unquote("grayscale(0%)");
+                opacity: 1;
             }
         }
     }
