@@ -241,53 +241,89 @@ $(document).on("click touchend", ".mmenu__close", function(e) {
 
 // ========= busket ======
 
-var products = [];
+// var products = [],
+//     sum = 0,
+//     generalPrice = $(".buys-inf").find(".finish-number-price");
 
-$(".item-cart-buys").each(function(i, el){
-    $(el).attr("data-product", i);
-    products[i] = +$(this).find(".item-cart-buys__summary .number").text().replace(/\s/g, "");
-});
+// $(".item-cart-buys").each(function(i, el){
+//     $(el).attr("data-product", i);
+//     products[i] = +$(this).find(".item-cart-buys__summary .number").text().replace(/\s/g, "");
+//     sum += products[i];
+// });
+
+// generalPrice.text(sum)
 
 $(document).on("change", ".item-cart-buys__counter input", function(e) {
-    var $this = $(this),
-        indx = $(this)
-            .closest(".item-cart-buys")
-            .attr('data-product');
-        oldValue = products[indx];
-    $(this)
-        .closest(".item-cart-buys")
-        .find(".item-cart-buys__summary .number")
-        .text(oldValue * $this.val());
-    
-    $(".buys-inf").find(".finish-number-price").text()
+    // var $this = $(this),
+    //     indx = $(this)
+    //         .closest(".item-cart-buys")
+    //         .attr('data-product');
+    //     oldValue = products[indx];
+    // $(this)
+    //     .closest(".item-cart-buys")
+    //     .find(".item-cart-buys__summary .number")
+    //     .text(oldValue * $this.val());
+    // if(oldValue * $this.val() > oldValue){
+    //     sum += $this.val() > oldValue;
+    // }else{
+    //     sum -= $this.val() > oldValue;
+    // }
+    // console.log(sum)
+    // generalPrice.text(sum);
+    // s
 });
 
 
 $(document).on("click", ".item-cart-buys__counter .plus", function(e) {
     e.preventDefault();
 
-    var $this = $(this),
-        input = $(this)
-            .closest(".item-cart-buys__counter")
-            .find("input");
-        val = +input.val();
-    input.val(++val);
-    input.trigger("change");
-    console.log(val)
+    // var $this = $(this),
+    //     input = $(this)
+    //         .closest(".item-cart-buys__counter")
+    //         .find("input"),
+    //     indx = $this.closest(".item-cart-buys").data("product"),
+    //     forOne = products[indx],
+    //     val = +input.val();
+    // if (val <= 100){
+    //     input.val(++val);
+
+    //     // sum += forOne;
+    //     input.trigger("change");       
+    // }
+
 });
 
 
 $(document).on("click", ".item-cart-buys__counter .minus", function(e) {
     e.preventDefault();
 
-    var $this = $(this),
+    // var $this = $(this),
+    //     input = $(this)
+    //         .closest(".item-cart-buys__counter")
+    //         .find("input"),
+    //     indx = $this.closest(".item-cart-buys").data("product"),
+    //     forOne = products[indx],
+    //     val = +input.val();
+    // if (val >= 2){
+    //     input.val(--val);
+    //     // sum -= forOne;
+    //     // generalPrice.text(sum);
+    //     input.trigger("change");
+    // }
+    
+});
+
+$(document).on("click", ".item-cart-buys .remove-from-cart", function(e) {
+
+     var $this = $(this),
         input = $(this)
-            .closest(".item-cart-buys__counter")
-            .find("input");
-        val = +input.val();
-    input.val(--val);
-    input.trigger("change");
-    console.log(val)
+            .closest(".item-cart-buys");
+            // .find("input"),
+        // indx = $this.closest(".item-cart-buys").data("product"),
+        // forOne = products[indx],
+        // val = +input.val();
+        // generalPrice.text(sum - val*forOne);
+        input.remove();
 });
 
 // ==========

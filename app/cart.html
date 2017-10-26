@@ -335,8 +335,8 @@
                     <form action="">
                         <h3 class="cart-cont__subheader">Оформлення:</h3>
                         <div class="order-block">
-                            <div class="order-block__item item-order-block">
-                                <div class="item-order-block__title">Контактні дані:</div>
+                            <div class="order-block__item item-order-block item-order-block--active">
+                                <div class="item-order-block__title item-order-block__title">1. Контактні дані:</div>
                                 <div class="input-group">
                                     <i class="fa fa-user-o"></i>
                                     <input type="text" class="input-el" placeholder="ПІБ">
@@ -349,9 +349,10 @@
                                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                                     <input type="text" class="input-el" placeholder="E-mail">
                                 </div>
+                                <input type="submit" class="btn btn--reg btn--unactive" value="Далі">
                             </div>
                             <div class="order-block__item item-order-block">
-                                <div class="item-order-block__title">Доставка і оплата</div>
+                                <div class="item-order-block__title">2. Доставка і оплата</div>
                                 <div class="input-group input-group--select">
                                     <span class="select-header">Перевізник:</span>
                                     <select name="" id="" class="nice-select">
@@ -384,9 +385,10 @@
                                     <span class="textarea-header">Коментар: <i class="fa"></i></span>
                                     <textarea name="" id="" cols="30" rows="10"></textarea>
                                 </div>
+                                <input type="submit" class="btn btn--reg btn--unactive" value="Оформити замовлення">
                             </div>
 
-                            <input type="submit" class="btn btn--reg" value="Оформити замовлення">
+                            
                         </div>
                     </form>
                 </div>
@@ -399,15 +401,15 @@
                             </div>
                             <div class="item-cart-buys__right-part">
                                 <div class="item-cart-buys__title">
-                                    <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450*2200 VIP master</h4>
+                                    <h4>Шкаф купе 2 двери  Омега 1 | Пескоструй +  Пескоструй | 2400*450* 2200 VIP master"</h4>
                                 </div>
                                 <div class="item-cart-buys__price">
                                     <span>3 350 грн</span>
                                 </div>
-                                <div class="item-cart-buys__counter">
-                                    <input type="text" min="1" value="1">
-                                    <a href="" class="plus">+</a>
-                                    <a href="" class="minus">-</a>
+                                <div class="item-cart-buys__counter input-group">
+                                    <input type="text" class="input-el"  value="1">
+                                    <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
+                                    <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="item-cart-buys__summary">
                                     <span class="number">3 350</span> грн
@@ -427,8 +429,10 @@
                                 <div class="item-cart-buys__price">
                                     <span>3 350 грн</span>
                                 </div>
-                                <div class="item-cart-buys__counter">
-                                    <input type="number" min="1" value="1">
+                                <div class="item-cart-buys__counter input-group">
+                                    <input type="text" class="input-el" value="1">
+                                    <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
+                                    <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="item-cart-buys__summary">
                                     <span class="number">3 350</span> грн
@@ -439,11 +443,14 @@
                         </div>
                     </div>
                     <div class="buys-inf">
-                        <div class="buys-inf__deliver">
-                            vaga
+                        <div class="buys-inf__kg">
+                           <span>Вага замовлення:</span><span>8 кг</span>
+                        </div>
+                        <div class="buys-inf__price-delivery">
+                           <span>Вартість доставки:</span><span>230 грн</span>
                         </div>
                         <div class="buys-inf__finish-price">
-                            <span class="finish-number-price"></span>
+                            <span>Разом(з доставкою) </span><span class="finish-number-price">9020 грн</span>
                         </div>
                     </div>
                 </div>

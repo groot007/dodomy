@@ -1,8 +1,72 @@
 .page-cart{
-    
+    .site-header__catalog{
+    	display: none;
+    }
+}
+
+.cart-cont{
+	padding: 30px 0;
+	&__subheader{
+		font-family: "ProximaNovaSemiBold";
+		font-size: 20px;
+		// font-weight: 400;
+		color: #333;
+	}
+}
+
+.order-block{
+
+	.input-group{
+		margin-bottom: 15px;
+	}
+
+	.nice-select{
+		padding: 0 30px 0 20px;
+		
+    	.current{
+    		display: inline-block;
+    		width: 100%;
+    		text-overflow: ellipsis;
+	    	overflow: hidden;	
+	    	color: #898889;
+    	}
+	}
+}
+
+.item-order-block{
+	text-align: center;
+	margin: 15px 0;
+	&>*:not(.item-order-block__title){
+		display: none;
+	}
+	&__title{
+		color: #898889;
+		text-align: left;
+		margin-bottom: 15px;
+	}
+
+	&--active{
+		&>*:not(.item-order-block__title){
+			display: inline-block;
+		}
+		.item-order-block__title{
+			color: #d34d64;		
+		}
+	}
+
+	.input-group{
+		width: 100%;
+	}
 }
 
 
+
+
+.cart-buys{
+	&__item{
+		margin-bottom: 15px;
+	}
+}
 
 .item-cart-buys{
 	display: flex;
@@ -13,7 +77,7 @@
 		width: 84px;
 		height: 84px;
 		border: 1px solid #d2d2d2;
-		flex: 1 0 auto;
+		flex-shrink: 0;
 		margin-right: 10px;
 		text-align: center;
 		line-height: 84px;
@@ -27,10 +91,13 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		position: relative;
+		align-items: center;
 	}
 
 	&__title{
 		width: 100%;
+		color: #333;
 		h4{
 			font-weight: 400;
 			margin: 0;
@@ -38,12 +105,45 @@
 	}
 
 	&__price{
+		font-weight: 700;
+		margin: 8px 0;
 		width: 100%;
 	}
 
 	&__counter{
-		input{
-			max-width: 80px;
+		position: relative;
+		.input-el{
+			width: 52px;
+			max-width: 52px;
+			height: 42px;
+			font-size: 16px;
+			text-align: center;
+			color: #333;
+			border-radius: 20px;
+			padding: 5px 10px 5px 10px;
+
+		}
+		.num-control{
+			// top: 0;
+			// right: 10px;
+			position: absolute;
+			&.plus{
+				right: -20px;
+				top: 0;
+
+			}
+			&.minus{
+				right: -20px;
+				bottom: 0;
+			}
+			.fa{
+				position: relative;
+				left: auto;
+				top: auto;
+				color: #333;
+				font-size: 24px;
+				bottom: auto;
+			}
 		}
 	}
 
@@ -51,6 +151,14 @@
 		color: $links-color;
 		font-weight: 600;
 		font-size: 20px;
+		margin-right: 10px;
+	}
+
+	.remove-from-cart{
+		color: #898889;
+		position: absolute;
+		right: 0;
+		bottom: 30px;
 	}
 
 }

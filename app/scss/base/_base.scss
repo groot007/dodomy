@@ -220,6 +220,14 @@ input {
     }
 
     &--select {
+        .select-header{
+            color: #333;
+            font-size: 16px;
+            padding: 0 20px;
+            margin-bottom: 8px;
+            display: block;
+
+        }
         .nice-select {
             max-width: 100%;
             width: 100%;
@@ -619,8 +627,11 @@ section {
     &--disable{
         border: 1px solid #dcdbdc;
         color: #898889;
-        background: #dcdbdc;
-        
+        background: #dcdbdc;    
+    }
+
+    &--unactive{
+        opacity: .5;
     }
 
     &.show-more {
