@@ -85,8 +85,8 @@
                         <a class="contacts__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
                         <a class="contacts__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
                         <a class="contacts__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
-                        <a class="contacts__sign" href="#"><span>Вхід</span> <i class="fa fa-sign-in"></i></a>
-                        <a class="contacts__sign" href="#"><span>Реєстрація</span><i class="fa fa-user-plus"></i></a>
+                        <a class="contacts__sign login-link" href="#"><span>Вхід</span> <i class="fa fa-sign-in"></i></a>
+                        <a class="contacts__sign reg-link" href="#"><span>Реєстрація</span><i class="fa fa-user-plus"></i></a>
                     </div>
                     <ul class="top-head__main-menu main-menu">
                         <li class="main-menu__item"><a href="#">Про нас</a>
@@ -255,31 +255,31 @@
                                 <div class="dropdown-menu__slider slider-brands">
                                     <div>
                                         <div class="group-hover">
-                                            
+
                                             <img src="img/dropdown/companies/logo 1 hover.png" alt="" />
                                         </div>
                                     </div>
                                     <div>
                                         <div class="group-hover">
-                                            
+
                                             <img src="img/dropdown/companies/logo 2 hover.png" alt="" />
                                         </div>
                                     </div>
                                     <div>
                                         <div class="group-hover">
-                                            
+
                                             <img src="img/dropdown/companies/logo 3 hover.png" alt="" />
                                         </div>
                                     </div>
                                     <div>
                                         <div class="group-hover">
-                                            
+
                                             <img src="img/dropdown/companies/logo 4 hover.png" alt="" />
                                         </div>
                                     </div>
                                     <div>
                                         <div class="group-hover">
-                                            
+
                                             <img src="img/dropdown/companies/logo 5 hover.png" alt="" />
                                         </div>
                                     </div>
@@ -551,31 +551,31 @@
                 <div class="rec-category__s-brands slider-brands">
                     <div>
                         <div class="group-hover">
-                            
+
                             <img src="img/dropdown/companies/logo 1 hover.png" alt="" />
                         </div>
                     </div>
                     <div>
                         <div class="group-hover">
-                            
+
                             <img src="img/dropdown/companies/logo 2 hover.png" alt="" />
                         </div>
                     </div>
                     <div>
                         <div class="group-hover">
-                            
+
                             <img src="img/dropdown/companies/logo 3 hover.png" alt="" />
                         </div>
                     </div>
                     <div>
                         <div class="group-hover">
-                            
+
                             <img src="img/dropdown/companies/logo 4 hover.png" alt="" />
                         </div>
                     </div>
                     <div>
                         <div class="group-hover">
-                            
+
                             <img src="img/dropdown/companies/logo 5 hover.png" alt="" />
                         </div>
                     </div>
@@ -791,8 +791,17 @@
             </div>
         </div>
     </section>
-</footer> "
+</footer>
 
+
+
+<!-- ============================================== -->
+<!-- =============== END FOOTER =================== -->
+<!-- ============================================== -->
+
+
+
+<!-- ==========  MODALS ============== -->
 
 <div class="basket-window" id="basket-modal">
     WOOOW
@@ -801,15 +810,58 @@
     <br>
     <br>
     <br>
-    It's real MODAAAL 
+    It's real MODAAAL
 
     <button data-izimodal-close="">Close</button>
 </div>
 
-<!-- ============================================== -->
-<!-- =============== END FOOTER =================== -->
-<!-- ============================================== -->
 
+
+<div class="login-modal" id="login-modal">
+    <div class="top">
+        <h4>Вхід</h4>
+    </div>
+
+    <form action="">
+        <div class="input-group">
+            <i class="fa fa-user-o"></i>
+            <input type="text" class="input-el" placeholder="Логін(e-mail)*" required>
+        </div>
+        <div class="input-group">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="text" class="input-el" placeholder="Пароль*" required>
+            <a href="#" class="reset-pass-link">Забули пароль?</a>
+        </div>
+        <div class="col-12 text-center">
+            <input type="submit" class="btn btn--reg" value="Увійти">
+        </div>
+        <a href="#">Реєстрація</a>
+    </form>
+
+    <button data-izimodal-close="" class="close-btn"><i class="fa fa-times"></i></button>
+</div>
+
+
+<div class="reset-pass" id="reset-pass">
+    <div class="top">
+        <h4>Відновлення паролю</h4>
+    </div>
+
+    <form action="">
+        <div class="input-group">
+            <i class="fa fa-envelope-o"></i>
+            <input type="text" class="input-el" placeholder="Ваш email*" required>
+        </div>
+        <div class="col-12 text-center">
+            <input type="submit" class="btn btn--reg" value="Відновити">
+        </div>
+        <a href="#" class="back-to-login">Повернутися назад</a>
+    </form>
+
+    <button data-izimodal-close="" class="close-btn"><i class="fa fa-times"></i></button>
+</div>
+
+<!-- ==========  END MODALS ============== -->
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

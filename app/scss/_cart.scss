@@ -5,3 +5,38 @@
     	display: flex;
     }
 }
+
+.item-cart-buys{
+	&__price{
+		width: auto;
+	}
+	&__img-wr{
+		width: 135px;
+		margin-right: 20px;
+		height: 135px;
+		line-height: 135px;
+	}
+
+	&__counter{
+		margin-left: auto;
+    	margin-right: 70px;
+	}
+
+	.remove-from-cart{
+		top: 0;
+		font-size: 20px;
+
+		bottom: auto;
+	}
+}
+
+.buys-inf{
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+	&__finish-price{
+		margin-top: 0;
+	}
+}

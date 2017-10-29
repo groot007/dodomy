@@ -1,0 +1,20 @@
+@import "mobile/_reg-page";
+
+
+.page-reg{
+	.site-header__catalog{
+    	display: flex;
+    }
+    .input-group--radio{
+    		.radio-header{
+    			margin: 0 20px;
+    		}
+    	}
+}
+
+.reg-wr{
+	.first-group{
+		margin-bottom: 50px;
+		padding-bottom: 20px;
+	}
+}

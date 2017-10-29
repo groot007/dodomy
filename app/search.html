@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="page-cart">
+<body class="page-search">
     <!-- ============================================== -->
     <!-- ===============  HEADER ====================== -->
     <!-- ============================================== -->
@@ -80,6 +80,11 @@
                     <input class="search__input" type="text" placeholder="Пошук">
                     <button class="search__btn"><i class="fa fa-search"></i>
                     </button>
+                    <div class="quick-search">
+                        <a href="#" class="all-results">
+                            Усі результати пошуку
+                        </a>
+                    </div>
                 </form>
                 <div class="top-head__lang-change lang-change">
                     <select name="lang" id="lang">
@@ -327,135 +332,141 @@
         </ul>
     </div>
 
-    <div class="cart-cont">
+    <div class="search-cont">
         <div class="container">
-            <h1 class="h-simple">Кошик</h1>
+            <h2 class="h-simple">Результати пошуку</h2>
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <form action="">
-                        <h3 class="cart-cont__subheader">Оформлення:</h3>
-                        <div class="order-block">
-                            <div class="order-block__item item-order-block item-order-block--active">
-                                <div class="item-order-block__title item-order-block__title">1. Контактні дані:</div>
-                                <div class="input-group">
-                                    <i class="fa fa-user-o"></i>
-                                    <input type="text" class="input-el" placeholder="ПІБ">
+                <div class="col-12 catalog-products">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-3 ">
+                            <div class="catalog-products__item item-product">
+                                <a href="#" class="item-product__wr-img">
+                                    <div class="item-product__discount"><span>- 30 %</span>
+                                    </div>
+                                    <img class="item-product__img" src="img/mobile/slider-products/chair.png" alt="">
+                                    <i class="item-product__basket fa fa-shopping-basket"></i>
+                                    <div class="item-product__sticker"><span>Хіт</span>
+                                    </div>
+                                </a>
+                                <div class="item-product__wr-description">
+                                    <h4 class="item-product__product-title">Стілець Dior</h4>
+                                    <span class="item-product__current-price">2 150 грн.</span>
                                 </div>
-                                <div class="input-group">
-                                    <i class="fa fa-mobile" aria-hidden="true"></i>
-                                    <input type="text" class="input-el phone-mask" placeholder="+38 (0__) ___-__-__">
-                                </div>
-                                <div class="input-group">
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <input type="text" class="input-el" placeholder="E-mail">
-                                </div>
-                                <input type="submit" class="btn btn--reg" value="Далі" disabled>
-                            </div>
-                            <div class="order-block__item item-order-block item-order-block--active">
-                                <div class="item-order-block__title">2. Доставка і оплата</div>
-                                <div class="input-group input-group--select">
-                                    <span class="select-header">Перевізник:</span>
-                                    <select name="" id="" class="nice-select">
-                                        <option value="1" selected disabled>Вибрати</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </div>
-                                <div class="input-group input-group--select">
-                                    <span class="select-header">Тип доставки:</span>
-                                    <select name="" id="" class="nice-select">
-                                        <option value="1" >Відділення - відділення(Нова пошта)</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </div>
-                                <div class="input-group input-group--select">
-                                    <span class="select-header">Метод оплати:</span>
-                                    <select name="" id="" class="nice-select">
-                                        <option value="1">Передплата на картку</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </div>
-                                <div class="input-group input-group--select">
-                                    <span class="select-header">Місто доставки:</span>
-                                    <select name="" id="" class="nice-select">
-                                        <option value="1">Оберіть місто</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </div>
-                                <div class="input-group input-group--textarea">
-                                    <span class="textarea-header">Коментар: <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
-                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    <textarea class="input-el" name="" id="" cols="30" rows="10" placeholder="Коментар..."></textarea>
-                                </div>
-                                <input type="submit" class="btn btn--reg" value="Оформити замовлення" disabled>
-                            </div>
-
-
-                        </div>
-                    </form>
-                </div>
-                <div class="col-12 col-md-8">
-                    <h3 class="cart-cont__subheader">Наявні товари в кошику:</h3>
-                    <div class="cart-buys">
-                        <div class="cart-buys__item item-cart-buys">
-                            <div class="item-cart-buys__img-wr">
-                                <img src="img/similar-product.png" alt="">
-                            </div>
-                            <div class="item-cart-buys__right-part">
-                                <div class="item-cart-buys__title">
-                                    <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450* 2200 VIP master"</h4>
-                                </div>
-                                <div class="item-cart-buys__price">
-                                    <span>3 350 грн</span>
-                                </div>
-                                <div class="item-cart-buys__counter input-group">
-                                    <input type="text" class="input-el"  value="1">
-                                    <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
-                                    <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="item-cart-buys__summary">
-                                    <span class="number">3 350</span> грн
-                                </div>
-                                <span class="remove-from-cart"><i class="fa fa-times"></i></span>
-                            </div>
-
-                        </div>
-                        <div class="cart-buys__item item-cart-buys">
-                            <div class="item-cart-buys__img-wr">
-                                <img src="img/similar-product.png" alt="">
-                            </div>
-                            <div class="item-cart-buys__right-part">
-                                <div class="item-cart-buys__title">
-                                    <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450*2200 VIP master</h4>
-                                </div>
-                                <div class="item-cart-buys__price">
-                                    <span>3 350 грн</span>
-                                </div>
-                                <div class="item-cart-buys__counter input-group">
-                                    <input type="text" class="input-el" value="1">
-                                    <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
-                                    <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="item-cart-buys__summary">
-                                    <span class="number">3 350</span> грн
-                                </div>
-                                <span class="remove-from-cart"><i class="fa fa-times"></i></span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="buys-inf">
-                        <div class="wr-details">
-                            <div class="buys-inf__kg">
-                               <span>Вага замовлення:</span><strong><span>8</span> кг</strong>
-                            </div>
-                            <div class="buys-inf__price-delivery">
-                               <span>Вартість доставки:</span><strong><span>230</span> грн</strong>
                             </div>
                         </div>
-                        <div class="buys-inf__finish-price">
-                            <span class="txt">Разом(з доставкою): </span><span class="finish-number-price"><strong><span class="number">9020</span> грн</strong></span>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-3 ">
+                            <div class="catalog-products__item item-product">
+                                <a href="#" class="item-product__wr-img">
+                                    <div class="item-product__discount"><span>- 30 %</span>
+                                    </div>
+                                    <img class="item-product__img" src="img/mobile/slider-products/chair.png" alt="">
+                                    <i class="item-product__basket fa fa-shopping-basket"></i>
+                                    <div class="item-product__sticker"><span>Хіт</span>
+                                    </div>
+                                </a>
+                                <div class="item-product__wr-description">
+                                    <h4 class="item-product__product-title">Стілець Dior</h4>
+                                    <span class="item-product__old-price">2 730 грн.</span>
+                                    <span class="item-product__current-price">2 150 грн.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-3 ">
+                            <div class="catalog-products__item item-product">
+                                <a href="#" class="item-product__wr-img">
+                                    <div class="item-product__discount"><span>- 30 %</span>
+                                    </div>
+                                    <img class="item-product__img" src="img/mobile/slider-products/chair.png" alt="">
+                                    <i class="item-product__basket fa fa-shopping-basket"></i>
+                                    <div class="item-product__sticker"><span>Хіт</span>
+                                    </div>
+                                </a>
+                                <div class="item-product__wr-description">
+                                    <h4 class="item-product__product-title">Стілець Dior</h4>
+                                    <span class="item-product__old-price">2 730 грн.</span>
+                                    <span class="item-product__current-price">2 150 грн.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-3 ">
+                            <div class="catalog-products__item item-product">
+                                <a href="#" class="item-product__wr-img">
+                                    <div class="item-product__discount"><span>- 30 %</span>
+                                    </div>
+                                    <img class="item-product__img" src="img/mobile/slider-products/chair.png" alt="">
+                                    <i class="item-product__basket fa fa-shopping-basket"></i>
+                                    <div class="item-product__sticker"><span>Хіт</span>
+                                    </div>
+                                </a>
+                                <div class="item-product__wr-description">
+                                    <h4 class="item-product__product-title">Стілець Dior</h4>
+                                    <span class="item-product__old-price">2 730 грн.</span>
+                                    <span class="item-product__current-price">2 150 грн.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-3 ">
+                            <div class="catalog-products__item item-product">
+                                <a href="#" class="item-product__wr-img">
+                                    <div class="item-product__discount"><span>- 30 %</span>
+                                    </div>
+                                    <img class="item-product__img" src="img/mobile/slider-products/chair.png" alt="">
+                                    <i class="item-product__basket fa fa-shopping-basket"></i>
+                                    <div class="item-product__sticker"><span>Хіт</span>
+                                    </div>
+                                </a>
+                                <div class="item-product__wr-description">
+                                    <h4 class="item-product__product-title">Стілець Dior</h4>
+                                    <span class="item-product__old-price">2 730 грн.</span>
+                                    <span class="item-product__current-price">2 150 грн.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-3 ">
+                            <div class="catalog-products__item item-product">
+                                <a href="#" class="item-product__wr-img">
+                                    <div class="item-product__discount"><span>- 30 %</span>
+                                    </div>
+                                    <img class="item-product__img" src="img/mobile/slider-products/chair.png" alt="">
+                                    <i class="item-product__basket fa fa-shopping-basket"></i>
+                                    <div class="item-product__sticker"><span>Хіт</span>
+                                    </div>
+                                </a>
+                                <div class="item-product__wr-description">
+                                    <h4 class="item-product__product-title">Стілець Dior</h4>
+                                    <span class="item-product__old-price">2 730 грн.</span>
+                                    <span class="item-product__current-price">2 150 грн.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-3 ">
+                            <div class="catalog-products__item item-product">
+                                <a href="#" class="item-product__wr-img">
+                                    <div class="item-product__discount"><span>- 30 %</span>
+                                    </div>
+                                    <img class="item-product__img" src="img/mobile/slider-products/chair.png" alt="">
+                                    <i class="item-product__basket fa fa-shopping-basket"></i>
+                                    <div class="item-product__sticker"><span>Хіт</span>
+                                    </div>
+                                </a>
+                                <div class="item-product__wr-description">
+                                    <h4 class="item-product__product-title">Стілець Dior</h4>
+                                    <span class="item-product__old-price">2 730 грн.</span>
+                                    <span class="item-product__current-price">2 150 грн.</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <a href="#" class="show-more btn btn--reg"><i class="fa fa-repeat" aria-hidden="true"></i>Показати більше</a>
+                    <div class="pagination">
+                        <a href="#" class="pagination__item"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                        <a href="#" class="pagination__item pagination__item--active">1</a>
+                        <a href="#" class="pagination__item">2</a>
+                        <a href="#" class="pagination__item">3</a>
+                        <a href="#" class="pagination__item">4</a>
+                        <a href="#" class="pagination__item"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -485,69 +496,68 @@
                     <form action="">
                         <input type="email" name="email" id="email" class="subscribe__input txt-input txt-input--bg-white" placeholder="Введіть свій E-mail">
                         <input type="submit" class="subscribe__btn btn btn--light" value="Підписатись">
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-    <section class="contacts-section">
-        <div class="container">
-            <div class="el-wr">
-
-
-                <div class="contacts-section__logo">
-                    <img src="img/LOGO.png" alt="">
-                </div>
-                <div class="contacts-section__user-zone">
-                    <a class="contacts-section__sign" href="#"><i class="fa fa-sign-in"></i><span>Вхід</span> </a>
-                    <a class="contacts-section__sign" href="#"><i class="fa fa-user-plus"></i><span>Реєстрація</span></a>
-                </div>
-
-                <div class="contacts-section__phones">
-                    <a class="contacts-section__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
-                    <a class="contacts-section__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
-                    <a class="contacts-section__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
-                </div>
-
-                <ul class="contacts-section__social social-block">
-                    <li><a href="#"><i class="fa fa-youtube"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="bottom-footer">
-        <div class="container">
-            <div class="wr-flex">
-                <div class="copyright">
-                    <span>2017</span> <i class="fa fa-copyright" aria-hidden="true"></i> <span>dodomy.com.ua</span>
-                </div>
-                <div class="webmaestro">
-                    <p>Розробка, підтримка та розкрутка сайту:</p>
-                    <!-- <img src="img/wm_lite.svg" alt=""> -->
+                        </button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-</footer>
-
-<!-- ============================================== -->
-<!-- =============== END FOOTER =================== -->
-<!-- ============================================== -->
+        </section>
+        <section class="contacts-section">
+            <div class="container">
+                <div class="el-wr">__so
 
 
+                    <div class="contacts-section__logo">
+                        <img src="img/LOGO.png" alt="">
+                    </div>
+                    <div class="contacts-section__user-zone">
+                        <a class="contacts-section__sign" href="#"><i class="fa fa-sign-in"></i><span>Вхід</span> </a>
+                        <a class="contacts-section__sign" href="#"><i class="fa fa-user-plus"></i><span>Реєстрація</span></a>
+                    </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+                    <div class="contacts-section__phones">
+                        <a class="contacts-section__phone" href="tel:(099) 700 70 70">(099) 700 70 70</a>
+                        <a class="contacts-section__phone" href="tel:(063) 800 80 80">(063) 800 80 80</a>
+                        <a class="contacts-section__phone" href="tel:(098) 300 30 30">(098) 300 30 30</a>
+                    </div>
 
-<script src="js/main.min.js"></script>
+                    <ul class="contacts-section__social social-block">
+                        <li><a href="#"><i class="fa fa-youtube"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-footer">
+            <div class="container">
+                <div class="wr-flex">
+                    <div class="copyright">
+                        <span>2017</span> <i class="fa fa-copyright" aria-hidden="true"></i> <span>dodomy.com.ua</span>
+                    </div>
+                    <div class="webmaestro">
+                        <p>Розробка, підтримка та розкрутка сайту:</p>
+                        <!-- <img src="img/wm_lite.svg" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- =============== END FOOTER =================== -->
+    <!-- ============================================== -->
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>

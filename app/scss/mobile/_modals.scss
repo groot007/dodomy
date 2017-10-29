@@ -1,6 +1,6 @@
 .modal-success{
 	 box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)  !important;
-     border-radius: 30px !important; 
+     border-radius: 30px !important;
      padding: 20px;
      height: 80px !important;
      max-width: 720px !important;;
@@ -35,5 +35,57 @@
 	.iziModal-overlay{
 		background: transparent !important;
 	}
+}
+
+
+.login-modal, .reset-pass{
+    max-width: 370px !important;;
+    border-radius: 0 !important;
+    .top{
+        background: $purple;
+        padding: 15px 30px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        h4{
+            margin: 0;
+            font-size: 20px;
+            font-family: "ProximaNovaSemiBold";
+            color: #fff;
+        }
+    }
+
+    form{
+        padding: 10px 20px 30px 20px;
+        text-align: center;
+
+        .input-group{
+            margin-bottom: 15px;
+
+            .reset-pass-link{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .close-btn{
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        background: transparent;
+        border: 0;
+        color: #fff;
+        font-size: 30px;
+        transition: color .4s ease;
+
+
+        &:hover{
+            cursor: pointer;
+            color: $links-color;
+        }
+    }
 }
 

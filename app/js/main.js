@@ -288,7 +288,7 @@ $(document).on("click", ".item-cart-buys__counter .plus", function(e) {
     //     input.val(++val);
 
     //     // sum += forOne;
-    //     input.trigger("change");       
+    //     input.trigger("change");
     // }
 
 });
@@ -310,7 +310,7 @@ $(document).on("click", ".item-cart-buys__counter .minus", function(e) {
     //     // generalPrice.text(sum);
     //     input.trigger("change");
     // }
-    
+
 });
 
 $(document).on("click", ".item-cart-buys .remove-from-cart", function(e) {
@@ -325,6 +325,17 @@ $(document).on("click", ".item-cart-buys .remove-from-cart", function(e) {
         // generalPrice.text(sum - val*forOne);
         input.remove();
 });
+
+
+$(document).on("click", ".item-order-block .textarea-header", function(e) {
+    console.log(222);
+     var $this = $(this),
+        ta = $(this).closest(".input-group ")
+            .find(".input-el, .fa-pencil-square-o");
+        ta.slideToggle();
+});
+
+
 
 // ==========
 
@@ -420,7 +431,7 @@ $(document).on("click", ".all-catagories", function(e){
     // $(".dropdown-menu .items").animate({scrollTop : 100}, 1000);
 });
 
-  
+
 
 
 $("#lang, #sort, .nice-select").niceSelect();
@@ -500,6 +511,7 @@ if($("#basket-modal").length){
          closeButton: true,
     });
 }
+
 if($("#success-msg").length){
     $("#success-msg").iziModal({
         transitionIn: "comingIn",
@@ -508,10 +520,38 @@ if($("#success-msg").length){
 }
 
 
+if($("#login-modal").length){
+    $("#login-modal").iziModal({
+        transitionIn: "comingIn",
+        closeButton: true,
+    });
+}
+
+if($("#reset-pass").length){
+    $("#reset-pass").iziModal({
+        transitionIn: "comingIn",
+        closeButton: true,
+    });
+}
+
+
+
 $(document).on('click', '.modal-basket', function (event) {
     event.preventDefault();
     console.log(21);
     $('#basket-modal').iziModal('open');
+});
+
+$(document).on('click', '.login-link, .back-to-login', function (event) {
+    event.preventDefault();
+    console.log(21);
+    $('#login-modal').iziModal('open');
+});
+
+$(document).on('click', '.reset-pass-link', function (event) {
+    event.preventDefault();
+    console.log(21);
+    $('#reset-pass').iziModal('open');
 });
 
 
