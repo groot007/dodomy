@@ -267,6 +267,14 @@ input {
     }
 }
 
+.datepicker--day-name{
+    color: $links-color;
+}
+
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current-, .datepicker--cell.-selected-.-focus-{
+        background: $purple;
+}
+
 .recaptcha-wr {
     .error {
         border-radius: 5px;

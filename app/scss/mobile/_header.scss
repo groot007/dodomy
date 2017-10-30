@@ -460,7 +460,7 @@
 .dropdown-menu {
     width: 100%;
     z-index: 999;
-    height: 440px;
+    max-height: 440px;
 
     // position: relative;
     background: #fff;
@@ -703,7 +703,10 @@
         outline: none;
         display: inline-block;
     }
+
 }
+
+
 
 // ======= SLICK & NICE SELECT ==========
 .slider-brands-wr {

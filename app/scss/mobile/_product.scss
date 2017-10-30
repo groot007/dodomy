@@ -110,6 +110,12 @@
         li {
             float: left;
 
+            &.slick-active{
+                .dots-item {
+                    opacity: 1;
+                }
+            }
+
             &:last-child {
                 .dots-item {
                     margin-right: 0;

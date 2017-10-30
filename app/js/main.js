@@ -25,6 +25,19 @@ $(function() {
     }
 });
 
+$(document).on("input", ".top-head__search .search__input", function(e) {
+     var $this = $(this);
+     if($this.val().length > 3){
+        $this.closest(".search").find(".quick-search").addClass("quick-search--opened");
+     }else{
+        $this.closest(".search").find(".quick-search").removeClass("quick-search--opened");
+     }
+});
+
+$(document).on("blur", ".top-head__search .search__input", function(e) {
+     var $this = $(this);
+     $this.closest(".search").find(".quick-search").removeClass("quick-search--opened");
+})
 
     // ====== YOUTUBE ======
 
@@ -328,12 +341,35 @@ $(document).on("click", ".item-cart-buys .remove-from-cart", function(e) {
 
 
 $(document).on("click", ".item-order-block .textarea-header", function(e) {
-    console.log(222);
      var $this = $(this),
         ta = $(this).closest(".input-group ")
             .find(".input-el, .fa-pencil-square-o");
         ta.slideToggle();
 });
+
+
+$(document).on("click", ".item-order-block .edit-order-block", function(e) {
+    e.preventDefault();
+     var $this = $(this),
+        block = $(this).closest(".item-order-block");
+        $this.addClass("hidden");
+        block.removeClass("item-order-block--full").addClass("item-order-block--active");
+});
+
+
+$(document).on("click", ".item-order-block .next-order-step", function(e) {
+    e.preventDefault();
+     var $this = $(this),
+        block = $(this).closest(".item-order-block");
+        block.addClass("item-order-block--full").removeClass("item-order-block--active");
+        block.find(".edit-order-block").removeClass("hidden");
+        $(".item-order-block ").eq(block.index() + 1).addClass("item-order-block--active");
+});
+
+
+
+
+
 
 
 
@@ -412,7 +448,6 @@ $(document).on("click", ".dropdown__show-all", function(e){
 
 $(document).on("click", ".read-more", function(e){
     e.preventDefault();
-    console.log("show")
     $(this)
     .closest("section")
     .find(".more-txt")
@@ -503,6 +538,19 @@ function handleFileSelect(evt) {
 }
 
 //  ============
+if($("#date").length){
+    $("#date").datepicker()
+}
+$(document).on("keydown", "#date", function(e){
+     var v = this.value;
+        if (v.length > 9 && e.keyCode != 8) return false;
+        if (v.match(/^\d{2}$/) !== null  && e.keyCode != 8) {
+            this.value = v + '.';
+        } else if (v.match(/^\d{2}\.\d{2}$/) !== null  && e.keyCode != 8) {
+            this.value = v + '.';
+        }
+})
+
 
 // ===== MODALS ===
 if($("#basket-modal").length){
@@ -538,19 +586,16 @@ if($("#reset-pass").length){
 
 $(document).on('click', '.modal-basket', function (event) {
     event.preventDefault();
-    console.log(21);
     $('#basket-modal').iziModal('open');
 });
 
 $(document).on('click', '.login-link, .back-to-login', function (event) {
     event.preventDefault();
-    console.log(21);
     $('#login-modal').iziModal('open');
 });
 
 $(document).on('click', '.reset-pass-link', function (event) {
     event.preventDefault();
-    console.log(21);
     $('#reset-pass').iziModal('open');
 });
 
@@ -645,6 +690,55 @@ submitHandler: function(form) {
     }
 
 
+if($("#cart-form").length){
+
+        $("#cart-form").validate({
+
+        rules: {
+        message:{
+            required: true,
+            minlength: 10,
+        },
+        email: {
+            required: true,
+            email: true
+        }
+
+  },
+
+  messages: {
+      message: {
+        required: "Це поле не повинно бути пустим",
+        minlength: "Поле має містити більше 10 символів"
+    },
+    email: "Введіть E-mail",
+    "hidden-grecaptcha":{
+        required: "Пройдіть перевірку"
+    }
+},
+
+submitHandler: function(form) {
+             console.log(form);
+            // form.submit();
+            return false;
+        }
+    });
+
+if($(".item-order-block").eq(0).hasClass("item-order-block--full")){
+    $("#cart-form").find(".btn").attr("disabled", false)
+}
+
+
+}
+
+$(document).on("input", "#cart-form input", function(e){
+    $(this).valid();
+    if($("#fullName").hasClass("valid") && $("#phone").hasClass("valid") && $( "#email" ).hasClass("valid")){
+        $(this).closest("#cart-form").find(".btn").attr("disabled", false)
+    }else{
+        $(this).closest("#cart-form").find(".btn").attr("disabled", true)
+    }
+});
 
     // ====== end VALIDATION =====
 

@@ -331,27 +331,27 @@
         <div class="container">
             <h1 class="h-simple">Кошик</h1>
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <form action="">
+                <div class="col-12 col-md-4 col-xxl-3">
+                    <form action="" id="cart-form">
                         <h3 class="cart-cont__subheader">Оформлення:</h3>
                         <div class="order-block">
                             <div class="order-block__item item-order-block item-order-block--active">
-                                <div class="item-order-block__title item-order-block__title">1. Контактні дані:</div>
+                                <div class="item-order-block__title item-order-block__title">1. Контактні дані <a href="#" class="edit-order-block"><i class="fa fa-pencil"></i> Редагувати</a></div>
                                 <div class="input-group">
                                     <i class="fa fa-user-o"></i>
-                                    <input type="text" class="input-el" placeholder="ПІБ">
+                                    <input type="text" name="fullName" id="fullName" class="input-el" placeholder="ПІБ">
                                 </div>
                                 <div class="input-group">
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
-                                    <input type="text" class="input-el phone-mask" placeholder="+38 (0__) ___-__-__">
+                                    <input type="text" name="phone" id="phone" class="input-el phone-mask" placeholder="+38 (0__) ___-__-__">
                                 </div>
                                 <div class="input-group">
                                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                    <input type="text" class="input-el" placeholder="E-mail">
+                                    <input type="text" name="email" id="email" class="input-el" placeholder="E-mail">
                                 </div>
-                                <input type="submit" class="btn btn--reg" value="Далі" disabled>
+                                <input type="submit" class="btn btn--reg next-order-step" value="Далі" disabled>
                             </div>
-                            <div class="order-block__item item-order-block item-order-block--active">
+                            <div class="order-block__item item-order-block">
                                 <div class="item-order-block__title">2. Доставка і оплата</div>
                                 <div class="input-group input-group--select">
                                     <span class="select-header">Перевізник:</span>
@@ -383,8 +383,8 @@
                                 </div>
                                 <div class="input-group input-group--textarea">
                                     <span class="textarea-header">Коментар: <i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
-                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    <textarea class="input-el" name="" id="" cols="30" rows="10" placeholder="Коментар..."></textarea>
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="display: none;"></i>
+                                    <textarea style="display: none;" class="input-el" name="" id="" cols="30" rows="10" placeholder="Коментар..."></textarea>
                                 </div>
                                 <input type="submit" class="btn btn--reg" value="Оформити замовлення" disabled>
                             </div>
@@ -393,7 +393,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-8 col-xxl-8">
                     <h3 class="cart-cont__subheader">Наявні товари в кошику:</h3>
                     <div class="cart-buys">
                         <div class="cart-buys__item item-cart-buys">
@@ -545,6 +545,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
 
 <script src="js/main.min.js"></script>
