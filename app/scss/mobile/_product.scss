@@ -81,6 +81,9 @@
             bottom: -20px;
             right: 0;
         }
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     .slick-track {
@@ -113,6 +116,16 @@
             &.slick-active{
                 .dots-item {
                     opacity: 1;
+                    background: $links-color;;
+                
+                &.dots-item--youtube {
+                    background: transparent;
+                    &:after{
+                        opacity: 1;
+                        
+                        color: $links-color;
+                    }
+                 }
                 }
             }
 
@@ -141,6 +154,7 @@
                 opacity: 0.3;
                 background-color: #898889;
                 cursor: pointer;
+                transition: all .4s ease;
             }
 
             .dots-item--youtube {
@@ -150,7 +164,8 @@
                 &:after {
                     content: '\f01d';
                     font-family: "FontAwesome";
-                    color: #d34d64;
+                    color: #898889;
+                    opacity: 0.3;
                     position: relative;
                     top: -3px;
                     font-size: 20px;

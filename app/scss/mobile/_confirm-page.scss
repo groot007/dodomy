@@ -1,0 +1,19 @@
+.page-confirm{
+    .site-header__catalog{
+    	display: none;
+    }
+}
+
+.confirm-cont{
+	padding: 60px 0;
+	.h-simple{
+		margin-top: 0px;
+		// font-family: "ProximaNovaSemiBold";
+		color: #333;
+	}
+	.msg{
+		margin: 50px 0;
+		width: 90%;
+		font-size: 20px;
+	}
+}
