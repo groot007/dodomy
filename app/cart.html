@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" />
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.min.css" /> -->
 
@@ -89,7 +91,7 @@
                 </div>
 
 
-                <a href="" class="top-head__shopping-basket shopping-basket">
+                <a href="#basket-modal" class="top-head__shopping-basket shopping-basket">
                     <i class="shopping-basket__icon fa fa-shopping-basket"></i>
                     <span class="shopping-basket__counter">0</span>
                 </a>
@@ -397,50 +399,44 @@
                     <h3 class="cart-cont__subheader">Наявні товари в кошику:</h3>
                     <div class="cart-buys">
                         <div class="cart-buys__item item-cart-buys">
-                            <div class="item-cart-buys__img-wr">
-                                <img src="img/similar-product.png" alt="">
-                            </div>
-                            <div class="item-cart-buys__right-part">
-                                <div class="item-cart-buys__title">
+                            <div class="item-cart-buys__title">
                                     <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450* 2200 VIP master"</h4>
                                 </div>
-                                <div class="item-cart-buys__price">
-                                    <span>3 350 грн</span>
-                                </div>
-                                <div class="item-cart-buys__counter input-group">
-                                    <input type="text" class="input-el"  value="1">
-                                    <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
-                                    <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="item-cart-buys__summary">
-                                    <span class="number">3 350</span> грн
-                                </div>
-                                <span class="remove-from-cart"><i class="fa fa-times"></i></span>
-                            </div>
-
-                        </div>
-                        <div class="cart-buys__item item-cart-buys">
                             <div class="item-cart-buys__img-wr">
                                 <img src="img/similar-product.png" alt="">
                             </div>
-                            <div class="item-cart-buys__right-part">
-                                <div class="item-cart-buys__title">
-                                    <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450*2200 VIP master</h4>
-                                </div>
-                                <div class="item-cart-buys__price">
-                                    <span>3 350 грн</span>
-                                </div>
-                                <div class="item-cart-buys__counter input-group">
-                                    <input type="text" class="input-el" value="1">
-                                    <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
-                                    <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="item-cart-buys__summary">
-                                    <span class="number">3 350</span> грн
-                                </div>
-                                <span class="remove-from-cart"><i class="fa fa-times"></i></span>
+                            <div class="item-cart-buys__price">
+                                <span>3 350 грн</span>
                             </div>
-
+                            <div class="item-cart-buys__counter input-group">
+                                <input type="text" class="input-el"  value="1">
+                                <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
+                                <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="item-cart-buys__summary">
+                                <span class="number">3 350</span> грн
+                            </div>
+                            <span class="remove-from-cart"><i class="fa fa-times"></i></span>
+                        </div>
+                        <div class="cart-buys__item item-cart-buys">
+                            <div class="item-cart-buys__title">
+                                    <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450* 2200 VIP master"</h4>
+                                </div>
+                            <div class="item-cart-buys__img-wr">
+                                <img src="img/similar-product.png" alt="">
+                            </div>
+                            <div class="item-cart-buys__price">
+                                <span>3 350 грн</span>
+                            </div>
+                            <div class="item-cart-buys__counter input-group">
+                                <input type="text" class="input-el"  value="1">
+                                <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
+                                <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="item-cart-buys__summary">
+                                <span class="number">3 350</span> грн
+                            </div>
+                            <span class="remove-from-cart"><i class="fa fa-times"></i></span>
                         </div>
                     </div>
                     <div class="buys-inf">
@@ -541,12 +537,105 @@
 <!-- ============================================== -->
 
 
+<!-- ====== MODALS ======== -->
+
+<div class="zoom-anim-dialog mfp-hide" id="basket-modal">
+    <h4>Кошик</h4>
+
+
+
+
+
+        <div class="cart-buys__item item-cart-buys">
+            <div class="item-cart-buys__title">
+                <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450* 2200 VIP master"</h4>
+            </div>
+        <div class="item-cart-buys__img-wr">
+            <img src="img/similar-product.png" alt="">
+        </div>
+            
+            <div class="item-cart-buys__price">
+                <span>3 350 грн</span>
+            </div>
+            <div class="item-cart-buys__counter input-group">
+                <input type="text" class="input-el" value="1">
+                <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
+                <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
+            </div>
+            <div class="item-cart-buys__summary">
+                <span class="number">3 350</span> грн
+            </div>
+            <span class="remove-from-cart"><i class="fa fa-times"></i></span>
+
+    </div>
+
+     <div class="cart-buys__item item-cart-buys">
+            <div class="item-cart-buys__title">
+                <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450* 2200 VIP master"</h4>
+            </div>
+        <div class="item-cart-buys__img-wr">
+            <img src="img/similar-product.png" alt="">
+        </div>
+            
+            <div class="item-cart-buys__price">
+                <span>3 350 грн</span>
+            </div>
+            <div class="item-cart-buys__counter input-group">
+                <input type="text" class="input-el" value="1">
+                <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
+                <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
+            </div>
+            <div class="item-cart-buys__summary">
+                <span class="number">3 350</span> грн
+            </div>
+            <span class="remove-from-cart"><i class="fa fa-times"></i></span>
+
+    </div>
+
+         <div class="cart-buys__item item-cart-buys">
+            <div class="item-cart-buys__title">
+                <h4>Шкаф купе 2 двери Омега 1 | Пескоструй + Пескоструй | 2400*450* 2200 VIP master"</h4>
+            </div>
+        <div class="item-cart-buys__img-wr">
+            <img src="img/similar-product.png" alt="">
+        </div>
+            
+            <div class="item-cart-buys__price">
+                <span>3 350 грн</span>
+            </div>
+            <div class="item-cart-buys__counter input-group">
+                <input type="text" class="input-el" value="1">
+                <a href="" class="num-control plus"><i class="fa fa-sort-up" aria-hidden="true"></i></a>
+                <a href="" class="num-control minus"><i class="fa fa-sort-down" aria-hidden="true"></i></a>
+            </div>
+            <div class="item-cart-buys__summary">
+                <span class="number">3 350</span> грн
+            </div>
+            <span class="remove-from-cart"><i class="fa fa-times"></i></span>
+
+    </div>
+
+
+
+
+    <div class="btns-group">
+        <a href="#" class="btn back-to-site">Продовжити покупки</a>
+        <a href="#" class="btn btn--reg">Оформити замовлення</a>
+    </div>
+</div>
+
+
+<!-- ====== end MODALS ======== -->
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 
 <script src="js/main.min.js"></script>
 </body>

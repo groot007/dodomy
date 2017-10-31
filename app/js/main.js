@@ -16,7 +16,7 @@ $(function() {
       max: 500,
       values: [ 10, 450 ],
       create: function( event, ui ) {
-        $( ".price-filter .min-input" ).val( 10 );
+        $( ".price-filter .min-input" ).val( 2 );
         $( ".price-filter .max-input" ).val( 450 );
     },
     slide: function( event, ui ) {
@@ -25,23 +25,47 @@ $(function() {
     }
 });
 
-if($(".product-slider-g").length){
-    $(".product-slider-g").magnificPopup({
-        delegate: 'a',
+
+var thumbs = '';
+if($(".product-slider-g .gallery").length){
+    $(".product-slider-g .gallery").magnificPopup({
         type: 'image',
         tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
+        mainClass: 'products-gallery mfp-with-zoom mfp-img-mobile',
+
         gallery: {
             enabled: true,
             navigateByImgClick: true,
+            tCounter: '%curr% з %total%',
             preload: [0,1] // Will preload 0 - before current, and 1 after the current image
         },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-            titleSrc: function(item) {
-                return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+        zoom: {
+            enabled: true,
+            duration: 300, // don't foget to change the duration also in CSS
+            opener: function(element) {
+                return element.find('img');
             }
         }
+        // image: {
+        //     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        //     titleSrc: function(item) {
+               
+        //         console.log(thumbs)
+        //         return thumbs;
+        //     }
+        // },
+        // callbacks: {
+        //     beforeOpen: function() {
+        //          var ul = $("<ul></ul>"),
+        //             mp = $.magnificPopup.instance;
+        //             // console.log(mp.items.length )
+        //         for( var i = 0; i < mp.items.length ; i++){
+        //             $(mp.items[i]).find("img").attr("src");
+        //             ul.append("<img src='"+ $(mp.items[i]).find("img").attr("src") +"'>");
+        //             thumbs = ul;
+        //         }
+        //       },
+        // }
     });
 }
 
@@ -575,10 +599,21 @@ $(document).on("keydown", "#date", function(e){
 
 
 // ===== MODALS ===
-if($("#basket-modal").length){
-    $("#basket-modal").iziModal({
-        transitionIn: "comingIn",
-         closeButton: true,
+if($(".top-head__shopping-basket").length){
+    $(".top-head__shopping-basket").magnificPopup({
+       type: 'inline',
+
+        // fixedContentPos: false,
+        // fixedBgPos: true,
+
+        overflowY: 'auto',
+
+        closeBtnInside: true,
+        preloader: false,
+        
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-slide-bottom basket-modal'
     });
 }
 
@@ -635,10 +670,11 @@ if($(".additions").length){
 
 
 
-$(document).on('click', '.modal-basket', function (event) {
-    event.preventDefault();
-    $('#basket-modal').iziModal('open');
-});
+// $(document).on('click', '.top-head__shopping-basket', function (event) {
+//     event.preventDefault();
+//     console.log(1);
+//     // $('#basket-modal').iziModal('open');
+// });
 
 $(document).on('click', '.login-link, .back-to-login', function (event) {
     event.preventDefault();
@@ -649,6 +685,14 @@ $(document).on('click', '.reset-pass-link', function (event) {
     event.preventDefault();
     $('#reset-pass').iziModal('open');
 });
+
+
+$(document).on('click', '.back-to-site', function (event) {
+    event.preventDefault();
+     $('#basket-modal').iziModal('close');
+});
+
+
 
 
 // === end MODALS ===

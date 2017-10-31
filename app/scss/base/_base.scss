@@ -16,6 +16,10 @@ body {
 
 a {
     color: $links-color;
+
+    &:focus{
+        outline: none;
+    }
 }
 
 p {
@@ -738,9 +742,17 @@ section {
 .slick-slide {
     img {
         display: inline-block;
+         
     }
+    a{
+        &:focus{
+            outline: none;
 
+        }
+    }
     text-align: center;
+    
+   
 }
 
 .slick-arrows {

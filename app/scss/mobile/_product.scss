@@ -636,11 +636,27 @@
     }
 
     &__title{
-        width: 80%;
+        width: calc(100% - 104px);
         flex-shrink: 1;
         color: #333;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.products-gallery{
+    .mfp-figure {
+        figure{
+            padding: 50px;
+            background: #fff;           
+        }
+        figcaption{
+            color: #000;
+            .mfp-counter{
+                color: #333;
+                padding: 10px 20px;
+            }
+        }
     }
 }

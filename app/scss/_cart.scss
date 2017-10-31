@@ -7,6 +7,10 @@
 }
 
 .item-cart-buys{
+	&__title{
+		display: inline-block;
+		width: 70%;
+	}
 	&__price{
 		width: auto;
 	}
@@ -23,7 +27,7 @@
 	}
 
 	.remove-from-cart{
-		top: 0;
+		top: 20px;
 		font-size: 20px;
 
 		bottom: auto;
