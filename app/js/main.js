@@ -689,7 +689,8 @@ $(document).on('click', '.reset-pass-link', function (event) {
 
 $(document).on('click', '.back-to-site', function (event) {
     event.preventDefault();
-     $('#basket-modal').iziModal('close');
+    var magnificPopup = $.magnificPopup.instance; 
+    magnificPopup.close();
 });
 
 

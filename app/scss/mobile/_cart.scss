@@ -14,6 +14,7 @@
 		font-size: 20px;
 		// font-weight: 400;
 		color: #333;
+		margin-bottom: 40px;
 	}
 }
 
@@ -135,7 +136,7 @@
 .item-cart-buys{
 	position: relative;
 	// display: flex;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #d2d2d2;
 	
 	&:after{
@@ -178,9 +179,10 @@
 		width: 100%;
 		color: #333;
 		float: right;
-		margin-bottom: 15px;
-		padding-right: 15%;
+		margin-bottom: 10px;
+		padding-right: 5%;
 		h4{
+			font-size: 16px;
 			font-weight: 400;
 			margin: 0;
 		}
@@ -189,15 +191,24 @@
 	&__price{
 		font-weight: 700;
 		font-size: 14px;
-		margin: 30px 0 0 0;
-		// width: 100%;
+		margin: 15px 0 0 0;
+		width: 34%;
 		float: left;
+		@include min(400px){
+			width: auto;
+			margin: 35px 0 0 0;
+		}
+
 	}
 
 	&__counter{
 		position: relative;
-		float: left;
-		margin: 20px 0 0 10%;
+		float: right;
+		margin: 0 20px 0 8%;
+		@include min(400px){
+			float: left;
+			margin: 20px 20px 0 8%;
+		}
 		// margin-left: 20%;
 		.input-el{
 			width: 52px;
@@ -239,20 +250,79 @@
 		color: $links-color;
 		font-weight: 600;
 		font-size: 20px;
+		width: 31%;
 		// margin-right: 10px;
-		margin: 10px 10px 0 0;
+		margin: 20px 10px 0 0;
+		@include min(350px){
+			width: 35%;
+		}
+		@include min(370px){
+			width: 40%;
+		}
+		@include min(400px){
+			width: auto;
+			float: right;
+			margin: 30px 0 0 0;
+		}
 	}
 
 	.remove-from-cart{
 		color: #898889;
-		position: absolute;
-		right: 0;
-		bottom: 30px;
+		position: relative;
+		// right: 0;
+		margin-top: 12px;
+		float: right;
+		width: 20px;
+		height: 20px;
+		padding: 5px;
+		display: inline-block;
+		font-size: 24px;
+		// bottom: 20px;
 		color: #d2d2d2;
 		transition: color .4s ease;
+
+		@include min(400px){
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 0;
+		}
+		.fa{
+			display: none;
+		}
+		&:after, &:before{
+			content: '';
+			display: block;
+			position: absolute;
+			background: #898889;
+			top: 50%;
+			left: 50%;
+			width: 15px;
+			height: 1px;
+			transition: all .3s ease-in-out;
+			transform: translate(-50%, -50%);
+		}
+
+		&:after{
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&:before{
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+
 		&:hover{
 			cursor: pointer;
 			color: $links-color;
+			&:before, &:after{
+				// transform: scale(1.5) translate(-50%, -50%) rotate(-45deg);
+				background: $links-color;
+			}
+			&:after{
+				transform: scale(1.4) translate(-40%, -40%) rotate(45deg);
+			}
+			&:before{
+				transform: scale(1.4) translate(-40%, -40%) rotate(-45deg);
+			}
 		}
 	}
 
@@ -264,17 +334,22 @@
 		display: flex;
 		-webkit-align-items: center;
 		align-items: center;
+		font-family: "ProximaNovaSemiBold";
+		font-size: 20px;
 		-webkit-justify-content: space-between;
 		 justify-content: space-between;
 		.txt{
 			font-size: 16px;
 			margin-right: 10px;
-			font-family: "ProximaNovaSemiBold";
+			
 		}
 		.finish-number-price{
 			.number{
-				font-size: 24px;
+				font-size: 30px;
 				font-weight: 700;
+			}
+			.money{
+				font-size: 16px;
 			}
 		}
 	}

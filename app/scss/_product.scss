@@ -294,6 +294,7 @@
     }
 
     &__title{
+        width: calc(100% - 45px);
         @include min(1600px){
             font-size: 14px;
         }

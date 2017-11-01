@@ -646,10 +646,21 @@
 }
 
 .products-gallery{
+    .mfp-content{
+        // background: #fff;
+    }
+
+    .mfp-image-holder .mfp-close{
+        right: -6px;
+    top: -13px;
+    color: #000;
+    }
+
+
     .mfp-figure {
         figure{
             padding: 50px;
-            background: #fff;           
+            // background: #fff;           
         }
         figcaption{
             color: #000;
@@ -659,4 +670,48 @@
             }
         }
     }
+}
+
+// .mfp-content{
+//     background: #000;
+//     transition: all 5s ease;
+// }
+
+
+.image-source-link {
+    color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+}
+
+.mfp-with-zoom figure{
+    background: #000;
+    transition: all 1s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready figure{
+    background: #fff;
+}
+
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
 }
